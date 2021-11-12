@@ -2,9 +2,17 @@
   <div class="relative bg-black w-full h-auto">
     <img
       src="../../assets/images/logo/coastal_coating_logo_small_transparent.png"
-      class="transform scale-75"
+      class="inline transform scale-50 md:scale-75"
     />
 
+    <div class="hidden md:inline">
+      <a href="#" class="inline font-bold text-white px-4 font-sans md:hover:underline">Get a quote</a>
+      <a href="#" class="inline font-bold text-white px-4 font-sans md:hover:underline">See our work</a>
+      <a href="#" class="inline font-bold text-white px-4 font-sans md:hover:underline">Services</a>
+      <a href="#" class="inline font-bold text-white px-4 font-sans md:hover:underline">Contact us</a>
+
+      <button class="absolute right-8 top-4 bg-green-200 p-2 rounded-md">Get a quote</button>
+    </div>
     <div class="md:hidden absolute right-4 top-5 flex items-center">
       <button class="outline-none mobile-menu-button">
         <svg
