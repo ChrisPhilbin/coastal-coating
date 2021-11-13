@@ -1,6 +1,22 @@
 <template>
   <button
-    class="absolute hidden md:inline right-8 top-8 bg-green-200 p-2 rounded-md"
+    class="
+      absolute
+      hidden
+      md:inline
+      right-8
+      top-10
+      bg-blue-800
+      p-2
+      rounded-md
+      text-white
+      font-bold
+      transition
+      ease-in
+      duration-700
+      transform
+      hover:scale-110
+    "
   >
     Get a quote
   </button>
