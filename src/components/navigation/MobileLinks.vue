@@ -4,7 +4,6 @@
       <svg
         @click="toggleMenu"
         class="w-10 h-10 text-blue-700"
-        x-show="!showMenu"
         fill="none"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -39,34 +38,38 @@
         opacity-95
       "
     >
-      <div class="border-b-2 w-full p-3">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 inline"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-            clip-rule="evenodd"
-          /></svg
-        >Home
-      </div>
-      <div class="border-b-2 w-full p-3">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 inline"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-            clip-rule="evenodd"
-          /></svg
-        >Get a quote
-      </div>
+      <router-link to="/" custom v-slot="{ navigate }">
+        <div role="link" @click="toggleMenu(); navigate()" class="border-b-2 w-full p-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 inline"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd"
+            /></svg
+          ><p class="inline font-semibold">Home</p>
+        </div>
+      </router-link>
+      <router-link to="/quote" custom v-slot="{ navigate }">
+        <div role="link" @click="toggleMenu(); navigate()" class="border-b-2 w-full p-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 inline"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd"
+            /></svg
+          ><p class="inline font-semibold">Get a quote</p>
+        </div>
+      </router-link>
       <div
         class="w-full p-3"
         :class="[showServices ? '' : 'border-b-2']"
@@ -159,7 +162,7 @@
           /></svg
         >Contact us
       </div>
-      <div class="flex w-full p-3">
+      <div class="flex w-full p-3 relative">
         <img
           src="../../assets/images/social-icons/facebook_small.png"
           class="inline ml-4 mr-4"
@@ -176,6 +179,7 @@
 <script>
 export default {
   name: "MobileLinks",
+  components: {},
   data() {
     return {
       showMenu: false,
