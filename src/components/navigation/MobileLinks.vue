@@ -19,12 +19,88 @@
 
   <div
     v-show="showMenu"
-    class="md:hidden absolute left-16 bg-white z-50 opacity-95 w-2/3 rounded-md"
+    class="md:hidden absolute left-10 top-24 bg-white z-50 w-10/12 rounded-md"
   >
-    <div class="border-b-2 w-full p-3">Home</div>
-    <div class="border-b-2 w-full p-3">See our work</div>
-    <div class="border-b-2 w-full p-3">Our services</div>
-    <div class="border-b-2 w-full p-3">Contact us</div>
+    <div class="border-b-2 w-full p-3">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5 inline"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+          clip-rule="evenodd"
+        /></svg
+      >Home
+    </div>
+    <div class="border-b-2 w-full p-3">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5 inline"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+          clip-rule="evenodd"
+        /></svg
+      >Get a quote
+    </div>
+    <div class="border-b-2 w-full p-3">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5 inline"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+          clip-rule="evenodd"
+        /></svg
+      >See our work
+    </div>
+    <div class="border-b-2 w-full p-3">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5 inline"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+          clip-rule="evenodd"
+        /></svg
+      >Our services
+    </div>
+    <div class="border-b-2 w-full p-3">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5 inline"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+          clip-rule="evenodd"
+        /></svg
+      >Contact us
+    </div>
+    <div class="flex w-full p-3">
+      <img
+        src="../../assets/images/social-icons/facebook_small.png"
+        class="inline ml-4 mr-4"
+      />
+      <img
+        src="../../assets/images/social-icons/instagram_small.png"
+        class="inline"
+      />
+    </div>
   </div>
 </template>
 
