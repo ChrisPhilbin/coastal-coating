@@ -1,42 +1,25 @@
 <template>
   <div class="text-center pt-20 md:pt-2">
-    <div
-      class="
-        bg-black
-        relative
-        flex
-        justify-center
-        items-center
-        md:bg-home-background-desktop
-        bg-home-background-mobile bg-contain
-        h-screen
-        bg-no-repeat
-      "
-    >
-      <p class="absolute top-24 md:top-1/4 text-white text-5xl md:text-7xl">
-        We've got you covered.
-      </p>
-      <button
-        class="
-          absolute
-          bottom-1/2
-          md:inline md:bottom-1/2
-          bg-blue-500
-          p-2
-          text-2xl text-white
-          font-bold
-          transition
-          ease-in
-          duration-700
-          transform
-          hover:scale-110
-          rounded-xl
-          h-20
-          w-60
-        "
-      >
-        Get a quote
-      </button>
+    <div class="relative hidden md:inline w-full">
+      <img src="/img/home/corvette.jpg" class="h-auto w-full inline opacity-75" />
+      <div class="absolute w-full mr-auto ml-auto bottom-14 text-7xl text-white font-sans z-10">We've got you covered.</div>
+      <button class="absolute top-48 left-1/2 transform -translate-x-1/2 -translate-y-48 h-16 w-52 rounded-lg bg-blue-400 text-white font-semibold text-lg z-10">Book appointment</button>
+    </div>
+
+    <div class="relative md:hidden w-full">
+      <img src="/img/home/corvette_mobile.jpg" class="h-auto w-full opacity-75" />
+      <div class="absolute w-full mr-auto ml-auto bottom-1/2 text-3xl text-white font-sans z-10">We've got you covered.</div>
+      <button class="absolute left-20 bottom-6 h-16 w-52 rounded-lg bg-blue-400 text-white font-semibold text-lg z-10">Book appointment</button>
+    </div>
+
+    <div class="grid md:grid-cols-2 grid-cols-1 gap-4 bg-black text-white py-8">
+      <div>
+        <p class="font-semibold text-3xl font-sans">Why coastal coating?</p>
+      </div>
+
+      <div>
+        
+      </div>
     </div>
   </div>
 </template>
