@@ -32,12 +32,11 @@
           hover:scale-110
           rounded-xl
           h-20
-          w-48
+          w-60
         "
       >
         Get a quote
       </button>
-      <!-- test -->
     </div>
   </div>
 </template>
