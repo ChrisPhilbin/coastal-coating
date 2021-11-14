@@ -3,7 +3,8 @@
     class="
       absolute
       hidden
-      md:inline
+      md:hidden
+      lg:inline
       right-8
       top-10
       bg-blue-800
@@ -67,6 +68,7 @@
           shadow-lg
           ring-1 ring-black ring-opacity-5
           focus:outline-none
+          z-50
         "
       >
         <div>
@@ -175,6 +177,7 @@
           shadow-lg
           ring-1 ring-black ring-opacity-5
           focus:outline-none
+          z-50
         "
       >
         <div>

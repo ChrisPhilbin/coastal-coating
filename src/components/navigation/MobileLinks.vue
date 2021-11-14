@@ -39,7 +39,14 @@
       "
     >
       <router-link to="/" custom v-slot="{ navigate }">
-        <div role="link" @click="toggleMenu(); navigate()" class="border-b-2 w-full p-3">
+        <div
+          role="link"
+          @click="
+            toggleMenu();
+            navigate();
+          "
+          class="border-b-2 w-full p-3"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5 inline"
@@ -50,12 +57,20 @@
               fill-rule="evenodd"
               d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
               clip-rule="evenodd"
-            /></svg
-          ><p class="inline font-semibold">Home</p>
+            />
+          </svg>
+          <p class="inline font-semibold">Home</p>
         </div>
       </router-link>
       <router-link to="/quote" custom v-slot="{ navigate }">
-        <div role="link" @click="toggleMenu(); navigate()" class="border-b-2 w-full p-3">
+        <div
+          role="link"
+          @click="
+            toggleMenu();
+            navigate();
+          "
+          class="border-b-2 w-full p-3"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5 inline"
@@ -66,8 +81,9 @@
               fill-rule="evenodd"
               d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
               clip-rule="evenodd"
-            /></svg
-          ><p class="inline font-semibold">Get a quote</p>
+            />
+          </svg>
+          <p class="inline font-semibold">Get a quote</p>
         </div>
       </router-link>
       <div

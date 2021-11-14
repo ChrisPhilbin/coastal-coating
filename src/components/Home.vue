@@ -1,26 +1,42 @@
 <template>
   <div class="text-center pt-20 md:pt-2">
-    <!-- <div
-      class="absolute inset-0 bg-cover bg-center z-0"
-      style="background-image: url('../assets/images/home/corvette.jpg')"
-    ></div>
     <div
       class="
-        opacity-100
-        absolute
-        inset-0
-        z-10
+        bg-black
+        relative
         flex
         justify-center
         items-center
-        text-2xl text-white
-        font-semibold
+        md:bg-home-background-desktop
+        bg-home-background-mobile bg-contain
+        h-screen
+        bg-no-repeat
       "
     >
-      We've got you covered.
-    </div> -->
-    <div class="flex justify-center items-center">
-      <img src="../assets/images/home/corvette.jpg" />
+      <p class="absolute top-24 md:top-1/4 text-white text-5xl md:text-7xl">
+        We've got you covered.
+      </p>
+      <button
+        class="
+          absolute
+          bottom-1/2
+          md:inline md:bottom-1/2
+          bg-blue-500
+          p-2
+          text-2xl text-white
+          font-bold
+          transition
+          ease-in
+          duration-700
+          transform
+          hover:scale-110
+          rounded-xl
+          h-20
+          w-48
+        "
+      >
+        Get a quote
+      </button>
     </div>
   </div>
 </template>
