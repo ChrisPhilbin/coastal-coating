@@ -12,6 +12,9 @@ import TopNav from "./components/navigation/TopNav.vue";
 export default {
   name: "App",
   components: { TopNav },
+  mounted() {
+     document.body.style.backgroundColor = "black";
+  }
 };
 </script>
 
