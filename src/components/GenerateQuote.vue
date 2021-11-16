@@ -7,5 +7,18 @@
 <script>
 export default {
     name: "GenerateQuote",
+    data() {
+        return {
+            firstName: "",
+            lastName: "",
+            phone: "",
+            email: "",
+            carYear: "",
+            carMake: "",
+            carModel: "",
+            carMilage: "",
+            servicesDesired: [],
+        }
+    }
 }
 </script>
