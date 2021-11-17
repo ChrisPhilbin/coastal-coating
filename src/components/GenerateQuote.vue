@@ -247,6 +247,47 @@
           </div>
         </div>
       </transition>
+      <transition
+        enter-active-class="transition duration-500 ease-out"
+        enter-from-class="transform scale-95 opacity-0"
+        enter-to-class="transform scale-100 opacity-100"
+        leave-active-class="transition duration-500 ease-in"
+        leave-from-class="transform scale-100 opacity-100"
+        leave-to-class="transform scale-95 opacity-0"
+      >
+        <div v-if="step === 3" class="mr-auto ml-auto">
+          <div class="mr-auto ml-auto">
+            <label
+              for="ceramicCoating"
+              class="inline text-sm text-left font-medium text-gray-500 pb-2"
+            >
+              Ceramic Coating
+            </label>
+
+            <input
+              type="checkbox"
+              v-model="servicesDesired"
+              value="Ceramic Coating"
+              id="ceramicCoating"
+            />
+          </div>
+          <div class="mr-auto ml-auto">
+            <label
+              for="washWax"
+              class="inline text-sm text-left font-medium text-gray-500 pb-2"
+            >
+              Wash & wax
+            </label>
+
+            <input
+              type="checkbox"
+              v-model="servicesDesired"
+              value="Wash and Wax"
+              id="washWax"
+            />
+          </div>
+        </div>
+      </transition>
       <div class="mr-auto ml-auto pt-4">
         <button
           v-if="step === 1"
@@ -281,10 +322,18 @@
         </button>
 
         <button
+          v-if="step < 3"
           class="inline bg-blue-800 rounded-md w-24 p-3 text-white font-bold"
           @click="step = step + 1"
         >
           Next
+        </button>
+        <button
+          v-else
+          class="inline bg-blue-800 rounded-md w-24 p-3 text-white font-bold"
+          
+        >
+          Submit
         </button>
       </div>
     </div>
@@ -307,9 +356,6 @@ export default {
       carMilage: "",
       servicesDesired: [],
     };
-  },
-  updated() {
-    console.log(this.step, "current step");
   },
 };
 </script>
