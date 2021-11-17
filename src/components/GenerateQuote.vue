@@ -1,127 +1,287 @@
 <template>
   <div class="text-center pt-20 md:pt-2">
     <div class="grid grid-cols-1">
-      <div class="mr-auto ml-auto">
-        <label
-          for="firstName"
-          class="block text-sm text-left font-medium text-gray-500 pb-2"
-        >
-          Your first name
-        </label>
+      <div v-if="step === 1" class="mr-auto ml-auto">
+        <div class="mr-auto ml-auto">
+          <label
+            for="firstName"
+            class="block text-sm text-left font-medium text-gray-500 pb-2"
+          >
+            Your first name
+          </label>
 
-        <input
-          type="text"
-          v-model="firstName"
-          name="firstName"
-          id="firstName"
-          class="
-            focus:ring-blue-500 focus:border-blue-500
-            flex-1
-            p-4
-            block
-            w-full
-            rounded
-            text-lg
-            border-gray-300
-          "
-          placeholder="John"
-        />
-      </div>
-      <div class="mr-auto ml-auto pt-4">
-        <label
-          for="lastName"
-          class="block text-sm text-left font-medium text-gray-500 pb-2"
-        >
-          Your last name
-        </label>
+          <input
+            type="text"
+            v-model="firstName"
+            name="firstName"
+            id="firstName"
+            class="
+              focus:ring-4
+              focus:ring-blue-500
+              focus:border-blue-500
+              focus:outline-none
+              flex-1
+              p-4
+              block
+              w-full
+              rounded
+              text-lg
+              border-0
+            "
+            placeholder="John"
+          />
+        </div>
+        <div class="mr-auto ml-auto pt-4">
+          <label
+            for="lastName"
+            class="block text-sm text-left font-medium text-gray-500 pb-2"
+          >
+            Your last name
+          </label>
 
-        <input
-          type="text"
-          v-model="lastName"
-          name="lastName"
-          id="lastName"
-          class="
-            focus:ring-blue-500 focus:border-blue-500
-            flex-1
-            p-4
-            block
-            w-full
-            rounded
-            text-lg
-            border-gray-300
-          "
-          placeholder="Smith"
-        />
-      </div>
-      <div class="mr-auto ml-auto pt-4">
-        <label
-          for="email"
-          class="block text-sm text-left font-medium text-gray-500 pb-2"
-        >
-          Your email address
-        </label>
+          <input
+            type="text"
+            v-model="lastName"
+            name="lastName"
+            id="lastName"
+            class="
+              focus:ring-4
+              focus:ring-blue-500
+              focus:border-blue-500
+              focus:outline-none
+              flex-1
+              p-4
+              block
+              w-full
+              rounded
+              text-lg
+              border-gray-300
+            "
+            placeholder="Smith"
+          />
+        </div>
+        <div class="mr-auto ml-auto pt-4">
+          <label
+            for="email"
+            class="block text-sm text-left font-medium text-gray-500 pb-2"
+          >
+            Your email address
+          </label>
 
-        <input
-          type="text"
-          v-model="email"
-          name="email"
-          id="email"
-          class="
-            focus:ring-blue-500 focus:border-blue-500
-            flex-1
-            p-4
-            block
-            w-full
-            rounded
-            text-lg
-            border-gray-300
-          "
-          placeholder="john.smith@example.com"
-        />
-      </div>
-      <div class="mr-auto ml-auto pt-4">
-        <label
-          for="phoneNumber"
-          class="block text-sm text-left font-medium text-gray-500 pb-2"
-        >
-          Your phone number
-        </label>
+          <input
+            type="text"
+            v-model="email"
+            name="email"
+            id="email"
+            class="
+              focus:ring-4
+              focus:ring-blue-500
+              focus:border-blue-500
+              focus:outline-none
+              flex-1
+              p-4
+              block
+              w-full
+              rounded
+              text-lg
+              border-gray-300
+            "
+            placeholder="john.smith@example.com"
+          />
+        </div>
+        <div class="mr-auto ml-auto pt-4">
+          <label
+            for="phoneNumber"
+            class="block text-sm text-left font-medium text-gray-500 pb-2"
+          >
+            Your phone number
+          </label>
 
-        <input
-          type="text"
-          v-model="phone"
-          name="phone"
-          id="phone"
-          class="
-            focus:ring-blue-500 focus:border-blue-500
-            flex-1
-            p-4
-            block
-            w-full
-            rounded
-            text-lg
-            border-gray-300
-          "
-          placeholder="(281)-330-8004"
-        />
+          <input
+            type="text"
+            v-model="phone"
+            name="phone"
+            id="phone"
+            class="
+              focus:ring-4
+              focus:ring-blue-500
+              focus:border-blue-500
+              focus:outline-none
+              flex-1
+              p-4
+              block
+              w-full
+              rounded
+              text-lg
+              border-gray-300
+            "
+            placeholder="(281)-330-8004"
+          />
+        </div>
       </div>
+
+      <transition
+        enter-active-class="transition duration-500 ease-out"
+        enter-from-class="transform scale-95 opacity-0"
+        enter-to-class="transform scale-100 opacity-100"
+        leave-active-class="transition duration-500 ease-in"
+        leave-from-class="transform scale-100 opacity-100"
+        leave-to-class="transform scale-95 opacity-0"
+      >
+        <div v-if="step === 2" class="mr-auto ml-auto">
+          <div class="mr-auto ml-auto">
+            <label
+              for="carYear"
+              class="block text-sm text-left font-medium text-gray-500 pb-2"
+            >
+              Your car's year
+            </label>
+
+            <input
+              type="text"
+              v-model="carYear"
+              name="carYear"
+              id="careYear"
+              class="
+                focus:ring-4
+                focus:ring-blue-500
+                focus:border-blue-500
+                focus:outline-none
+                flex-1
+                p-4
+                block
+                w-full
+                rounded
+                text-lg
+                border-gray-300
+              "
+              placeholder="2021"
+            />
+          </div>
+          <div class="mr-auto ml-auto pt-4">
+            <label
+              for="carMake"
+              class="block text-sm text-left font-medium text-gray-500 pb-2"
+            >
+              Your car's make
+            </label>
+
+            <input
+              type="text"
+              v-model="carMake"
+              name="carMake"
+              id="carMake"
+              class="
+                focus:ring-4
+                focus:ring-blue-500
+                focus:border-blue-500
+                focus:outline-none
+                flex-1
+                p-4
+                block
+                w-full
+                rounded
+                text-lg
+                border-gray-300
+              "
+              placeholder="Chevorlet"
+            />
+          </div>
+          <div class="mr-auto ml-auto pt-4">
+            <label
+              for="carModel"
+              class="block text-sm text-left font-medium text-gray-500 pb-2"
+            >
+              Your car's model
+            </label>
+
+            <input
+              type="text"
+              v-model="carModel"
+              name="carModel"
+              id="carModel"
+              class="
+                focus:ring-4
+                focus:ring-blue-500
+                focus:border-blue-500
+                focus:outline-none
+                flex-1
+                p-4
+                block
+                w-full
+                rounded
+                text-lg
+                border-gray-300
+              "
+              placeholder="Corvette"
+            />
+          </div>
+          <div class="mr-auto ml-auto pt-4">
+            <label
+              for="carMilage"
+              class="block text-sm text-left font-medium text-gray-500 pb-2"
+            >
+              Your car's milage (estimated)
+            </label>
+
+            <input
+              type="text"
+              v-model="carMilage"
+              name="carMilage"
+              id="carMilage"
+              class="
+                focus:ring-4
+                focus:ring-blue-500
+                focus:border-blue-500
+                focus:outline-none
+                flex-1
+                p-4
+                block
+                w-full
+                rounded
+                text-lg
+                border-gray-300
+              "
+              placeholder="15,000"
+            />
+          </div>
+        </div>
+      </transition>
       <div class="mr-auto ml-auto pt-4">
         <button
           v-if="step === 1"
-          class="disabled inline bg-gray-300 rounded-md w-24 p-3 mr-3"
+          class="
+            disabled
+            cursor-not-allowed
+            inline
+            bg-gray-500
+            rounded-md
+            w-24
+            p-3
+            mr-3
+          "
         >
           Previous
         </button>
         <button
           v-else
-          class="inline bg-blue-400 rounded-md w-24 p-3 mr-3"
+          class="
+            inline
+            bg-blue-800
+            rounded-md
+            w-24
+            p-3
+            mr-3
+            text-white
+            font-bold
+          "
           @click="step = step - 1"
         >
           Previous
         </button>
 
         <button
-          class="inline bg-blue-400 rounded-md w-24 p-3"
+          class="inline bg-blue-800 rounded-md w-24 p-3 text-white font-bold"
           @click="step = step + 1"
         >
           Next

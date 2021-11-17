@@ -1,26 +1,28 @@
 <template>
-  <button
-    class="
-      absolute
-      hidden
-      md:hidden
-      lg:inline
-      right-8
-      top-10
-      bg-blue-800
-      p-2
-      rounded-md
-      text-white
-      font-bold
-      transition
-      ease-in
-      duration-700
-      transform
-      hover:scale-110
-    "
-  >
-    Get a quote
-  </button>
+  <router-link to="/quote">
+    <button
+      class="
+        absolute
+        hidden
+        md:hidden
+        lg:inline
+        right-8
+        top-10
+        bg-blue-800
+        p-2
+        rounded-md
+        text-white
+        font-bold
+        transition
+        ease-in
+        duration-700
+        transform
+        hover:scale-110
+      "
+    >
+      Get a quote
+    </button>
+  </router-link>
 
   <Menu as="div" class="relative hidden md:inline-block text-left">
     <div>
