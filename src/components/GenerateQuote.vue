@@ -16,17 +16,16 @@
             name="firstName"
             id="firstName"
             class="
-              focus:ring-4
-              focus:ring-blue-500
-              focus:border-blue-500
-              focus:outline-none
+              focus:ring-2 focus:ring-indigo-800 focus:outline-none
               flex-1
               p-4
               block
               w-full
-              rounded
-              text-lg
-              border-0
+              rounded-lg
+              bg-black
+              text-lg text-white
+              border border-indigo-800
+              placeholder-gray-600
             "
             placeholder="John"
           />
@@ -45,17 +44,16 @@
             name="lastName"
             id="lastName"
             class="
-              focus:ring-4
-              focus:ring-blue-500
-              focus:border-blue-500
-              focus:outline-none
+              focus:ring-2 focus:ring-indigo-800 focus:outline-none
               flex-1
               p-4
               block
               w-full
-              rounded
-              text-lg
-              border-gray-300
+              rounded-lg
+              bg-black
+              text-lg text-white
+              border border-indigo-800
+              placeholder-gray-600
             "
             placeholder="Smith"
           />
@@ -74,17 +72,16 @@
             name="email"
             id="email"
             class="
-              focus:ring-4
-              focus:ring-blue-500
-              focus:border-blue-500
-              focus:outline-none
+              focus:ring-2 focus:ring-indigo-800 focus:outline-none
               flex-1
               p-4
               block
               w-full
-              rounded
-              text-lg
-              border-gray-300
+              rounded-lg
+              bg-black
+              text-lg text-white
+              border border-indigo-800
+              placeholder-gray-600
             "
             placeholder="john.smith@example.com"
           />
@@ -103,17 +100,16 @@
             name="phone"
             id="phone"
             class="
-              focus:ring-4
-              focus:ring-blue-500
-              focus:border-blue-500
-              focus:outline-none
+              focus:ring-2 focus:ring-indigo-800 focus:outline-none
               flex-1
               p-4
               block
               w-full
-              rounded
-              text-lg
-              border-gray-300
+              rounded-lg
+              bg-black
+              text-lg text-white
+              border border-indigo-800
+              placeholder-gray-600
             "
             placeholder="(281)-330-8004"
           />
@@ -141,19 +137,18 @@
               type="text"
               v-model="carYear"
               name="carYear"
-              id="careYear"
+              id="carYear"
               class="
-                focus:ring-4
-                focus:ring-blue-500
-                focus:border-blue-500
-                focus:outline-none
+                focus:ring-2 focus:ring-indigo-800 focus:outline-none
                 flex-1
                 p-4
                 block
                 w-full
-                rounded
-                text-lg
-                border-gray-300
+                rounded-lg
+                bg-black
+                text-lg text-white
+                border border-indigo-800
+                placeholder-gray-600
               "
               placeholder="2021"
             />
@@ -172,17 +167,16 @@
               name="carMake"
               id="carMake"
               class="
-                focus:ring-4
-                focus:ring-blue-500
-                focus:border-blue-500
-                focus:outline-none
+                focus:ring-2 focus:ring-indigo-800 focus:outline-none
                 flex-1
                 p-4
                 block
                 w-full
-                rounded
-                text-lg
-                border-gray-300
+                rounded-lg
+                bg-black
+                text-lg text-white
+                border border-indigo-800
+                placeholder-gray-600
               "
               placeholder="Chevorlet"
             />
@@ -201,17 +195,16 @@
               name="carModel"
               id="carModel"
               class="
-                focus:ring-4
-                focus:ring-blue-500
-                focus:border-blue-500
-                focus:outline-none
+                focus:ring-2 focus:ring-indigo-800 focus:outline-none
                 flex-1
                 p-4
                 block
                 w-full
-                rounded
-                text-lg
-                border-gray-300
+                rounded-lg
+                bg-black
+                text-lg text-white
+                border border-indigo-800
+                placeholder-gray-600
               "
               placeholder="Corvette"
             />
@@ -230,17 +223,16 @@
               name="carMilage"
               id="carMilage"
               class="
-                focus:ring-4
-                focus:ring-blue-500
-                focus:border-blue-500
-                focus:outline-none
+                focus:ring-2 focus:ring-indigo-800 focus:outline-none
                 flex-1
                 p-4
                 block
                 w-full
-                rounded
-                text-lg
-                border-gray-300
+                rounded-lg
+                bg-black
+                text-lg text-white
+                border border-indigo-800
+                placeholder-gray-600
               "
               placeholder="15,000"
             />
@@ -331,7 +323,6 @@
         <button
           v-else
           class="inline bg-blue-800 rounded-md w-24 p-3 text-white font-bold"
-          
         >
           Submit
         </button>

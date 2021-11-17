@@ -20,7 +20,7 @@
         hover:scale-110
       "
     >
-      Get a quote
+      Book an appointment
     </button>
   </router-link>
 
