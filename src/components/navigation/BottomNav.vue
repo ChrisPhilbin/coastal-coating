@@ -11,6 +11,6 @@
             class="inline"
             />
         </p>
-        <p class="text-gray-300">&copy; 2021 Coating Coating</p>
+        <p class="text-gray-300">&copy; 2021 Coastal Coating</p>
     </div>    
 </template>
