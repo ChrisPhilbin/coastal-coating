@@ -105,8 +105,8 @@
 
     <div class="grid grid-cols-1 gap-1 bg-gray-50 py-6">
       <div>
-        <p class="font-semibold text-3xl font-sans text-gray-700">
-          0 to #WOW in 1... 2... 3...
+        <p class="font-semibold text-4xl font-sans text-gray-700">
+          0 to <span class="inline font-bold text-red-500 text-5xl">wow</span> in 1, 2, 3...
         </p>
       </div>
     </div>
@@ -141,7 +141,7 @@
             text-4xl
           "
         >
-          #before
+          BEFORE
         </p>
       </div>
 
@@ -163,7 +163,7 @@
             text-4xl
           "
         >
-          #during
+          DURING
         </p>
       </div>
 
@@ -185,7 +185,7 @@
             text-4xl
           "
         >
-          #after
+          AFTER
         </p>
       </div>
     </div>
