@@ -30,7 +30,7 @@
             h-16
             w-52
             rounded-lg
-            bg-blue-400
+            bg-blue-700
             text-white
             font-semibold
             text-lg
@@ -61,7 +61,6 @@
       >
         We've got you covered.
       </div>
-      <!-- <button class="absolute left-20 bottom-6 h-16 w-52 rounded-lg bg-blue-400 text-white font-semibold text-lg z-10">Book appointment</button> -->
       <router-link to="/quote"
         ><button
           class="
@@ -73,7 +72,7 @@
             h-16
             w-52
             rounded-lg
-            bg-blue-400
+            bg-blue-700
             text-white
             font-semibold
             text-lg
@@ -89,6 +88,16 @@
       <div>
         <p class="text-gray-100 text-3xl font-bold">Why Coastal Coating?</p>
         <p class="text-gray-200 pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="pt-2 ml-auto mr-auto">
+          <img
+            src="../assets/images/social-icons/facebook_small.png"
+            class="inline ml-4 mr-4"
+            />
+            <img
+            src="../assets/images/social-icons/instagram_small.png"
+            class="inline"
+            />
+        </p>
       </div>
 
       <div></div>

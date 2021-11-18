@@ -1,11 +1,15 @@
 <template>
-  <TopNav />
-  <!-- <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div> -->
-  <router-view />
-  <BottomNav />
+  <div class="flex flex-col h-screen">
+    <TopNav />
+    <!-- <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div> -->
+    <div class="mb-auto">
+      <router-view />
+    </div>
+    <BottomNav />
+  </div>
 </template>
 
 <script>

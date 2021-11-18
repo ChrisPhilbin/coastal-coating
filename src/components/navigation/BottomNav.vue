@@ -1,5 +1,5 @@
 <template>
-    <div class="relative text-center bg-gray-800 py-4 mt-3 w-full h-auto md:pt-4">
+    <div class="text-center bg-gray-800 py-4 mt-3 w-full h-auto md:pt-4">
         <p class="text-gray-300">115-C Prather Park Dr., Myrtle Beach, SC 29588<br />(843) 999-2636</p>
         <p class="py-2">
             <img
