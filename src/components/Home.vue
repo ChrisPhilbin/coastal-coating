@@ -85,12 +85,99 @@
       >
     </div>
 
-    <div class="grid md:grid-cols-2 grid-cols-1 gap-4 bg-black text-white py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 mt-6">
       <div>
-        <p class="font-semibold text-3xl font-sans">Why coastal coating?</p>
+        <p class="text-white text-3xl font-bold">Why Coastal Coating?</p>
       </div>
 
       <div></div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-1 bg-black text-white py-8">
+      <div>
+        <p class="font-semibold text-3xl font-sans">
+          0 to #WOW in 1... 2... 3...
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="
+        grid grid-cols-1
+        gap-4
+        md:grid-cols-3
+        ml-auto
+        mr-auto
+        bg-black
+        text-white
+        pb-10
+      "
+    >
+      <div class="relative ml-auto mr-auto">
+        <img
+          class="rounded"
+          src="/img/home/solstice_before.jpg"
+          alt="Before paint correction"
+        />
+        <p
+          class="
+            absolute
+            bottom-1/2
+            left-1/2
+            transform
+            -translate-x-1/2 -translate-y-1/2
+            z-10
+            font-bold
+            text-4xl
+          "
+        >
+          #before
+        </p>
+      </div>
+
+      <div class="relative ml-auto mr-auto">
+        <img
+          class="rounded"
+          src="/img/home/solstice_during.jpg"
+          alt="During paint correction"
+        />
+        <p
+          class="
+            absolute
+            bottom-1/2
+            left-1/2
+            transform
+            -translate-x-1/2 -translate-y-1/2
+            z-10
+            font-bold
+            text-4xl
+          "
+        >
+          #during
+        </p>
+      </div>
+
+      <div class="relative ml-auto mr-auto">
+        <img
+          class="rounded"
+          src="/img/home/solstice_after.jpg"
+          alt="After paint correction"
+        />
+        <p
+          class="
+            absolute
+            bottom-1/2
+            left-1/2
+            transform
+            -translate-x-1/2 -translate-y-1/2
+            z-10
+            font-bold
+            text-4xl
+          "
+        >
+          #after
+        </p>
+      </div>
     </div>
   </div>
 </template>
