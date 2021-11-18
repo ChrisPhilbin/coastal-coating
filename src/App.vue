@@ -5,13 +5,16 @@
     <router-link to="/about">About</router-link>
   </div> -->
   <router-view />
+  <BottomNav />
 </template>
 
 <script>
 import TopNav from "./components/navigation/TopNav.vue";
+import BottomNav from "./components/navigation/BottomNav.vue";
+
 export default {
   name: "App",
-  components: { TopNav },
+  components: { TopNav, BottomNav },
   mounted() {
      document.body.style.backgroundColor = "black";
   }

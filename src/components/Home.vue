@@ -85,17 +85,18 @@
       >
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 mt-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 bg-black py-6">
       <div>
-        <p class="text-white text-3xl font-bold">Why Coastal Coating?</p>
+        <p class="text-gray-100 text-3xl font-bold">Why Coastal Coating?</p>
+        <p class="text-gray-200 pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
 
       <div></div>
     </div>
 
-    <div class="grid grid-cols-1 gap-1 bg-black text-white py-8">
+    <div class="grid grid-cols-1 gap-1 bg-gray-50 py-6">
       <div>
-        <p class="font-semibold text-3xl font-sans">
+        <p class="font-semibold text-3xl font-sans text-gray-700">
           0 to #WOW in 1... 2... 3...
         </p>
       </div>
@@ -108,7 +109,7 @@
         md:grid-cols-3
         ml-auto
         mr-auto
-        bg-black
+        bg-gray-50
         text-white
         pb-10
       "
@@ -177,6 +178,13 @@
         >
           #after
         </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 bg-black py-6">
+      <div></div>
+      <div>
+        <p class="text-gray-100 text-3xl font-bold">What is ceramic coating?</p>
+        <p class="text-gray-200 pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
     </div>
   </div>
