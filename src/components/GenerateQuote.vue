@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center pt-20 md:pt-2">
+  <div class="text-center">
     <div class="grid grid-cols-1">
       <div v-if="step === 1" class="mr-auto ml-auto">
         <div class="mr-auto ml-auto">

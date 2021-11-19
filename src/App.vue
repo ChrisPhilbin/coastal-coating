@@ -5,7 +5,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div> -->
-    <div class="mb-auto">
+    <div class="mb-auto pt-20 md:pt-2">
       <router-view />
     </div>
     <BottomNav />
