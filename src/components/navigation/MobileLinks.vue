@@ -157,7 +157,16 @@
         leave-to-class="transform scale-95 opacity-0"
       >
         <div v-show="showWork" class="w-full pl-10">
-          <span class="block pb-0.5">Chevrolet</span>
+          <router-link to="/gallery/chevrolet" custom v-slot="{ navigate }"
+            ><span
+              class="block pb-0.5"
+              @click="
+                toggleMenu();
+                navigate();
+              "
+              >Chevrolet</span
+            ></router-link
+          >
           <span class="block pb-0.5">Ford</span>
           <span class="block pb-0.5">Nissan</span>
           <span class="block pb-0.5">Jeep</span>

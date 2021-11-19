@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../components/Home.vue";
 import GenerateQuote from "../components/GenerateQuote.vue";
+import Gallery from "../components/gallery/Gallery.vue";
 
 const routes = [
   {
@@ -13,6 +14,11 @@ const routes = [
     name: "Quote",
     component: GenerateQuote,
   },
+  {
+    path: "/gallery/:make",
+    name: "Gallery",
+    component: Gallery
+  }
 ];
 
 const router = createRouter({

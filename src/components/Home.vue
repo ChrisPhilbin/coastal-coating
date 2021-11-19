@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center pt-20 md:pt-2">
+  <div class="text-center">
     <div class="relative hidden md:inline w-full">
       <img
         src="/img/home/corvette.jpg"
@@ -30,7 +30,7 @@
             h-16
             w-52
             rounded-lg
-            bg-blue-400
+            bg-blue-700
             text-white
             font-semibold
             text-lg
@@ -61,7 +61,6 @@
       >
         We've got you covered.
       </div>
-      <!-- <button class="absolute left-20 bottom-6 h-16 w-52 rounded-lg bg-blue-400 text-white font-semibold text-lg z-10">Book appointment</button> -->
       <router-link to="/quote"
         ><button
           class="
@@ -73,7 +72,7 @@
             h-16
             w-52
             rounded-lg
-            bg-blue-400
+            bg-blue-700
             text-white
             font-semibold
             text-lg
@@ -85,18 +84,39 @@
       >
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 mt-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 bg-black py-6">
       <div>
-        <p class="text-white text-3xl font-bold">Why Coastal Coating?</p>
+        <p class="text-gray-100 text-3xl font-bold">Why Coastal Coating?</p>
+        <p class="text-gray-200 pt-2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="pt-2 ml-auto mr-auto">
+          <img
+            src="../assets/images/social-icons/facebook_small.png"
+            class="inline ml-4 mr-4"
+          />
+          <img
+            src="../assets/images/social-icons/instagram_small.png"
+            class="inline"
+          />
+        </p>
       </div>
 
       <div></div>
     </div>
 
-    <div class="grid grid-cols-1 gap-1 bg-black text-white py-8">
+    <div class="grid grid-cols-1 gap-1 bg-gray-50 py-6">
       <div>
-        <p class="font-semibold text-3xl font-sans">
-          0 to #WOW in 1... 2... 3...
+        <p class="font-semibold text-4xl font-sans text-gray-700">
+          0 to
+          <span class="inline font-bold text-red-500 text-5xl">wow</span> in 1,
+          2, 3...
         </p>
       </div>
     </div>
@@ -108,7 +128,7 @@
         md:grid-cols-3
         ml-auto
         mr-auto
-        bg-black
+        bg-gray-50
         text-white
         pb-10
       "
@@ -131,7 +151,7 @@
             text-4xl
           "
         >
-          #before
+          BEFORE
         </p>
       </div>
 
@@ -153,7 +173,7 @@
             text-4xl
           "
         >
-          #during
+          DURING
         </p>
       </div>
 
@@ -175,7 +195,22 @@
             text-4xl
           "
         >
-          #after
+          AFTER
+        </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 bg-black py-6">
+      <div></div>
+      <div>
+        <p class="text-gray-100 text-3xl font-bold">What is ceramic coating?</p>
+        <p class="text-gray-200 pt-2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
         </p>
       </div>
     </div>

@@ -75,14 +75,16 @@
       >
         <div>
           <MenuItem v-slot="{ active }">
-            <button
-              :class="[
-                active ? 'bg-green-200 text-black' : 'text-gray-900',
-                'group flex rounded-tl-md rounded-tr-md items-center w-full px-2 py-2 text-sm',
-              ]"
-            >
-              Chevrolet
-            </button>
+            <router-link to="/gallery/chevrolet">
+              <button
+                :class="[
+                  active ? 'bg-green-200 text-black' : 'text-gray-900',
+                  'group flex rounded-tl-md rounded-tr-md items-center w-full px-2 py-2 text-sm',
+                ]"
+              >
+                Chevrolet
+              </button>
+            </router-link>
           </MenuItem>
           <MenuItem v-slot="{ active }">
             <button

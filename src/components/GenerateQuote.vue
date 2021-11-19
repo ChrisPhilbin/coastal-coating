@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center pt-20 md:pt-2">
+  <div class="text-center">
     <div class="grid grid-cols-1">
       <div v-if="step === 1" class="mr-auto ml-auto">
         <div class="mr-auto ml-auto">
@@ -16,7 +16,7 @@
             name="firstName"
             id="firstName"
             class="
-              focus:ring-2 focus:ring-indigo-800 focus:outline-none
+              focus:ring-2 focus:ring-blue-700 focus:outline-none
               flex-1
               p-4
               block
@@ -24,7 +24,7 @@
               rounded-lg
               bg-black
               text-lg text-white
-              border border-indigo-800
+              border border-blue-700
               placeholder-gray-600
             "
             placeholder="John"
@@ -44,7 +44,7 @@
             name="lastName"
             id="lastName"
             class="
-              focus:ring-2 focus:ring-indigo-800 focus:outline-none
+              focus:ring-2 focus:ring-blue-700 focus:outline-none
               flex-1
               p-4
               block
@@ -52,7 +52,7 @@
               rounded-lg
               bg-black
               text-lg text-white
-              border border-indigo-800
+              border border-blue-700
               placeholder-gray-600
             "
             placeholder="Smith"
@@ -72,7 +72,7 @@
             name="email"
             id="email"
             class="
-              focus:ring-2 focus:ring-indigo-800 focus:outline-none
+              focus:ring-2 focus:ring-blue-700 focus:outline-none
               flex-1
               p-4
               block
@@ -80,7 +80,7 @@
               rounded-lg
               bg-black
               text-lg text-white
-              border border-indigo-800
+              border border-blue-700
               placeholder-gray-600
             "
             placeholder="john.smith@example.com"
@@ -100,7 +100,7 @@
             name="phone"
             id="phone"
             class="
-              focus:ring-2 focus:ring-indigo-800 focus:outline-none
+              focus:ring-2 focus:ring-blue-700 focus:outline-none
               flex-1
               p-4
               block
@@ -108,7 +108,7 @@
               rounded-lg
               bg-black
               text-lg text-white
-              border border-indigo-800
+              border border-blue-700
               placeholder-gray-600
             "
             placeholder="(281)-330-8004"
@@ -139,7 +139,7 @@
               name="carYear"
               id="carYear"
               class="
-                focus:ring-2 focus:ring-indigo-800 focus:outline-none
+                focus:ring-2 focus:ring-blue-700 focus:outline-none
                 flex-1
                 p-4
                 block
@@ -147,7 +147,7 @@
                 rounded-lg
                 bg-black
                 text-lg text-white
-                border border-indigo-800
+                border border-blue-700
                 placeholder-gray-600
               "
               placeholder="2021"
@@ -167,7 +167,7 @@
               name="carMake"
               id="carMake"
               class="
-                focus:ring-2 focus:ring-indigo-800 focus:outline-none
+                focus:ring-2 focus:ring-blue-700 focus:outline-none
                 flex-1
                 p-4
                 block
@@ -175,7 +175,7 @@
                 rounded-lg
                 bg-black
                 text-lg text-white
-                border border-indigo-800
+                border border-blue-700
                 placeholder-gray-600
               "
               placeholder="Chevorlet"
@@ -195,7 +195,7 @@
               name="carModel"
               id="carModel"
               class="
-                focus:ring-2 focus:ring-indigo-800 focus:outline-none
+                focus:ring-2 focus:ring-blue-700 focus:outline-none
                 flex-1
                 p-4
                 block
@@ -203,7 +203,7 @@
                 rounded-lg
                 bg-black
                 text-lg text-white
-                border border-indigo-800
+                border border-blue-700
                 placeholder-gray-600
               "
               placeholder="Corvette"
@@ -223,7 +223,7 @@
               name="carMilage"
               id="carMilage"
               class="
-                focus:ring-2 focus:ring-indigo-800 focus:outline-none
+                focus:ring-2 focus:ring-blue-700 focus:outline-none
                 flex-1
                 p-4
                 block
@@ -231,7 +231,7 @@
                 rounded-lg
                 bg-black
                 text-lg text-white
-                border border-indigo-800
+                border border-blue-700
                 placeholder-gray-600
               "
               placeholder="15,000"
@@ -300,7 +300,7 @@
           v-else
           class="
             inline
-            bg-blue-800
+            bg-blue-700
             rounded-md
             w-24
             p-3
@@ -315,14 +315,14 @@
 
         <button
           v-if="step < 3"
-          class="inline bg-blue-800 rounded-md w-24 p-3 text-white font-bold"
+          class="inline bg-blue-700 rounded-md w-24 p-3 text-white font-bold"
           @click="step = step + 1"
         >
           Next
         </button>
         <button
           v-else
-          class="inline bg-blue-800 rounded-md w-24 p-3 text-white font-bold"
+          class="inline bg-blue-700 rounded-md w-24 p-3 text-white font-bold"
         >
           Submit
         </button>
