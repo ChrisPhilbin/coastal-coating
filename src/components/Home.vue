@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center pt-20 md:pt-2">
+  <div class="text-center">
     <div class="relative hidden md:inline w-full">
       <img
         src="/img/home/corvette.jpg"
