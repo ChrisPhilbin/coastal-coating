@@ -2,19 +2,23 @@
   <div v-if="errors">
     <p class="text-red-500">Not found!</p>
   </div>
-  <p class="text-white">{{ gallery.intro }}</p>
-  <br />
   <div
     class="
       grid grid-cols-1
       md:grid-cols-2
-      gap-8
+      gap-2
+      md:gap-8
       ml-auto
       mr-auto
       justify-items-center
-      w-2/3
+      max-w-auto
+      md:w-3/4
     "
   >
+    <div class="col-span-1 md:col-span-2 w-auto">
+      <p class="text-white font-bold text-3xl">{{ gallery.name }}</p>
+      <p class="text-gray-300">{{ gallery.intro }}</p>
+    </div>
     <div v-for="img in gallery.images" :key="img.id">
       <img :src="`${img.sm_url}`" />
     </div>
@@ -29,7 +33,8 @@ export default {
       errors: false,
       galleries: {
         chevrolet: {
-          intro: "Some test text",
+          name: "Chevrolet",
+          intro: "Chevy makes some of the most iconic sports cars - the Corvette and the Camaro.",
           leaderImage: "",
           images: [
             {
