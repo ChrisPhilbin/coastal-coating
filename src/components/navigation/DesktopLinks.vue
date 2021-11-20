@@ -87,49 +87,57 @@
             </router-link>
           </MenuItem>
           <MenuItem v-slot="{ active }">
-            <button
-              :class="[
-                active ? 'bg-green-200 text-black' : 'text-gray-900',
-                'group flex items-center w-full px-2 py-2 text-sm',
-              ]"
-            >
-              Ford
-            </button>
+            <router-link to="/gallery/ford">
+              <button
+                :class="[
+                  active ? 'bg-green-200 text-black' : 'text-gray-900',
+                  'group flex items-center w-full px-2 py-2 text-sm',
+                ]"
+              >
+                Ford
+              </button>
+            </router-link>
           </MenuItem>
         </div>
         <div>
           <MenuItem v-slot="{ active }">
-            <button
-              :class="[
-                active ? 'bg-green-200 text-black' : 'text-gray-900',
-                'group flex items-center w-full px-2 py-2 text-sm',
-              ]"
-            >
-              Nissan
-            </button>
+            <router-link to="/gallery/nissan">
+              <button
+                :class="[
+                  active ? 'bg-green-200 text-black' : 'text-gray-900',
+                  'group flex items-center w-full px-2 py-2 text-sm',
+                ]"
+              >
+                Nissan
+              </button>
+            </router-link>
           </MenuItem>
           <MenuItem v-slot="{ active }">
-            <button
-              :class="[
-                active ? 'bg-green-200 text-black' : 'text-gray-900',
-                'group flex items-center w-full px-2 py-2 text-sm',
-              ]"
-            >
-              Jeep
-            </button>
+            <router-link to="/gallery/jeep">
+              <button
+                :class="[
+                  active ? 'bg-green-200 text-black' : 'text-gray-900',
+                  'group flex items-center w-full px-2 py-2 text-sm',
+                ]"
+              >
+                Jeep
+              </button>
+            </router-link>
           </MenuItem>
         </div>
 
         <div>
           <MenuItem v-slot="{ active }">
-            <button
-              :class="[
-                active ? 'bg-green-200 text-black' : 'text-gray-900',
-                'group flex radius-bl-md radius-br-md items-center w-full px-2 py-2 text-sm',
-              ]"
-            >
-              BMW
-            </button>
+            <router-link to="/gallery/bmw">
+              <button
+                :class="[
+                  active ? 'bg-green-200 text-black' : 'text-gray-900',
+                  'group flex radius-bl-md radius-br-md items-center w-full px-2 py-2 text-sm',
+                ]"
+              >
+                BMW
+              </button>
+            </router-link>
           </MenuItem>
         </div>
       </MenuItems>

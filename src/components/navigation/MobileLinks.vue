@@ -167,10 +167,46 @@
               >Chevrolet</span
             ></router-link
           >
-          <span class="block pb-0.5">Ford</span>
-          <span class="block pb-0.5">Nissan</span>
-          <span class="block pb-0.5">Jeep</span>
-          <span class="block pb-0.5">BMW</span>
+          <router-link to="/gallery/ford" custom v-slot="{ navigate }"
+            ><span
+              class="block pb-0.5"
+              @click="
+                toggleMenu();
+                navigate();
+              "
+              >Ford</span
+            ></router-link
+          >
+          <router-link to="/gallery/nissan" custom v-slot="{ navigate }"
+            ><span
+              class="block pb-0.5"
+              @click="
+                toggleMenu();
+                navigate();
+              "
+              >Nissan</span
+            ></router-link
+          >
+          <router-link to="/gallery/jeep" custom v-slot="{ navigate }"
+            ><span
+              class="block pb-0.5"
+              @click="
+                toggleMenu();
+                navigate();
+              "
+              >Jeep</span
+            ></router-link
+          >
+          <router-link to="/gallery/bmw" custom v-slot="{ navigate }"
+            ><span
+              class="block pb-0.5"
+              @click="
+                toggleMenu();
+                navigate();
+              "
+              >BMW</span
+            ></router-link
+          >
         </div>
       </transition>
       <div class="border-b-2 w-full p-3">

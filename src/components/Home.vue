@@ -87,14 +87,17 @@
     <div class="grid grid-cols-1 md:grid-cols-2 bg-black py-6">
       <div>
         <p class="text-gray-100 text-3xl font-bold">Why Coastal Coating?</p>
-        <p class="text-gray-200 pt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        <p class="text-gray-200 pt-2 px-4 text-left">
+          Coastal Coating protects those things that you’ve invested in (cars,
+          boats, home, etc) and helps make cleaning them easier. Protecting them
+          from the UV Rays, saltwater, and other environmental hazards. This
+          means less time maintaining and more time ENJOYING these things in
+          your life!<br /><br />
+          Coastal Coating has been blessed to have a loyal client base and great
+          relations with other local businesses in the area. In turn, we have
+          been able to sponsor local non-profit clubs such as Myrtle Beach
+          Corvette Club, Coastal Carolina Mustang Club, and Myrtle Beach Car
+          Club.
         </p>
         <p class="pt-2 ml-auto mr-auto">
           <img
