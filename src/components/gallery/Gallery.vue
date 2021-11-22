@@ -20,7 +20,7 @@
       <p class="text-gray-300" v-html="gallery.intro"></p>
     </div>
     <div v-for="img in gallery.images" :key="img.id">
-      <img :src="`${img.sm_url}`" />
+      <img :src="`${img.sm_url}`" class="rounded" />
     </div>
   </div>
 </template>

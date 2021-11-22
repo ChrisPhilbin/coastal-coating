@@ -37,7 +37,7 @@
             z-10
           "
         >
-          Book appointment
+          Book an appointment
         </button></router-link
       >
     </div>
@@ -79,14 +79,16 @@
             z-10
           "
         >
-          Book appointment
+          Book an appointment
         </button></router-link
       >
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 bg-black py-6">
-      <div>
-        <p class="text-gray-100 text-3xl font-bold">Why Coastal Coating?</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 bg-black pt-6 pb-0 md:pb-3">
+      <div class="mt-auto mb-auto">
+        <p class="text-gray-100 text-3xl font-bold mb-5">
+          Why Coastal Coating?
+        </p>
         <p class="text-gray-200 pt-2 px-4 text-left">
           Coastal Coating protects those things that you’ve invested in (cars,
           boats, home, etc) and helps make cleaning them easier. Protecting them
@@ -99,7 +101,7 @@
           Corvette Club, Coastal Carolina Mustang Club, and Myrtle Beach Car
           Club.
         </p>
-        <p class="pt-2 ml-auto mr-auto">
+        <p class="pt-2 ml-auto mr-auto mt-8 pb-3">
           <img
             src="../assets/images/social-icons/facebook_small.png"
             class="inline ml-4 mr-4"
@@ -111,7 +113,13 @@
         </p>
       </div>
 
-      <div></div>
+      <div class="mt-auto mb-auto">
+        <img
+          src="/img/home/coastal_coating_shop_front.jpg"
+          alt="Coastal Coating Shop Front"
+          class="inline rounded"
+        />
+      </div>
     </div>
 
     <div class="grid grid-cols-1 gap-1 bg-gray-50 py-6">
