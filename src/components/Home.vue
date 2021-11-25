@@ -141,7 +141,7 @@
         mr-auto
         bg-gray-50
         text-white
-        pb-10
+        pb-2
       "
     >
       <div class="relative ml-auto mr-auto">
@@ -214,14 +214,18 @@
       <div></div>
       <div>
         <p class="text-gray-100 text-3xl font-bold">What is ceramic coating?</p>
-        <p class="text-gray-200 pt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        <p class="text-gray-200 pt-2 px-4 text-left">
+          In a couple years it has gone from market entry to mainstream, ceramic
+          coating is the new normal for paint protection. Why waste time
+          reapplying waxes and sealants weekly or monthly when you can have a 3,
+          5, or 10-Year Ceramic Coating to protect your investment, make it
+          easier to clean, and keep it looking amazing?<br /><br />
+
+          <span class="font-semibold">What's in it for me?</span><br />
+          This means less time spent washing your vehicle. Protecting your
+          investment for YEARS – After all, the first thing anyone bases value
+          of a car, boat, etc. on is its appearance. You’ll have an unbeatable
+          shine & gloss after every wash.
         </p>
       </div>
     </div>
