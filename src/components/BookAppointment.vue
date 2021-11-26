@@ -247,11 +247,11 @@
         leave-from-class="transform scale-100 opacity-100"
         leave-to-class="transform scale-95 opacity-0"
       >
-        <div v-if="step === 3" class="mr-auto ml-auto">
+        <div v-if="step === 3" class="mr-auto ml-auto text-left">
           <div class="mr-auto ml-auto">
             <label
               for="ceramicCoating"
-              class="inline text-sm text-left font-medium text-gray-500 pb-2"
+              class="inline text-sm text-left text-xl text-gray-500 pb-2"
             >
               Ceramic Coating
             </label>
@@ -266,7 +266,7 @@
           <div class="mr-auto ml-auto">
             <label
               for="washWax"
-              class="inline text-sm text-left font-medium text-gray-500 pb-2"
+              class="inline text-sm text-left text-xl text-gray-500 pb-2"
             >
               Wash & wax
             </label>
@@ -346,6 +346,7 @@ export default {
       carModel: "",
       carMilage: "",
       servicesDesired: [],
+      dateDesired: "",
     };
   },
 };

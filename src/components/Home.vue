@@ -37,7 +37,7 @@
             z-10
           "
         >
-          Book appointment
+          Book an appointment
         </button></router-link
       >
     </div>
@@ -79,24 +79,29 @@
             z-10
           "
         >
-          Book appointment
+          Book an appointment
         </button></router-link
       >
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 bg-black py-6">
-      <div>
-        <p class="text-gray-100 text-3xl font-bold">Why Coastal Coating?</p>
-        <p class="text-gray-200 pt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+    <div class="grid grid-cols-1 md:grid-cols-2 bg-black pt-6 pb-0 md:pb-3">
+      <div class="mt-auto mb-auto">
+        <p class="text-gray-100 text-3xl font-bold mb-5">
+          Why Coastal Coating?
         </p>
-        <p class="pt-2 ml-auto mr-auto">
+        <p class="text-gray-200 pt-2 px-4 text-left">
+          Coastal Coating protects those things that you’ve invested in (cars,
+          boats, home, etc) and helps make cleaning them easier. Protecting them
+          from the UV Rays, saltwater, and other environmental hazards. This
+          means less time maintaining and more time ENJOYING these things in
+          your life!<br /><br />
+          Coastal Coating has been blessed to have a loyal client base and great
+          relations with other local businesses in the area. In turn, we have
+          been able to sponsor local non-profit clubs such as Myrtle Beach
+          Corvette Club, Coastal Carolina Mustang Club, and Myrtle Beach Car
+          Club.
+        </p>
+        <p class="pt-2 ml-auto mr-auto mt-8 pb-3">
           <img
             src="../assets/images/social-icons/facebook_small.png"
             class="inline ml-4 mr-4"
@@ -108,7 +113,13 @@
         </p>
       </div>
 
-      <div></div>
+      <div class="mt-auto mb-auto">
+        <img
+          src="/img/home/coastal_coating_shop_front.jpg"
+          alt="Coastal Coating Shop Front"
+          class="inline rounded"
+        />
+      </div>
     </div>
 
     <div class="grid grid-cols-1 gap-1 bg-gray-50 py-6">
@@ -130,7 +141,7 @@
         mr-auto
         bg-gray-50
         text-white
-        pb-10
+        pb-2
       "
     >
       <div class="relative ml-auto mr-auto">
@@ -203,14 +214,18 @@
       <div></div>
       <div>
         <p class="text-gray-100 text-3xl font-bold">What is ceramic coating?</p>
-        <p class="text-gray-200 pt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        <p class="text-gray-200 pt-2 px-4 text-left">
+          In a couple years it has gone from market entry to mainstream, ceramic
+          coating is the new normal for paint protection. Why waste time
+          reapplying waxes and sealants weekly or monthly when you can have a 3,
+          5, or 10-Year Ceramic Coating to protect your investment, make it
+          easier to clean, and keep it looking amazing?<br /><br />
+
+          <span class="font-semibold">What's in it for me?</span><br />
+          This means less time spent washing your vehicle. Protecting your
+          investment for YEARS – After all, the first thing anyone bases value
+          of a car, boat, etc. on is its appearance. You’ll have an unbeatable
+          shine & gloss after every wash.
         </p>
       </div>
     </div>

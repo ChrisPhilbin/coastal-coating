@@ -15,12 +15,15 @@
       md:w-3/4
     "
   >
-    <div class="col-span-1 md:col-span-2 w-auto">
+    <div class="px-2">
       <p class="text-white font-bold text-3xl">{{ gallery.name }}</p>
-      <p class="text-gray-300">{{ gallery.intro }}</p>
+      <p class="text-gray-300" v-html="gallery.intro"></p>
+    </div>
+    <div>
+      <img :src="`${gallery.leaderImage}`" class="rounded" />
     </div>
     <div v-for="img in gallery.images" :key="img.id">
-      <img :src="`${img.sm_url}`" />
+      <img :src="`${img.sm_url}`" class="rounded" />
     </div>
   </div>
 </template>
@@ -34,8 +37,9 @@ export default {
       galleries: {
         chevrolet: {
           name: "Chevrolet",
-          intro: "Chevy makes some of the most iconic sports cars - the Corvette and the Camaro.",
-          leaderImage: "",
+          intro:
+            '<p class="pb-3">Chevy makes some of the most iconic sports cars in American history but also produces some great sedans and SUVs that are seen all over the roads.</p><p>Whether you have the latest C8 Corvette, a Suburban to take long family roadtrips, or an iconic 1963 split-window Sting Ray, protecting your Chevy from the harsh elements should be of top concern.</p>',
+          leaderImage: "/img/cars/gallery/chevrolet/corvette_sm.jpg",
           images: [
             {
               id: 1,
@@ -55,9 +59,21 @@ export default {
           ],
         },
         ford: {
-          intro: "",
-          leaderImage: "",
-          images: [],
+          name: "Ford",
+          intro: "The automaker that started it all: Ford.",
+          leaderImage: "/img/cars/gallery/ford/mach1_mustang_sm.jpg",
+          images: [
+            {
+              id: 1,
+              lg_url: "",
+              sm_url: "/img/cars/gallery/ford/f150_sm.jpg",
+            },
+            {
+              id: 2,
+              lg_url: "",
+              sm_url: "/img/cars/gallery/ford/f450_sm.jpg",
+            },
+          ],
         },
         nissan: {
           intro: "",
