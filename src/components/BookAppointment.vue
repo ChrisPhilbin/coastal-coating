@@ -346,6 +346,7 @@ export default {
       carModel: "",
       carMilage: "",
       servicesDesired: [],
+      dateDesired: "",
     };
   },
 };
