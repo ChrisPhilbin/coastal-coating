@@ -12,7 +12,7 @@
 
           <input
             type="text"
-            v-model="firstName"
+            v-model="appointmentDetails.firstName"
             name="firstName"
             id="firstName"
             class="
@@ -40,7 +40,7 @@
 
           <input
             type="text"
-            v-model="lastName"
+            v-model="appointmentDetails.lastName"
             name="lastName"
             id="lastName"
             class="
@@ -68,7 +68,7 @@
 
           <input
             type="text"
-            v-model="email"
+            v-model="appointmentDetails.email"
             name="email"
             id="email"
             class="
@@ -96,7 +96,7 @@
 
           <input
             type="text"
-            v-model="phone"
+            v-model="appointmentDetails.phone"
             name="phone"
             id="phone"
             class="
@@ -135,7 +135,7 @@
 
             <input
               type="text"
-              v-model="carYear"
+              v-model="appointmentDetails.carYear"
               name="carYear"
               id="carYear"
               class="
@@ -163,7 +163,7 @@
 
             <input
               type="text"
-              v-model="carMake"
+              v-model="appointmentDetails.carMake"
               name="carMake"
               id="carMake"
               class="
@@ -191,7 +191,7 @@
 
             <input
               type="text"
-              v-model="carModel"
+              v-model="appointmentDetails.carModel"
               name="carModel"
               id="carModel"
               class="
@@ -219,7 +219,7 @@
 
             <input
               type="text"
-              v-model="carMilage"
+              v-model="appointmentDetails.carMilage"
               name="carMilage"
               id="carMilage"
               class="
@@ -258,7 +258,7 @@
 
             <input
               type="checkbox"
-              v-model="servicesDesired"
+              v-model="appointmentDetails.servicesDesired"
               value="Ceramic Coating"
               id="ceramicCoating"
             />
@@ -273,7 +273,7 @@
 
             <input
               type="checkbox"
-              v-model="servicesDesired"
+              v-model="appointmentDetails.servicesDesired"
               value="Wash and Wax"
               id="washWax"
             />
@@ -322,6 +322,7 @@
         </button>
         <button
           v-else
+          @click.prevent="submitAppointmentDetails"
           class="inline bg-blue-700 rounded-md w-24 p-3 text-white font-bold"
         >
           Submit
@@ -337,17 +338,45 @@ export default {
   data() {
     return {
       step: 1,
-      firstName: "",
-      lastName: "",
-      phone: "",
-      email: "",
-      carYear: "",
-      carMake: "",
-      carModel: "",
-      carMilage: "",
-      servicesDesired: [],
-      dateDesired: "",
+      appointmentDetails: {
+        firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        carYear: "",
+        carMake: "",
+        carModel: "",
+        carMilage: "",
+        servicesDesired: [],
+        dateDesired: "",
+      },
     };
+  },
+  methods: {
+    async submitAppointmentDetails() {
+      try {
+        let response = await fetch(
+          `http://localhost:5001/coastal-coating/us-central1/api/book-appointment`,
+          {
+            method: "POST",
+
+            body: JSON.stringify({
+              appointmentDetails: this.appointmentDetails,
+            }),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        let data = await response.json();
+        if (response.ok) {
+          console.log(data);
+          alert("Success!");
+        }
+      } catch (error) {
+        //do something with error
+      }
+    },
   },
 };
 </script>
