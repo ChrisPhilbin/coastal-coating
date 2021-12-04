@@ -78,17 +78,85 @@ export default {
         nissan: {
           intro: "",
           leaderImage: "",
-          images: [],
+          images: [
+            {
+              id: 1,
+              lg_url: "",
+              sm_url: "/img/cars/gallery/nissan/altima_sm.jpg",
+            },
+            {
+              id: 2,
+              lg_url: "",
+              sm_url: "/img/cars/gallery/nissan/titan_sm.jpg",
+            },
+            {
+              id: 3,
+              lg_url: "",
+              sm_url: "/img/cars/gallery/nissan/maxima_sm.jpg",
+            },
+            {
+              id: 4,
+              lg_url: "",
+              sm_url: "/img/cars/gallery/nissan/370z_sm.jpg",
+            },
+            {
+              id: 5,
+              lg_url: "",
+              sm_url: "/img/cars/gallery/nissan/murano_sm.jpg",
+            },
+          ],
         },
         jeep: {
           intro: "",
           leaderImage: "",
-          images: [],
+          images: [
+            {
+              id: 1,
+              lg_url: "",
+              sm_url: "/img/cars/gallery/jeep/wrangler_sm.jpg",
+            },
+            {
+              id: 2,
+              lg_url: "",
+              sm_url: "/img/cars/gallery/jeep/trackhawk_sm.jpg",
+            },
+            {
+              id: 3,
+              lg_url: "",
+              sm_url: "/img/cars/gallery/jeep/trailhawk_sm.jpg",
+            },
+            {
+              id: 4,
+              lg_url: "",
+              sm_url: "/img/cars/gallery/jeep/gladiator_sm.jpg",
+            },
+            {
+              id: 5,
+              lg_url: "",
+              sm_url: "/img/cars/gallery/jeep/wrangler_sport_sm.jpg",
+            },
+          ],
         },
         bmw: {
           intro: "",
           leaderImage: "",
-          images: [],
+          images: [
+            {
+              id: 1,
+              lg_url: "",
+              sm_url: "/img/cars/gallery/bmw/x6_sm.jpg",
+            },
+            {
+              id: 2,
+              lg_url: "",
+              sm_url: "/img/cars/gallery/bmw/m240i_sm.jpg",
+            },
+            {
+              id: 3,
+              lg_url: "",
+              sm_url: "/img/cars/gallery/bmw/3_series_sm.jpg",
+            },
+          ],
         },
       },
     };

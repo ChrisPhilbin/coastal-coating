@@ -159,7 +159,7 @@
         <div v-show="showWork" class="w-full pl-10">
           <router-link to="/gallery/chevrolet" custom v-slot="{ navigate }"
             ><span
-              class="block pb-0.5"
+              class="block pb-2"
               @click="
                 toggleMenu();
                 navigate();
@@ -169,7 +169,7 @@
           >
           <router-link to="/gallery/ford" custom v-slot="{ navigate }"
             ><span
-              class="block pb-0.5"
+              class="block pb-2"
               @click="
                 toggleMenu();
                 navigate();
@@ -179,7 +179,7 @@
           >
           <router-link to="/gallery/nissan" custom v-slot="{ navigate }"
             ><span
-              class="block pb-0.5"
+              class="block pb-2"
               @click="
                 toggleMenu();
                 navigate();
@@ -189,7 +189,7 @@
           >
           <router-link to="/gallery/jeep" custom v-slot="{ navigate }"
             ><span
-              class="block pb-0.5"
+              class="block pb-2"
               @click="
                 toggleMenu();
                 navigate();
@@ -199,7 +199,7 @@
           >
           <router-link to="/gallery/bmw" custom v-slot="{ navigate }"
             ><span
-              class="block pb-0.5"
+              class="block pb-2"
               @click="
                 toggleMenu();
                 navigate();

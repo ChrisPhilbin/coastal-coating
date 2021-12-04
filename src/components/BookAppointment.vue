@@ -1,340 +1,369 @@
 <template>
   <div class="text-center">
     <div class="grid grid-cols-1">
-      <div v-if="step === 1" class="mr-auto ml-auto">
-        <div class="mr-auto ml-auto">
-          <label
-            for="firstName"
-            class="block text-sm text-left font-medium text-gray-500 pb-2"
-          >
-            Your first name
-          </label>
-
-          <input
-            type="text"
-            v-model="appointmentDetails.firstName"
-            name="firstName"
-            id="firstName"
-            class="
-              focus:ring-2 focus:ring-blue-700 focus:outline-none
-              flex-1
-              p-4
-              block
-              w-full
-              rounded-lg
-              bg-black
-              text-lg text-white
-              border border-blue-700
-              placeholder-gray-600
-            "
-            placeholder="John"
-          />
-        </div>
-        <div class="mr-auto ml-auto pt-4">
-          <label
-            for="lastName"
-            class="block text-sm text-left font-medium text-gray-500 pb-2"
-          >
-            Your last name
-          </label>
-
-          <input
-            type="text"
-            v-model="appointmentDetails.lastName"
-            name="lastName"
-            id="lastName"
-            class="
-              focus:ring-2 focus:ring-blue-700 focus:outline-none
-              flex-1
-              p-4
-              block
-              w-full
-              rounded-lg
-              bg-black
-              text-lg text-white
-              border border-blue-700
-              placeholder-gray-600
-            "
-            placeholder="Smith"
-          />
-        </div>
-        <div class="mr-auto ml-auto pt-4">
-          <label
-            for="email"
-            class="block text-sm text-left font-medium text-gray-500 pb-2"
-          >
-            Your email address
-          </label>
-
-          <input
-            type="text"
-            v-model="appointmentDetails.email"
-            name="email"
-            id="email"
-            class="
-              focus:ring-2 focus:ring-blue-700 focus:outline-none
-              flex-1
-              p-4
-              block
-              w-full
-              rounded-lg
-              bg-black
-              text-lg text-white
-              border border-blue-700
-              placeholder-gray-600
-            "
-            placeholder="john.smith@example.com"
-          />
-        </div>
-        <div class="mr-auto ml-auto pt-4">
-          <label
-            for="phoneNumber"
-            class="block text-sm text-left font-medium text-gray-500 pb-2"
-          >
-            Your phone number
-          </label>
-
-          <input
-            type="text"
-            v-model="appointmentDetails.phone"
-            name="phone"
-            id="phone"
-            class="
-              focus:ring-2 focus:ring-blue-700 focus:outline-none
-              flex-1
-              p-4
-              block
-              w-full
-              rounded-lg
-              bg-black
-              text-lg text-white
-              border border-blue-700
-              placeholder-gray-600
-            "
-            placeholder="(281)-330-8004"
-          />
-        </div>
-      </div>
-
-      <transition
-        enter-active-class="transition duration-500 ease-out"
-        enter-from-class="transform scale-95 opacity-0"
-        enter-to-class="transform scale-100 opacity-100"
-        leave-active-class="transition duration-500 ease-in"
-        leave-from-class="transform scale-100 opacity-100"
-        leave-to-class="transform scale-95 opacity-0"
+      <Form
+        @submit="handleAppointmentSubmit"
+        v-slot="{ errors }"
+        :validation-schema="schema"
+        class="ml-auto mr-auto w-80"
       >
-        <div v-if="step === 2" class="mr-auto ml-auto">
-          <div class="mr-auto ml-auto">
-            <label
-              for="carYear"
-              class="block text-sm text-left font-medium text-gray-500 pb-2"
-            >
-              Your car's year
-            </label>
+        <transition
+          enter-active-class="transition duration-500 ease-out"
+          enter-from-class="transform scale-95 opacity-0"
+          enter-to-class="transform scale-100 opacity-100"
+        >
+          <div v-show="step === 1" class="mr-auto ml-auto">
+            <div class="mr-auto ml-auto">
+              <label
+                for="firstName"
+                class="block text-sm text-left font-medium text-gray-500 pb-2"
+              >
+                Your first name
+              </label>
 
-            <input
-              type="text"
-              v-model="appointmentDetails.carYear"
-              name="carYear"
-              id="carYear"
-              class="
-                focus:ring-2 focus:ring-blue-700 focus:outline-none
-                flex-1
-                p-4
-                block
-                w-full
-                rounded-lg
-                bg-black
-                text-lg text-white
-                border border-blue-700
-                placeholder-gray-600
-              "
-              placeholder="2021"
-            />
-          </div>
-          <div class="mr-auto ml-auto pt-4">
-            <label
-              for="carMake"
-              class="block text-sm text-left font-medium text-gray-500 pb-2"
-            >
-              Your car's make
-            </label>
+              <Field
+                type="text"
+                v-model="appointmentDetails.firstName"
+                name="firstName"
+                id="firstName"
+                class="input-default"
+                :class="[errors.firstName ? 'input--error' : 'input--no-error']"
+                placeholder="John"
+              />
+              <p class="pt-2 text-left text-sm text-red-500">
+                {{ errors.firstName ? "*First name is required" : "" }}
+              </p>
+            </div>
+            <div class="mr-auto ml-auto pt-4">
+              <label
+                for="lastName"
+                class="block text-sm text-left font-medium text-gray-500 pb-2"
+              >
+                Your last name
+              </label>
 
-            <input
-              type="text"
-              v-model="appointmentDetails.carMake"
-              name="carMake"
-              id="carMake"
-              class="
-                focus:ring-2 focus:ring-blue-700 focus:outline-none
-                flex-1
-                p-4
-                block
-                w-full
-                rounded-lg
-                bg-black
-                text-lg text-white
-                border border-blue-700
-                placeholder-gray-600
-              "
-              placeholder="Chevorlet"
-            />
-          </div>
-          <div class="mr-auto ml-auto pt-4">
-            <label
-              for="carModel"
-              class="block text-sm text-left font-medium text-gray-500 pb-2"
-            >
-              Your car's model
-            </label>
+              <Field
+                type="text"
+                v-model="appointmentDetails.lastName"
+                name="lastName"
+                id="lastName"
+                class="input-default"
+                :class="[errors.lastName ? 'input--error' : 'input--no-error']"
+                placeholder="Smith"
+              />
+              <p class="pt-2 text-left text-sm text-red-500">
+                {{ errors.lastName ? "*Last name is required" : "" }}
+              </p>
+            </div>
+            <div class="mr-auto ml-auto pt-4">
+              <label
+                for="email"
+                class="block text-sm text-left font-medium text-gray-500 pb-2"
+              >
+                Your email address
+              </label>
 
-            <input
-              type="text"
-              v-model="appointmentDetails.carModel"
-              name="carModel"
-              id="carModel"
-              class="
-                focus:ring-2 focus:ring-blue-700 focus:outline-none
-                flex-1
-                p-4
-                block
-                w-full
-                rounded-lg
-                bg-black
-                text-lg text-white
-                border border-blue-700
-                placeholder-gray-600
-              "
-              placeholder="Corvette"
-            />
-          </div>
-          <div class="mr-auto ml-auto pt-4">
-            <label
-              for="carMilage"
-              class="block text-sm text-left font-medium text-gray-500 pb-2"
-            >
-              Your car's milage (estimated)
-            </label>
+              <Field
+                type="email"
+                v-model="appointmentDetails.email"
+                name="email"
+                id="email"
+                class="input-default"
+                :class="[errors.email ? 'input--error' : 'input--no-error']"
+                placeholder="john.smith@example.com"
+              />
+              <p class="pt-2 text-left text-sm text-red-500">
+                {{ errors.email }}
+              </p>
+            </div>
+            <div class="mr-auto ml-auto pt-4">
+              <label
+                for="phoneNumber"
+                class="block text-sm text-left font-medium text-gray-500 pb-2"
+              >
+                Your phone number
+              </label>
 
-            <input
-              type="text"
-              v-model="appointmentDetails.carMilage"
-              name="carMilage"
-              id="carMilage"
-              class="
-                focus:ring-2 focus:ring-blue-700 focus:outline-none
-                flex-1
-                p-4
-                block
-                w-full
-                rounded-lg
-                bg-black
-                text-lg text-white
-                border border-blue-700
-                placeholder-gray-600
-              "
-              placeholder="15,000"
-            />
+              <Field
+                type="phone"
+                v-model="appointmentDetails.phone"
+                name="phone"
+                id="phone"
+                class="input-default"
+                :class="[errors.phone ? 'input--error' : 'input--no-error']"
+                placeholder="843-999-2636"
+              />
+            </div>
+            <p class="pt-2 text-left text-sm text-red-500">
+              {{
+                errors.phone ? "* Phone must be valid - Ex: 843-999-2636" : ""
+              }}
+            </p>
           </div>
+        </transition>
+
+        <transition
+          enter-active-class="transition duration-500 ease-out"
+          enter-from-class="transform scale-95 opacity-0"
+          enter-to-class="transform scale-100 opacity-100"
+        >
+          <div v-show="step === 2" class="mr-auto ml-auto">
+            <div class="mr-auto ml-auto">
+              <label
+                for="carYear"
+                class="block text-sm text-left font-medium text-gray-500 pb-2"
+              >
+                Your car's year
+              </label>
+
+              <Field
+                type="text"
+                v-model="appointmentDetails.carYear"
+                name="carYear"
+                id="carYear"
+                class="input-default"
+                :class="[errors.carYear ? 'input--error' : 'input--no-error']"
+                placeholder="2021"
+              />
+            </div>
+            <p class="pt-2 text-left text-sm text-red-500">
+              {{ errors.carYear ? "Must be valid 4 digit year." : "" }}
+            </p>
+
+            <div class="mr-auto ml-auto pt-4">
+              <label
+                for="carMake"
+                class="block text-sm text-left font-medium text-gray-500 pb-2"
+              >
+                Your car's make
+              </label>
+
+              <Field
+                type="text"
+                v-model="appointmentDetails.carMake"
+                name="carMake"
+                id="carMake"
+                class="input-default"
+                :class="[errors.carMake ? 'input--error' : 'input--no-error']"
+                placeholder="Chevorlet"
+              />
+            </div>
+            <p class="pt-2 text-left text-sm text-red-500">
+              {{ errors.carMake }}
+            </p>
+            <div class="mr-auto ml-auto pt-4">
+              <label
+                for="carModel"
+                class="block text-sm text-left font-medium text-gray-500 pb-2"
+              >
+                Your car's model
+              </label>
+
+              <Field
+                type="text"
+                v-model="appointmentDetails.carModel"
+                name="carModel"
+                id="carModel"
+                class="input-default"
+                :class="[errors.carModel ? 'input--error' : 'input--no-error']"
+                placeholder="Corvette"
+              />
+            </div>
+            <p class="pt-2 text-left text-sm text-red-500">
+              {{ errors.carModel }}
+            </p>
+            <div class="mr-auto ml-auto pt-4">
+              <label
+                for="carMilage"
+                class="block text-sm text-left font-medium text-gray-500 pb-2"
+              >
+                Your car's milage (estimated)
+              </label>
+
+              <input
+                type="text"
+                v-model="appointmentDetails.carMilage"
+                name="carMilage"
+                id="carMilage"
+                class="
+                  focus:ring-2 focus:ring-blue-700 focus:outline-none
+                  flex-1
+                  p-4
+                  block
+                  w-full
+                  rounded-lg
+                  bg-black
+                  text-lg text-white
+                  border border-blue-700
+                  placeholder-gray-600
+                "
+                placeholder="15,000"
+              />
+            </div>
+          </div>
+        </transition>
+        <transition
+          enter-active-class="transition duration-500 ease-out"
+          enter-from-class="transform scale-95 opacity-0"
+          enter-to-class="transform scale-100 opacity-100"
+        >
+          <div v-show="step === 3" class="mr-auto ml-auto text-left">
+            <div class="mr-auto ml-auto">
+              <label
+                for="ceramicCoating"
+                class="inline text-sm text-left text-xl text-gray-500 pb-2"
+              >
+                Ceramic Coating
+              </label>
+
+              <input
+                type="checkbox"
+                v-model="appointmentDetails.servicesDesired"
+                value="Ceramic Coating"
+                id="ceramicCoating"
+              />
+            </div>
+            <div class="mr-auto ml-auto">
+              <label
+                for="washWax"
+                class="inline text-sm text-left text-xl text-gray-500 pb-2"
+              >
+                Wash & wax
+              </label>
+
+              <input
+                type="checkbox"
+                v-model="appointmentDetails.servicesDesired"
+                value="Wash and Wax"
+                id="washWax"
+              />
+            </div>
+            <div class="mr-auto ml-auto pt-4">
+              <label
+                for="carMilage"
+                class="block text-sm text-left font-medium text-gray-500 pb-2"
+              >
+                Additional questions?
+              </label>
+
+              <textarea
+                rows="5"
+                cols="25"
+                maxlength="300"
+                v-model="appointmentDetails.otherComments"
+                name="otherComments"
+                id="otherComments"
+                class="
+                  resize-none
+                  focus:ring-2 focus:ring-blue-700 focus:outline-none
+                  flex-1
+                  p-4
+                  block
+                  w-full
+                  rounded-lg
+                  bg-black
+                  text-lg text-white
+                  border border-blue-700
+                  placeholder-gray-600
+                "
+                placeholder="Anything else you'd like us to know?"
+              />
+              <p
+                class="text-xs pt-2 pl-4"
+                :class="[
+                  appointmentDetails.otherComments.length === 300
+                    ? 'text-red-600'
+                    : 'text-gray-300',
+                ]"
+              >
+                {{ appointmentDetails.otherComments.length }} out of 300
+                characters used
+              </p>
+            </div>
+          </div>
+        </transition>
+        <div class="mr-auto ml-auto pt-4">
+          <button
+            v-if="step === 1"
+            type="button"
+            class="
+              disabled
+              cursor-not-allowed
+              inline
+              bg-gray-500
+              rounded-md
+              w-24
+              p-3
+              mr-3
+            "
+          >
+            Previous
+          </button>
+          <button
+            v-else
+            type="button"
+            class="
+              inline
+              bg-blue-700
+              rounded-md
+              w-24
+              p-3
+              mr-3
+              text-white
+              font-bold
+            "
+            @click="step = step - 1"
+          >
+            Previous
+          </button>
+
+          <button
+            v-if="step < 3"
+            type="button"
+            class="inline bg-blue-700 rounded-md w-24 p-3 text-white font-bold"
+            @click="step = step + 1"
+          >
+            Next
+          </button>
+          <button
+            @click.prevent="handleAppointmentSubmit"
+            v-else
+            class="inline bg-blue-700 rounded-md w-24 p-3 text-white font-bold"
+          >
+            Submit
+          </button>
         </div>
-      </transition>
-      <transition
-        enter-active-class="transition duration-500 ease-out"
-        enter-from-class="transform scale-95 opacity-0"
-        enter-to-class="transform scale-100 opacity-100"
-        leave-active-class="transition duration-500 ease-in"
-        leave-from-class="transform scale-100 opacity-100"
-        leave-to-class="transform scale-95 opacity-0"
-      >
-        <div v-if="step === 3" class="mr-auto ml-auto text-left">
-          <div class="mr-auto ml-auto">
-            <label
-              for="ceramicCoating"
-              class="inline text-sm text-left text-xl text-gray-500 pb-2"
-            >
-              Ceramic Coating
-            </label>
-
-            <input
-              type="checkbox"
-              v-model="appointmentDetails.servicesDesired"
-              value="Ceramic Coating"
-              id="ceramicCoating"
-            />
-          </div>
-          <div class="mr-auto ml-auto">
-            <label
-              for="washWax"
-              class="inline text-sm text-left text-xl text-gray-500 pb-2"
-            >
-              Wash & wax
-            </label>
-
-            <input
-              type="checkbox"
-              v-model="appointmentDetails.servicesDesired"
-              value="Wash and Wax"
-              id="washWax"
-            />
-          </div>
-        </div>
-      </transition>
-      <div class="mr-auto ml-auto pt-4">
-        <button
-          v-if="step === 1"
-          class="
-            disabled
-            cursor-not-allowed
-            inline
-            bg-gray-500
-            rounded-md
-            w-24
-            p-3
-            mr-3
-          "
-        >
-          Previous
-        </button>
-        <button
-          v-else
-          class="
-            inline
-            bg-blue-700
-            rounded-md
-            w-24
-            p-3
-            mr-3
-            text-white
-            font-bold
-          "
-          @click="step = step - 1"
-        >
-          Previous
-        </button>
-
-        <button
-          v-if="step < 3"
-          class="inline bg-blue-700 rounded-md w-24 p-3 text-white font-bold"
-          @click="step = step + 1"
-        >
-          Next
-        </button>
-        <button
-          v-else
-          @click.prevent="submitAppointmentDetails"
-          class="inline bg-blue-700 rounded-md w-24 p-3 text-white font-bold"
-        >
-          Submit
-        </button>
-      </div>
+      </Form>
     </div>
   </div>
 </template>
 
 <script>
+import { Form, Field } from "vee-validate";
+import * as Yup from "yup";
 export default {
   name: "GenerateQuote",
+  components: {
+    Form,
+    Field,
+  },
+  setup() {
+    const phoneRegEx =
+      /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+    const schema = Yup.object().shape({
+      email: Yup.string().required().email(),
+      firstName: Yup.string().required(),
+      lastName: Yup.string().required(),
+      phone: Yup.string().required().matches(phoneRegEx),
+      carYear: Yup.string()
+        .required()
+        .matches(/^(19|20)\d{2}$/),
+      carMake: Yup.string().required(),
+      carModel: Yup.string().required(),
+      carMilage: Yup.number().required(),
+    });
+    return { schema };
+  },
   data() {
     return {
       step: 1,
@@ -348,34 +377,50 @@ export default {
         carModel: "",
         carMilage: "",
         servicesDesired: [],
+        otherComments: "",
         dateDesired: "",
       },
     };
   },
   methods: {
-    async submitAppointmentDetails() {
-      try {
-        let response = await fetch(
-          `http://localhost:5001/coastal-coating/us-central1/api/book-appointment`,
-          {
-            method: "POST",
+    async handleAppointmentSubmit(values) {
+      console.log(values);
+      // try {
+      //   let response = await fetch(
+      //     `https://us-central1-coastal-coating.cloudfunctions.net/api/book-appointment`,
+      //     {
+      //       method: "POST",
 
-            body: JSON.stringify({
-              appointmentDetails: this.appointmentDetails,
-            }),
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
-        let data = await response.json();
-        if (response.ok) {
-          console.log(data);
-          alert("Success!");
-        }
-      } catch (error) {
-        //do something with error
+      //       body: JSON.stringify({
+      //         appointmentDetails: this.appointmentDetails,
+      //       }),
+      //       headers: {
+      //         "Content-Type": "application/json",
+      //       },
+      //     }
+      //   );
+      //   let data = await response.json();
+      //   if (response.ok) {
+      //     console.log(data);
+      //     alert("Success!");
+      //   }
+      // } catch (error) {
+      //   console.log(error);
+      //   //do something with error
+      // }
+    },
+    validateEmail(value) {
+      // if the field is empty
+      if (!value) {
+        return "This field is required";
       }
+      // if the field is not a valid email
+      const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+      if (!regex.test(value)) {
+        return "This field must be a valid email";
+      }
+      // All is good
+      return true;
     },
   },
 };
