@@ -209,34 +209,49 @@
         >
           <div v-show="step === 3" class="mr-auto ml-auto text-left">
             <div class="mr-auto ml-auto">
+              <input
+                type="checkbox"
+                v-model="appointmentDetails.servicesDesired"
+                value="Ceramic Coating"
+                id="ceramicCoating"
+                class="h-4 w-4 rounded-full mr-2"
+              />
               <label
                 for="ceramicCoating"
                 class="inline text-sm text-left text-xl text-gray-500 pb-2"
               >
                 Ceramic Coating
               </label>
-
+            </div>
+            <div class="mr-auto ml-auto">
               <input
                 type="checkbox"
                 v-model="appointmentDetails.servicesDesired"
-                value="Ceramic Coating"
-                id="ceramicCoating"
+                value="Wash and Wax"
+                id="washWax"
+                class="h-4 w-4 rounded-full mr-2"
               />
-            </div>
-            <div class="mr-auto ml-auto">
               <label
                 for="washWax"
                 class="inline text-sm text-left text-xl text-gray-500 pb-2"
               >
                 Wash & wax
               </label>
-
+            </div>
+            <div class="mr-auto ml-auto">
               <input
                 type="checkbox"
                 v-model="appointmentDetails.servicesDesired"
-                value="Wash and Wax"
-                id="washWax"
+                value="Interior Detailing"
+                id="interiorDetailing"
+                class="h-4 w-4 rounded-full mr-2"
               />
+              <label
+                for="interiorDetailing"
+                class="inline text-sm text-left text-xl text-gray-500 pb-2"
+              >
+                Interior Detailing
+              </label>
             </div>
             <div class="mr-auto ml-auto pt-4">
               <label
@@ -385,29 +400,29 @@ export default {
   methods: {
     async handleAppointmentSubmit(values) {
       console.log(values);
-      // try {
-      //   let response = await fetch(
-      //     `https://us-central1-coastal-coating.cloudfunctions.net/api/book-appointment`,
-      //     {
-      //       method: "POST",
+      try {
+        let response = await fetch(
+          `https://us-central1-coastal-coating.cloudfunctions.net/api/book-appointment`,
+          {
+            method: "POST",
 
-      //       body: JSON.stringify({
-      //         appointmentDetails: this.appointmentDetails,
-      //       }),
-      //       headers: {
-      //         "Content-Type": "application/json",
-      //       },
-      //     }
-      //   );
-      //   let data = await response.json();
-      //   if (response.ok) {
-      //     console.log(data);
-      //     alert("Success!");
-      //   }
-      // } catch (error) {
-      //   console.log(error);
-      //   //do something with error
-      // }
+            body: JSON.stringify({
+              appointmentDetails: this.appointmentDetails,
+            }),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        let data = await response.json();
+        if (response.ok) {
+          console.log(data);
+          alert("Success!");
+        }
+      } catch (error) {
+        console.log(error);
+        //do something with error
+      }
     },
     validateEmail(value) {
       // if the field is empty

@@ -13,7 +13,7 @@ exports.sendAppointmentDetails = async (request, response) => {
     carModel,
     carMilage,
     servicesDesired,
-    dateDesired,
+    otherComments,
   } = request.body.appointmentDetails;
 
   if (!validator.validate(email)) {
@@ -32,6 +32,7 @@ exports.sendAppointmentDetails = async (request, response) => {
     carMilage
   ) {
     const transporter = nodemailer.createTransport({
+      name: mailerConfig.name,
       port: mailerConfig.port,
       host: mailerConfig.host,
       auth: {
@@ -43,7 +44,7 @@ exports.sendAppointmentDetails = async (request, response) => {
 
     const mailData = {
       from: email,
-      to: "coastalcoatingmb@gmail.com",
+      to: mailerConfig.to,
       subject: "Coastal Coating: Request for consultation",
       html: `
             <h2>Customer's shared information:</h2>
@@ -53,9 +54,14 @@ exports.sendAppointmentDetails = async (request, response) => {
             <strong>Phone number:</strong> ${phone}<br />
             <hr />
             <strong>Car year:</strong> ${carYear}<br />
-            <strong>Car make</strong> ${carMake}<br />
-            <strong>Car model</strong> ${carModel}<br />
-            <strong>Car milage</strong> ${carMilage}<br />
+            <strong>Car make:</strong> ${carMake}<br />
+            <strong>Car model:</strong> ${carModel}<br />
+            <strong>Car milage:</strong> ${carMilage}<br />
+            <strong>Services desired:</strong> ${servicesDesired.map(
+              (service) => service
+            )}<br />
+            <hr />
+            <strong>Other comments:</strong> ${otherComments}<br />
         `,
     };
 
