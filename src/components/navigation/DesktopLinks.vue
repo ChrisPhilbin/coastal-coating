@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/quote">
+  <router-link to="/book-consultation">
     <button
       class="
         absolute
@@ -20,7 +20,7 @@
         hover:scale-110
       "
     >
-      Book an appointment
+      Book a consultation
     </button>
   </router-link>
 

@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../components/Home.vue";
-import BookAppointment from "../components/BookAppointment.vue";
+import BookConsultation from "../components/BookConsultation.vue";
 import Gallery from "../components/gallery/Gallery.vue";
 
 const routes = [
@@ -10,9 +10,9 @@ const routes = [
     component: Home,
   },
   {
-    path: "/quote",
+    path: "/book-consultation",
     name: "Quote",
-    component: BookAppointment,
+    component: BookConsultation,
   },
   {
     path: "/gallery/:make",

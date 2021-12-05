@@ -37,7 +37,7 @@
             z-10
           "
         >
-          Book an appointment
+          Book a consultation
         </button></router-link
       >
     </div>
@@ -61,7 +61,7 @@
       >
         We've got you covered.
       </div>
-      <router-link to="/quote"
+      <router-link to="/book-consultation"
         ><button
           class="
             absolute
@@ -79,7 +79,7 @@
             z-10
           "
         >
-          Book an appointment
+          Book a consultation
         </button></router-link
       >
     </div>
