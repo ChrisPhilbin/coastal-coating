@@ -14,6 +14,7 @@ exports.sendAppointmentDetails = async (request, response) => {
     carMilage,
     servicesDesired,
     otherComments,
+    bestTimesToConnect,
   } = request.body.appointmentDetails;
 
   if (!validator.validate(email)) {
@@ -57,9 +58,8 @@ exports.sendAppointmentDetails = async (request, response) => {
             <strong>Car make:</strong> ${carMake}<br />
             <strong>Car model:</strong> ${carModel}<br />
             <strong>Car milage:</strong> ${carMilage}<br />
-            <strong>Services desired:</strong> ${servicesDesired.map(
-              (service) => service
-            )}<br />
+            <strong>Services desired:</strong> ${servicesDesired}<br />
+            <strong>Best time(s) to contact:</strong> ${bestTimesToConnect}<br />
             <hr />
             <strong>Other comments:</strong> ${otherComments}<br />
         `,

@@ -209,6 +209,9 @@
         >
           <div v-show="step === 3" class="mr-auto ml-auto text-left">
             <div class="mr-auto ml-auto">
+              <p class="block text-sm text-left font-bold text-gray-500 pb-2">
+                What services are you interested in?
+              </p>
               <input
                 type="checkbox"
                 v-model="appointmentDetails.servicesDesired"
@@ -253,9 +256,57 @@
                 Interior Detailing
               </label>
             </div>
+            <div class="mr-auto ml-auto">
+              <p class="block text-sm text-left font-bold text-gray-500 py-3">
+                When would be best to contact you?
+              </p>
+              <input
+                type="checkbox"
+                v-model="appointmentDetails.bestTimesToConnect"
+                value="Between 9am and 12pm"
+                id="9to12"
+                class="h-4 w-4 rounded-full mr-2"
+              />
+              <label
+                for="9to12"
+                class="inline text-sm text-left text-xl text-gray-500 pb-2"
+              >
+                Between 9am and 12pm
+              </label>
+            </div>
+            <div class="mr-auto ml-auto">
+              <input
+                type="checkbox"
+                v-model="appointmentDetails.bestTimesToConnect"
+                value="Between 12pm and 4pm"
+                id="12to4"
+                class="h-4 w-4 rounded-full mr-2"
+              />
+              <label
+                for="12to4"
+                class="inline text-sm text-left text-xl text-gray-500 pb-2"
+              >
+                Between 12pm and 4pm
+              </label>
+            </div>
+            <div class="mr-auto ml-auto">
+              <input
+                type="checkbox"
+                v-model="appointmentDetails.bestTimesToConnect"
+                value="Between 4pm and 7pm"
+                id="4to7"
+                class="h-4 w-4 rounded-full mr-2"
+              />
+              <label
+                for="4to7"
+                class="inline text-sm text-left text-xl text-gray-500 pb-2"
+              >
+                Between 4pm and 7pm
+              </label>
+            </div>
             <div class="mr-auto ml-auto pt-4">
               <label
-                for="carMilage"
+                for="otherComments"
                 class="block text-sm text-left font-medium text-gray-500 pb-2"
               >
                 Additional questions?
@@ -392,8 +443,8 @@ export default {
         carModel: "",
         carMilage: "",
         servicesDesired: [],
+        bestTimesToConnect: [],
         otherComments: "",
-        dateDesired: "",
       },
     };
   },

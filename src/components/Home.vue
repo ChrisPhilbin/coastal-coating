@@ -19,7 +19,7 @@
       >
         We've got you covered.
       </div>
-      <router-link to="/quote"
+      <router-link to="/book-consultation"
         ><button
           class="
             absolute
