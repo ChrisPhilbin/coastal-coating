@@ -394,7 +394,12 @@
           <button
             @click.prevent="handleAppointmentSubmit"
             v-else
-            class="inline bg-blue-700 rounded-md w-24 p-3 text-white font-bold"
+            class="inline rounded-md w-24 p-3 font-bold"
+            :class="[
+              Object.keys(errors).length > 1
+                ? 'disabled cursor-not-allowed pointer-events-none bg-gray-500 text-black'
+                : 'bg-blue-700 text-white',
+            ]"
           >
             Submit
           </button>
@@ -449,8 +454,7 @@ export default {
     };
   },
   methods: {
-    async handleAppointmentSubmit(values) {
-      console.log(values);
+    async handleAppointmentSubmit() {
       try {
         let response = await fetch(
           `https://us-central1-coastal-coating.cloudfunctions.net/api/book-appointment`,
@@ -465,14 +469,15 @@ export default {
             },
           }
         );
-        let data = await response.json();
+        // let data = await response.json();
         if (response.ok) {
-          console.log(data);
-          alert("Success!");
+          this.$router.push("/thank-you");
         }
       } catch (error) {
-        console.log(error);
-        //do something with error
+        alert(
+          "Something went wrong! Please make sure all required fields are filled out"
+        );
+        this.step = 1;
       }
     },
     validateEmail(value) {
