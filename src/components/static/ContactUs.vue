@@ -3,12 +3,17 @@
     <div>
       <p class="block text-4xl text-gray-200 font-bold pb-4">Contact Us</p>
       <p class="block text-xl text-gray-300">
-        Coastal Coating<br />115-C Prather Park Dr.<br />Myrtle Beach, SC
-        29588<br />
-        <a href="tel:843-999-2636">(843) 999-2636</a><br />
-        <a href="mailto:coastalcoatingmb@gmail.com"
-          >coastalcoatingmb@gmail.com</a
-        >
+        {{ global.orgName }}<br />{{ global.contactInfo.address.street
+        }}<br />{{ global.contactInfo.address.city }},
+        {{ global.contactInfo.address.state }}
+        {{ global.contactInfo.address.zip }}<br />
+        <a :href="'tel:' + global.contactInfo.phone">{{
+          global.contactInfo.phone
+        }}</a
+        ><br />
+        <a :href="'mailto:' + global.contactInfo.email">{{
+          global.contactInfo.email
+        }}</a>
       </p>
       <img
         src="/img/home/coastal_coating_shop_front.jpg"

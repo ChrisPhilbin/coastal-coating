@@ -6,6 +6,18 @@ import "./index.css";
 
 let app = createApp(App);
 
-app.config.globalProperties.global = { orgName: "Coastal Coating" };
+app.config.globalProperties.global = {
+  orgName: "Coastal Coating",
+  contactInfo: {
+    address: {
+      street: "115-C Prather Park Dr.",
+      city: "Myrtle Beach",
+      state: "SC",
+      zip: "29588",
+    },
+    phone: "(843)-999-2636",
+    email: "coastalcoatingmb@gmail.com",
+  },
+};
 
 app.use(store).use(router).mount("#app");
