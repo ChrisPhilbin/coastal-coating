@@ -102,14 +102,7 @@
           Club.
         </p>
         <p class="pt-2 ml-auto mr-auto mt-8 pb-3">
-          <img
-            src="../assets/images/social-icons/facebook_small.png"
-            class="inline ml-4 mr-4"
-          />
-          <img
-            src="../assets/images/social-icons/instagram_small.png"
-            class="inline"
-          />
+          <SocialIcons />
         </p>
       </div>
 
@@ -232,4 +225,10 @@
   </div>
 </template>
 
-<script></script>
+<script>
+import SocialIcons from "./navigation/SocialIcons.vue";
+export default {
+  name: "Home",
+  components: { SocialIcons },
+};
+</script>

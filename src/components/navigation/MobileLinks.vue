@@ -233,23 +233,17 @@
         >
       </div>
       <div class="flex w-full p-3 relative">
-        <img
-          src="../../assets/images/social-icons/facebook_small.png"
-          class="inline ml-4 mr-4"
-        />
-        <img
-          src="../../assets/images/social-icons/instagram_small.png"
-          class="inline"
-        />
+        <SocialIcons />
       </div>
     </div>
   </transition>
 </template>
 
 <script>
+import SocialIcons from "./SocialIcons.vue";
 export default {
   name: "MobileLinks",
-  components: {},
+  components: { SocialIcons },
   data() {
     return {
       showMenu: false,
