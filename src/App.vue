@@ -19,9 +19,14 @@ import BottomNav from "./components/navigation/BottomNav.vue";
 export default {
   name: "App",
   components: { TopNav, BottomNav },
+  data() {
+    return {
+      companyName: "Coastal Coating",
+    };
+  },
   mounted() {
-     document.body.style.backgroundColor = "black";
-  }
+    document.body.style.backgroundColor = "black";
+  },
 };
 </script>
 
