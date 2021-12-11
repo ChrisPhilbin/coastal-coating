@@ -252,9 +252,9 @@
       </MenuItems>
     </transition>
   </Menu>
-  <Menu as="div" class="relative hidden md:inline-block text-left">
+  <div class="relative hidden md:inline-block text-left">
     <div class="relative hidden md:inline-block text-left">
-      <MenuButton
+      <div
         class="
           inline-flex
           justify-center
@@ -275,11 +275,11 @@
         "
       >
         About us
-      </MenuButton>
+      </div>
     </div>
     <div class="relative hidden md:inline-block text-left">
       <router-link to="/contact-us">
-        <MenuButton
+        <div
           class="
             inline-flex
             justify-center
@@ -300,10 +300,10 @@
           "
         >
           Contact us
-        </MenuButton>
+        </div>
       </router-link>
     </div>
-  </Menu>
+  </div>
 </template>
 
 <script>
