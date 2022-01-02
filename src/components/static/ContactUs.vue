@@ -1,8 +1,10 @@
 <template>
   <div class="text-center grid grid-cols-1 md:grid-cols-2">
     <div>
-      <p class="block text-4xl text-gray-200 font-bold pb-4">Contact Us</p>
-      <p class="block text-xl text-gray-300">
+      <p class="block font-coastal-body text-3xl text-gray-200 font-bold pb-4">
+        Contact Us
+      </p>
+      <p class="block text-lg font-coastal-body text-gray-300">
         {{ global.orgName }}<br />{{ global.contactInfo.address.street
         }}<br />{{ global.contactInfo.address.city }},
         {{ global.contactInfo.address.state }}

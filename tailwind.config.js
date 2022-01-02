@@ -10,6 +10,9 @@ module.exports = {
       "2xl": "1536px",
     },
     extend: {
+      fontFamily: {
+        "coastal-body": ["Nunito"],
+      },
       backgroundImage: {
         "home-background-desktop": "url('/img/home/corvette.jpg')",
         "home-background-mobile": "url('/img/home/corvette_mobile.jpg')",

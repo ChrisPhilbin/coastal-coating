@@ -86,10 +86,10 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 bg-black pt-6 pb-0 md:pb-3">
       <div class="mt-auto mb-auto">
-        <p class="text-gray-100 text-3xl font-bold mb-5">
+        <p class="font-coastal-body text-gray-100 text-3xl font-bold mb-5">
           Why Coastal Coating?
         </p>
-        <p class="text-gray-200 pt-2 px-4 text-left">
+        <p class="font-coastal-body text-gray-200 pt-2 px-4 text-left">
           Coastal Coating protects those things that you’ve invested in (cars,
           boats, home, etc) and helps make cleaning them easier. Protecting them
           from the UV Rays, saltwater, and other environmental hazards. This
@@ -101,7 +101,7 @@
           Corvette Club, Coastal Carolina Mustang Club, and Myrtle Beach Car
           Club.
         </p>
-        <p class="pt-2 ml-auto mr-auto mt-8 pb-3">
+        <p class="ml-auto mr-auto mt-8 pb-5">
           <SocialIcons />
         </p>
       </div>
@@ -208,12 +208,14 @@
         <img
           src="/img/home/what_is_ceramic_coating.jpg"
           alt="What is ceramic coating?"
-          class="inline rounded p-6"
+          class="inline rounded py-6"
         />
       </div>
       <div class="mt-auto mb-auto">
-        <p class="text-gray-100 text-3xl font-bold">What is ceramic coating?</p>
-        <p class="text-gray-200 pt-2 px-4 text-left">
+        <p class="font-coastal-body text-gray-100 text-3xl font-bold">
+          What is ceramic coating?
+        </p>
+        <p class="font-coastal-body text-gray-200 pt-2 px-4 text-left">
           In a couple years it has gone from market entry to mainstream, ceramic
           coating is the new normal for paint protection. Why waste time
           reapplying waxes and sealants weekly or monthly when you can have a 3,
