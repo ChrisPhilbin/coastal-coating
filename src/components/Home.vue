@@ -108,7 +108,7 @@
 
       <div class="mt-auto mb-auto">
         <img
-          src="/img/home/coastal_coating_shop_front.jpg"
+          src="/img/home/coastal_coating_shop_front2.jpg"
           alt="Coastal Coating Shop Front"
           class="inline rounded"
         />
@@ -203,15 +203,15 @@
         </p>
       </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 bg-black pb-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 bg-black">
       <div>
         <img
           src="/img/home/what_is_ceramic_coating.jpg"
           alt="What is ceramic coating?"
-          class="inline rounded"
+          class="inline rounded p-6"
         />
       </div>
-      <div class="pt-4">
+      <div class="mt-auto mb-auto">
         <p class="text-gray-100 text-3xl font-bold">What is ceramic coating?</p>
         <p class="text-gray-200 pt-2 px-4 text-left">
           In a couple years it has gone from market entry to mainstream, ceramic

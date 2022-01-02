@@ -149,7 +149,7 @@
               />
             </div>
             <p class="pt-2 text-left text-sm text-red-500">
-              {{ errors.carMake }}
+              {{ errors.carMake ? "Must provide your car's make" : "" }}
             </p>
             <div class="mr-auto ml-auto pt-4">
               <label
@@ -170,7 +170,7 @@
               />
             </div>
             <p class="pt-2 text-left text-sm text-red-500">
-              {{ errors.carModel }}
+              {{ errors.carModel ? "Must provide your car's model" : "" }}
             </p>
             <div class="mr-auto ml-auto pt-4">
               <label
