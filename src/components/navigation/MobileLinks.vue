@@ -118,7 +118,19 @@
         leave-to-class="transform scale-95 opacity-0"
       >
         <div v-show="showServices" class="w-full pl-10">
-          <span class="block pb-0.5">Ceramic Coating</span>
+          <router-link
+            to="/services/ceramic-coating"
+            custom
+            v-slot="{ navigate }"
+            ><span
+              class="block pb-0.5"
+              @click="
+                toggleMenu();
+                navigate();
+              "
+              >Ceramic Coating</span
+            ></router-link
+          >
           <span class="block pb-0.5">Detailing</span>
           <span class="block pb-0.5">Wash & Wax</span>
           <span class="block pb-0.5">Interiors</span>
