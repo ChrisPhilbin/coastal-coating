@@ -59,7 +59,7 @@
               clip-rule="evenodd"
             />
           </svg>
-          <p class="inline font-semibold">Home</p>
+          <p class="inline">Home</p>
         </div>
       </router-link>
       <router-link to="/book-consultation" custom v-slot="{ navigate }">
@@ -83,7 +83,7 @@
               clip-rule="evenodd"
             />
           </svg>
-          <p class="inline font-semibold">Book a consultation</p>
+          <p class="inline font-bold">Book a consultation</p>
         </div>
       </router-link>
       <div
@@ -123,7 +123,7 @@
             custom
             v-slot="{ navigate }"
             ><span
-              class="block pb-0.5"
+              class="block pb-1.5"
               @click="
                 toggleMenu();
                 navigate();
@@ -131,10 +131,13 @@
               >Ceramic Coating</span
             ></router-link
           >
-          <span class="block pb-0.5">Detailing</span>
-          <span class="block pb-0.5">Wash & Wax</span>
-          <span class="block pb-0.5">Interiors</span>
-          <span class="block pb-0.5">Recreational vehicles</span>
+          <span class="block pb-1.5">Wheel Coating</span>
+          <span class="block pb-1.5">Window Coating</span>
+          <span class="block pb-1.5">Leather Coating</span>
+          <span class="block pb-1.5">Convertible Top Coating</span>
+          <span class="block pb-1.5">Detailing</span>
+          <span class="block pb-1.5">Ceramic Wax & Polish</span>
+          <span class="block pb-1.5">Recreational Vehicles</span>
         </div>
       </transition>
       <div

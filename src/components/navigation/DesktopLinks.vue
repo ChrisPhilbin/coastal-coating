@@ -65,7 +65,6 @@
           mt-2
           origin-top-right
           bg-white
-          divide-y divide-gray-100
           rounded-md
           shadow-lg
           ring-1 ring-black ring-opacity-5
@@ -132,7 +131,7 @@
               <button
                 :class="[
                   active ? 'bg-green-200 text-black' : 'text-gray-900',
-                  'group flex radius-bl-md radius-br-md items-center w-full px-2 py-2 text-sm',
+                  'group flex rounded-bl-md rounded-br-md items-center w-full px-2 py-2 text-sm',
                 ]"
               >
                 BMW
@@ -180,11 +179,10 @@
         class="
           absolute
           right-0
-          w-40
+          w-52
           mt-2
           origin-top-right
           bg-white
-          divide-y divide-gray-100
           rounded-md
           shadow-lg
           ring-1 ring-black ring-opacity-5
@@ -202,6 +200,54 @@
                 ]"
               >
                 Ceramic Coating
+              </button>
+            </router-link>
+          </MenuItem>
+          <MenuItem v-slot="{ active }">
+            <router-link to="/services/wheel-coating">
+              <button
+                :class="[
+                  active ? 'bg-green-200 text-black' : 'text-gray-900',
+                  'group flex items-center w-full px-2 py-2 text-sm',
+                ]"
+              >
+                Wheel Coating
+              </button>
+            </router-link>
+          </MenuItem>
+          <MenuItem v-slot="{ active }">
+            <router-link to="/services/window-coating">
+              <button
+                :class="[
+                  active ? 'bg-green-200 text-black' : 'text-gray-900',
+                  'group flex items-center w-full px-2 py-2 text-sm',
+                ]"
+              >
+                Window Coating
+              </button>
+            </router-link>
+          </MenuItem>
+          <MenuItem v-slot="{ active }">
+            <router-link to="/services/interor-leather-coating">
+              <button
+                :class="[
+                  active ? 'bg-green-200 text-black' : 'text-gray-900',
+                  'group flex items-center w-full px-2 py-2 text-sm',
+                ]"
+              >
+                Leather Coating
+              </button>
+            </router-link>
+          </MenuItem>
+          <MenuItem v-slot="{ active }">
+            <router-link to="/services/convertible-top-coating">
+              <button
+                :class="[
+                  active ? 'bg-green-200 text-black' : 'text-gray-900',
+                  'group flex items-center w-full px-2 py-2 text-sm',
+                ]"
+              >
+                Convertible Top Coating
               </button>
             </router-link>
           </MenuItem>
@@ -224,21 +270,20 @@
                 'group flex items-center w-full px-2 py-2 text-sm',
               ]"
             >
-              Wash & Wax
+              Ceramic Wax & Polish
             </button>
           </MenuItem>
-        </div>
-
-        <div>
           <MenuItem v-slot="{ active }">
-            <button
-              :class="[
-                active ? 'bg-green-200 text-black' : 'text-gray-900',
-                'group flex radius-bl-md radius-br-md items-center w-full px-2 py-2 text-sm',
-              ]"
-            >
-              Recreational vehicles
-            </button>
+            <router-link to="/services/recreational-vehicles">
+              <button
+                :class="[
+                  active ? 'bg-green-200 text-black' : 'text-gray-900',
+                  'group flex rounded-bl-md rounded-br-md  items-center w-full px-2 py-2 text-sm',
+                ]"
+              >
+                Recreational Vehicles
+              </button>
+            </router-link>
           </MenuItem>
         </div>
       </MenuItems>
