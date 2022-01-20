@@ -396,7 +396,15 @@
             v-else
             class="inline rounded-md w-24 p-3 font-bold"
             :class="[
-              Object.keys(errors).length > 1
+              Object.keys(errors).length > 1 ||
+              !firstName ||
+              !lastName ||
+              !phone ||
+              !email ||
+              !carYear ||
+              !carMake ||
+              !carModel ||
+              !carMilage
                 ? 'disabled cursor-not-allowed pointer-events-none bg-gray-500 text-black'
                 : 'bg-blue-700 text-white',
             ]"

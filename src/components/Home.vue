@@ -45,7 +45,7 @@
     <div class="relative md:hidden w-full">
       <img
         src="/img/home/corvette_mobile.jpg"
-        class="h-auto w-full opacity-75"
+        class="h-auto w-full opacity-90"
       />
       <div
         class="
@@ -86,10 +86,19 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 bg-black pt-6 pb-0 md:pb-3">
       <div class="mt-auto mb-auto">
-        <p class="font-coastal-body text-gray-100 text-3xl font-bold mb-5">
+        <p class="font-coastal-body text-gray-100 text-3xl font-bold mb-3">
           Why Coastal Coating?
         </p>
-        <p class="font-coastal-body text-gray-200 pt-2 px-4 text-left">
+        <p
+          class="
+            font-coastal-body
+            text-gray-200
+            pt-2
+            px-4
+            text-left
+            leading-relaxed
+          "
+        >
           Coastal Coating protects those things that you’ve invested in (cars,
           boats, home, etc) and helps make cleaning them easier. Protecting them
           from the UV Rays, saltwater, and other environmental hazards. This
@@ -212,17 +221,26 @@
         />
       </div>
       <div class="mt-auto mb-auto">
-        <p class="font-coastal-body text-gray-100 text-3xl font-bold">
+        <p class="font-coastal-body text-gray-100 text-3xl font-bold mb-3">
           What is ceramic coating?
         </p>
-        <p class="font-coastal-body text-gray-200 pt-2 px-4 text-left">
+        <p
+          class="
+            font-coastal-body
+            text-gray-200
+            pt-2
+            px-4
+            text-left
+            leading-relaxed
+          "
+        >
           In a couple years it has gone from market entry to mainstream, ceramic
           coating is the new normal for paint protection. Why waste time
           reapplying waxes and sealants weekly or monthly when you can have a 3,
           5, or 10-Year Ceramic Coating to protect your investment, make it
           easier to clean, and keep it looking amazing?<br /><br />
 
-          <span class="font-semibold">What's in it for me?</span><br />
+          <span class="font-bold text-lg">What's in it for me?</span><br />
           This means less time spent washing your vehicle. Protecting your
           investment for YEARS – After all, the first thing anyone bases value
           of a car, boat, etc. on is its appearance. You’ll have an unbeatable
