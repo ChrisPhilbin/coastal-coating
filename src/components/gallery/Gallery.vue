@@ -167,6 +167,7 @@ export default {
   methods: {
     setErrors() {
       this.errors = true;
+      this.$router.push("/404");
     },
   },
   computed: {

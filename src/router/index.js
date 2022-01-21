@@ -6,6 +6,7 @@ import ContactUs from "../components/static/ContactUs.vue";
 import ThankYou from "../components/consultation/ThankYou.vue";
 import Gallery from "../components/gallery/Gallery.vue";
 import CeramicCoating from "../components/services/CeramicCoating.vue";
+import NotFound from "../components/static/NotFound.vue";
 
 const routes = [
   {
@@ -42,6 +43,11 @@ const routes = [
     path: "/thank-you",
     name: "ThankYou",
     component: ThankYou,
+  },
+  {
+    path: "/:catchAll(.*)",
+    name: "Not Found",
+    component: NotFound,
   },
 ];
 
