@@ -74,11 +74,39 @@
       >
         <div>
           <MenuItem v-slot="{ active }">
-            <router-link to="/gallery/chevrolet">
+            <router-link to="/gallery/bmw">
               <button
                 :class="[
                   active ? 'bg-green-200 text-black' : 'text-gray-900',
                   'group flex rounded-tl-md rounded-tr-md items-center w-full px-2 py-2 text-sm',
+                ]"
+              >
+                BMW
+              </button>
+            </router-link>
+          </MenuItem>
+        </div>
+        <div>
+          <MenuItem v-slot="{ active }">
+            <router-link to="/gallery/buick">
+              <button
+                :class="[
+                  active ? 'bg-green-200 text-black' : 'text-gray-900',
+                  'group flex items-center w-full px-2 py-2 text-sm',
+                ]"
+              >
+                Buick
+              </button>
+            </router-link>
+          </MenuItem>
+        </div>
+        <div>
+          <MenuItem v-slot="{ active }">
+            <router-link to="/gallery/chevrolet">
+              <button
+                :class="[
+                  active ? 'bg-green-200 text-black' : 'text-gray-900',
+                  'group flex items-center w-full px-2 py-2 text-sm',
                 ]"
               >
                 Chevrolet
@@ -100,17 +128,19 @@
         </div>
         <div>
           <MenuItem v-slot="{ active }">
-            <router-link to="/gallery/nissan">
+            <router-link to="/gallery/gmc">
               <button
                 :class="[
                   active ? 'bg-green-200 text-black' : 'text-gray-900',
                   'group flex items-center w-full px-2 py-2 text-sm',
                 ]"
               >
-                Nissan
+                GMC
               </button>
             </router-link>
           </MenuItem>
+        </div>
+        <div>
           <MenuItem v-slot="{ active }">
             <router-link to="/gallery/jeep">
               <button
@@ -124,17 +154,30 @@
             </router-link>
           </MenuItem>
         </div>
-
         <div>
           <MenuItem v-slot="{ active }">
-            <router-link to="/gallery/bmw">
+            <router-link to="/gallery/nissan">
               <button
                 :class="[
                   active ? 'bg-green-200 text-black' : 'text-gray-900',
-                  'group flex rounded-bl-md rounded-br-md items-center w-full px-2 py-2 text-sm',
+                  'group flex items-center w-full px-2 py-2 text-sm',
                 ]"
               >
-                BMW
+                Nissan
+              </button>
+            </router-link>
+          </MenuItem>
+        </div>
+        <div>
+          <MenuItem v-slot="{ active }">
+            <router-link to="/gallery/subaru">
+              <button
+                :class="[
+                  active ? 'bg-green-200 text-black' : 'text-gray-900',
+                  'group flex rounded-bl-md rounded-br-md flex items-center w-full px-2 py-2 text-sm',
+                ]"
+              >
+                Subaru
               </button>
             </router-link>
           </MenuItem>
