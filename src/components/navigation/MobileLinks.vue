@@ -133,7 +133,19 @@
           >
           <span class="block pb-1.5">Wheel Coating</span>
           <span class="block pb-1.5">Window Coating</span>
-          <span class="block pb-1.5">Leather Coating</span>
+          <router-link
+            to="/services/interior-leather-coating"
+            custom
+            v-slot="{ navigate }"
+            ><span
+              class="block pb-1.5"
+              @click="
+                toggleMenu();
+                navigate();
+              "
+              >Leather Coating</span
+            ></router-link
+          >
           <span class="block pb-1.5">Convertible Top Coating</span>
           <span class="block pb-1.5">Detailing</span>
           <span class="block pb-1.5">Ceramic Wax & Polish</span>

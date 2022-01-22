@@ -6,6 +6,7 @@ import ContactUs from "../components/static/ContactUs.vue";
 import ThankYou from "../components/consultation/ThankYou.vue";
 import Gallery from "../components/gallery/Gallery.vue";
 import CeramicCoating from "../components/services/CeramicCoating.vue";
+import LeatherCoating from "../components/services/LeatherCoating.vue";
 import NotFound from "../components/static/NotFound.vue";
 
 const routes = [
@@ -38,6 +39,11 @@ const routes = [
     path: "/services/ceramic-coating",
     name: "Ceramic Coating",
     component: CeramicCoating,
+  },
+  {
+    path: "/services/interior-leather-coating",
+    name: "Leather Coating",
+    component: LeatherCoating,
   },
   {
     path: "/thank-you",
