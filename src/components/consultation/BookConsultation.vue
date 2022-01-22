@@ -230,32 +230,93 @@
               <input
                 type="checkbox"
                 v-model="appointmentDetails.servicesDesired"
-                value="Wash and Wax"
-                id="washWax"
+                value="Wheel Coating"
+                id="wheelCoating"
                 class="h-4 w-4 rounded-full mr-2"
               />
               <label
-                for="washWax"
+                for="wheelCoating"
                 class="inline text-sm text-left text-xl text-gray-500 pb-2"
               >
-                Wash & wax
+                Wheel Coating
               </label>
             </div>
             <div class="mr-auto ml-auto">
               <input
                 type="checkbox"
                 v-model="appointmentDetails.servicesDesired"
-                value="Interior Detailing"
-                id="interiorDetailing"
+                value="Window Coating"
+                id="windowCoating"
                 class="h-4 w-4 rounded-full mr-2"
               />
               <label
-                for="interiorDetailing"
+                for="windowCoating"
                 class="inline text-sm text-left text-xl text-gray-500 pb-2"
               >
-                Interior Detailing
+                Window Coating
               </label>
             </div>
+            <div class="mr-auto ml-auto">
+              <input
+                type="checkbox"
+                v-model="appointmentDetails.servicesDesired"
+                value="Leather Coating"
+                id="leatherCoating"
+                class="h-4 w-4 rounded-full mr-2"
+              />
+              <label
+                for="leatherCoating"
+                class="inline text-sm text-left text-xl text-gray-500 pb-2"
+              >
+                Leather Coating
+              </label>
+            </div>
+            <div class="mr-auto ml-auto">
+              <input
+                type="checkbox"
+                v-model="appointmentDetails.servicesDesired"
+                value="Convertible Top Coating"
+                id="convertibleTopCoating"
+                class="h-4 w-4 rounded-full mr-2"
+              />
+              <label
+                for="convertibleTopCoating"
+                class="inline text-sm text-left text-xl text-gray-500 pb-2"
+              >
+                Convertible Top Coating
+              </label>
+            </div>
+            <div class="mr-auto ml-auto">
+              <input
+                type="checkbox"
+                v-model="appointmentDetails.servicesDesired"
+                value="Detailing"
+                id="detailing"
+                class="h-4 w-4 rounded-full mr-2"
+              />
+              <label
+                for="detailing"
+                class="inline text-sm text-left text-xl text-gray-500 pb-2"
+              >
+                Detailing
+              </label>
+            </div>
+            <div class="mr-auto ml-auto">
+              <input
+                type="checkbox"
+                v-model="appointmentDetails.servicesDesired"
+                value="Ceramic Wax & Polish"
+                id="ceramicWaxPolish"
+                class="h-4 w-4 rounded-full mr-2"
+              />
+              <label
+                for="ceramicWaxPolish"
+                class="inline text-sm text-left text-xl text-gray-500 pb-2"
+              >
+                Ceramic Wax & Polish
+              </label>
+            </div>
+
             <div class="mr-auto ml-auto">
               <p class="block text-sm text-left font-bold text-gray-500 py-3">
                 When would be best to contact you?
