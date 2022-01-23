@@ -5,6 +5,7 @@ import BookConsultation from "../components/consultation/BookConsultation.vue";
 import ContactUs from "../components/static/ContactUs.vue";
 import ThankYou from "../components/consultation/ThankYou.vue";
 import Gallery from "../components/gallery/Gallery.vue";
+import LandingPage from "../components/landing/LandingPage.vue";
 import CeramicCoating from "../components/services/CeramicCoating.vue";
 import LeatherCoating from "../components/services/LeatherCoating.vue";
 import NotFound from "../components/static/NotFound.vue";
@@ -34,6 +35,11 @@ const routes = [
     path: "/gallery/:make",
     name: "Gallery",
     component: Gallery,
+  },
+  {
+    path: "/get-services/:campaignSource",
+    name: "Landing Page",
+    component: LandingPage,
   },
   {
     path: "/services/ceramic-coating",
