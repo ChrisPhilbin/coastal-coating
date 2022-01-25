@@ -1,6 +1,7 @@
 const nodemailer = require("nodemailer");
 const { mailerConfig } = require("../config/index");
 const validator = require("email-validator");
+const { isCampaignSourceValid } = require("../util/validators");
 
 exports.sendAppointmentDetails = async (request, response) => {
   const {
@@ -15,12 +16,17 @@ exports.sendAppointmentDetails = async (request, response) => {
     servicesDesired,
     otherComments,
     bestTimesToConnect,
+    campaignSource,
   } = request.body.appointmentDetails;
 
   if (!validator.validate(email)) {
     return response
       .status(400)
       .json({ message: "Must provide valid email address." });
+  }
+
+  if (!isCampaignSourceValid(campaignSource)) {
+    return response.status(400).json({ message: "Invalid campain source." });
   }
 
   if (
@@ -62,6 +68,7 @@ exports.sendAppointmentDetails = async (request, response) => {
             <strong>Best time(s) to contact:</strong> ${bestTimesToConnect}<br />
             <hr />
             <strong>Other comments:</strong> ${otherComments}<br />
+            <strong>Campaign source:</strong> ${campaignSource}<br />
         `,
     };
 

@@ -519,8 +519,15 @@ export default {
         servicesDesired: [],
         bestTimesToConnect: [],
         otherComments: "",
+        campaignSource: "Organic",
       },
     };
+  },
+  mounted() {
+    const getSource = localStorage.getItem("campaignSource");
+    if (getSource) {
+      this.campaignSource = getSource;
+    }
   },
   methods: {
     async handleAppointmentSubmit() {
@@ -538,7 +545,6 @@ export default {
             },
           }
         );
-        // let data = await response.json();
         if (response.ok) {
           this.$router.push("/thank-you");
         }
