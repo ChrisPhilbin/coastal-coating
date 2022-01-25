@@ -88,20 +88,6 @@
         </div>
         <div>
           <MenuItem v-slot="{ active }">
-            <router-link to="/gallery/buick">
-              <button
-                :class="[
-                  active ? 'bg-green-200 text-black' : 'text-gray-900',
-                  'group flex items-center w-full px-2 py-2 text-sm',
-                ]"
-              >
-                Buick
-              </button>
-            </router-link>
-          </MenuItem>
-        </div>
-        <div>
-          <MenuItem v-slot="{ active }">
             <router-link to="/gallery/chevrolet">
               <button
                 :class="[

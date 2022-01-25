@@ -1,10 +1,10 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2">
-    <div class="pl-6 py-3">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-4 mb-4">
+    <div class="px-2 py-3">
       <p class="text-gray-200 text-3xl font-coastal-body font-bold">
         About {{ global.orgName }}
       </p>
-      <p class="text-gray-200 mt-3 font-coastal-body">
+      <p class="text-gray-200 mt-3 font-coastal-body leading-relaxed">
         Coastal Coating started with one goal in mind – To bring the Grand
         Strand affordable, high quality ceramic coatings to protect our cars,
         boats, RVs, motorcycles, and more from the harsh elements of our area
@@ -17,7 +17,13 @@
         Corvette Club, and Coastal Carolina Mustang Club.
       </p>
     </div>
-    <div class="text-center"></div>
+    <div class="text-center px-2 py-3">
+      <img
+        src="/img/about/about_us.webp"
+        class="w-max"
+        alt="About Coastal Coating"
+      />
+    </div>
   </div>
 </template>
 

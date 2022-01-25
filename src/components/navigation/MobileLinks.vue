@@ -194,16 +194,6 @@
               >BMW</span
             ></router-link
           >
-          <router-link to="/gallery/buick" custom v-slot="{ navigate }"
-            ><span
-              class="block pb-2"
-              @click="
-                toggleMenu();
-                navigate();
-              "
-              >Buick</span
-            ></router-link
-          >
           <router-link to="/gallery/chevrolet" custom v-slot="{ navigate }"
             ><span
               class="block pb-2"
