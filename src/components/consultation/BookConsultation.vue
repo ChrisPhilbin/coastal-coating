@@ -145,7 +145,7 @@
                 id="carMake"
                 class="input-default"
                 :class="[errors.carMake ? 'input--error' : 'input--no-error']"
-                placeholder="Chevorlet"
+                placeholder="Chevrolet"
               />
             </div>
             <p class="pt-2 text-left text-sm text-red-500">
