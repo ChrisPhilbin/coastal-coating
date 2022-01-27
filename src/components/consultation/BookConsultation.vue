@@ -1,6 +1,6 @@
 <template>
   <div class="text-center">
-    <div class="grid grid-cols-1">
+    <div class="grid grid-cols-1 mb-10">
       <Form
         @submit="handleAppointmentSubmit"
         v-slot="{ errors }"

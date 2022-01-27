@@ -84,7 +84,7 @@
       >
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 bg-black pt-6 pb-0 md:pb-3">
+    <div class="grid grid-cols-1 md:grid-cols-2 bg-black py-10">
       <div class="mt-auto mb-auto">
         <p class="font-coastal-body text-gray-100 text-3xl font-bold mb-3">
           Why Coastal Coating?
@@ -110,12 +110,12 @@
           Corvette Club, Coastal Carolina Mustang Club, and Myrtle Beach Car
           Club.
         </p>
-        <p class="ml-auto mr-auto mt-8 pb-5">
+        <p class="ml-auto mr-auto my-8">
           <SocialIcons />
         </p>
       </div>
 
-      <div class="mt-auto mb-auto">
+      <div>
         <img
           src="/img/home/coastal_coating_shop_front2.jpg"
           alt="Coastal Coating Shop Front"
@@ -124,7 +124,7 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-1 gap-1 bg-gray-50 py-6">
+    <div class="grid grid-cols-1 bg-gray-50 py-3">
       <div>
         <p class="font-semibold text-4xl font-sans text-gray-700">
           0 to
@@ -143,7 +143,7 @@
         mr-auto
         bg-gray-50
         text-white
-        pb-2
+        pb-6
       "
     >
       <div class="relative ml-auto mr-auto">
@@ -212,12 +212,12 @@
         </p>
       </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 bg-black">
+    <div class="grid grid-cols-1 md:grid-cols-2 bg-black my-10">
       <div>
         <img
           src="/img/home/what_is_ceramic_coating.jpg"
           alt="What is ceramic coating?"
-          class="inline rounded py-6"
+          class="inline rounded"
         />
       </div>
       <div class="mt-auto mb-auto">

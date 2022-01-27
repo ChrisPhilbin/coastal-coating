@@ -13,6 +13,7 @@
       justify-items-center
       max-w-auto
       md:w-3/4
+      mb-10
     "
   >
     <div class="px-2">

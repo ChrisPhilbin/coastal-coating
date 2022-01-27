@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center bg-gray-800 py-4 mt-3 w-full h-auto md:pt-4">
+  <div class="text-center bg-gray-800 py-4 w-full h-auto md:pt-4">
     <p class="text-gray-300">
       {{
         global.contactInfo.address.street +
