@@ -1,30 +1,56 @@
 <template>
-  <div class="grid grid-cols-1 mt-3">
-    <div class="relative">
+  <div
+    class="
+      grid grid-cols-1
+      md:grid-cols-2
+      gap-4
+      relative
+      mb-8
+      mt-2
+      mx-2
+      md:mx-8
+    "
+  >
+    <div>
       <img
         src="/img/landing/corvettes.jpg"
-        class="w-full h-auto ml-auto mr-auto mb-8 opacity-80"
+        class="w-auto h-full mx-auto opacity-80"
       />
+    </div>
+
+    <div class="p-4 text-center">
       <p
         class="
-          absolute
-          text-center
-          px-16
           w-full
-          top-1/2
-          left-1/2
-          transform
-          -translate-y-1/2 -translate-x-1/2
-          text-3xl
+          text-center text-3xl
           md:text-6xl
           text-white
           font-coastal-body font-bold
-          z-10
         "
       >
         We are the Grand Strand's preferred ceramic coating professional.
       </p>
+
+      <router-link to="/book-consultation"
+        ><button
+          class="
+            mt-12
+            md:mt-20
+            h-16
+            w-52
+            rounded-lg
+            bg-blue-700
+            text-white
+            font-semibold
+            text-lg
+          "
+        >
+          Book a consultation
+        </button></router-link
+      >
     </div>
+
+    <div class="text-center"></div>
   </div>
 </template>
 
