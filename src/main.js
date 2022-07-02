@@ -8,6 +8,7 @@ let app = createApp(App);
 
 app.config.globalProperties.global = {
   orgName: "Coastal Coating",
+  defaultPageTitle: "Coastal Coating - The Grand Strand's Leader in Ceramic Coating",
   contactInfo: {
     address: {
       street: "115-C Prather Park Dr.",

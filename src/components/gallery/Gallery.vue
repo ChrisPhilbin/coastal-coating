@@ -10,16 +10,32 @@
       <img :src="`${gallery.leaderImage}`" class="rounded" />
     </div>
     <div v-for="img in gallery.images" :key="img.id" class="ml-auto mr-auto">
-      <img :src="`${img.sm_url}`" class="rounded" />
+      <img :src="`${img.sm_url}`" class="rounded" @click="showModal(img)" />
     </div>
   </div>
+  <gallery-modal-vue v-show="isModalVisible" @close="closeModal">
+    <template v-if="selectedImage.title" v-slot:header> {{ selectedImage.title }} </template>
+
+    <template v-slot:body>
+      <img :src="`${selectedImage.lg_url}`" />
+    </template>
+
+    <template v-if="selectedImage.footer" v-slot:footer> {{ selectedImage.footer }} </template>
+  </gallery-modal-vue>
 </template>
 
 <script>
+import GalleryModalVue from "./modal/GalleryModal.vue";
+
 export default {
   name: "Gallery",
+  components: {
+    GalleryModalVue,
+  },
   data() {
     return {
+      selectedImage: {},
+      isModalVisible: false,
       errors: false,
       galleries: {
         chevrolet: {
@@ -146,13 +162,20 @@ export default {
       },
     };
   },
-  mounted() {
-    console.log(this.$route.params);
-  },
+  mounted() {},
   methods: {
     setErrors() {
       this.errors = true;
       this.$router.push("/404");
+    },
+    showModal(image) {
+      if (image.lg_url) {
+        this.selectedImage = image;
+        this.isModalVisible = true;
+      }
+    },
+    closeModal() {
+      this.isModalVisible = false;
     },
   },
   computed: {
