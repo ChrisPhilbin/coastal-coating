@@ -14,10 +14,7 @@
         >
           <div v-show="step === 1" class="mr-auto ml-auto">
             <div class="mr-auto ml-auto">
-              <label
-                for="firstName"
-                class="block text-sm text-left font-medium text-gray-500 pb-2"
-              >
+              <label for="firstName" class="block text-sm text-left font-medium text-gray-500 pb-2">
                 Your first name
               </label>
 
@@ -35,10 +32,7 @@
               </p>
             </div>
             <div class="mr-auto ml-auto pt-4">
-              <label
-                for="lastName"
-                class="block text-sm text-left font-medium text-gray-500 pb-2"
-              >
+              <label for="lastName" class="block text-sm text-left font-medium text-gray-500 pb-2">
                 Your last name
               </label>
 
@@ -56,10 +50,7 @@
               </p>
             </div>
             <div class="mr-auto ml-auto pt-4">
-              <label
-                for="email"
-                class="block text-sm text-left font-medium text-gray-500 pb-2"
-              >
+              <label for="email" class="block text-sm text-left font-medium text-gray-500 pb-2">
                 Your email address
               </label>
 
@@ -77,10 +68,7 @@
               </p>
             </div>
             <div class="mr-auto ml-auto pt-4">
-              <label
-                for="phoneNumber"
-                class="block text-sm text-left font-medium text-gray-500 pb-2"
-              >
+              <label for="phoneNumber" class="block text-sm text-left font-medium text-gray-500 pb-2">
                 Your phone number
               </label>
 
@@ -95,9 +83,7 @@
               />
             </div>
             <p class="pt-2 text-left text-sm text-red-500">
-              {{
-                errors.phone ? "* Phone must be valid - Ex: 843-999-2636" : ""
-              }}
+              {{ errors.phone ? "* Phone must be valid - Ex: 843-999-2636" : "" }}
             </p>
           </div>
         </transition>
@@ -109,10 +95,7 @@
         >
           <div v-show="step === 2" class="mr-auto ml-auto">
             <div class="mr-auto ml-auto">
-              <label
-                for="carYear"
-                class="block text-sm text-left font-medium text-gray-500 pb-2"
-              >
+              <label for="carYear" class="block text-sm text-left font-medium text-gray-500 pb-2">
                 Your car's year
               </label>
 
@@ -131,10 +114,7 @@
             </p>
 
             <div class="mr-auto ml-auto pt-4">
-              <label
-                for="carMake"
-                class="block text-sm text-left font-medium text-gray-500 pb-2"
-              >
+              <label for="carMake" class="block text-sm text-left font-medium text-gray-500 pb-2">
                 Your car's make
               </label>
 
@@ -152,10 +132,7 @@
               {{ errors.carMake ? "Must provide your car's make" : "" }}
             </p>
             <div class="mr-auto ml-auto pt-4">
-              <label
-                for="carModel"
-                class="block text-sm text-left font-medium text-gray-500 pb-2"
-              >
+              <label for="carModel" class="block text-sm text-left font-medium text-gray-500 pb-2">
                 Your car's model
               </label>
 
@@ -173,10 +150,7 @@
               {{ errors.carModel ? "Must provide your car's model" : "" }}
             </p>
             <div class="mr-auto ml-auto pt-4">
-              <label
-                for="carMilage"
-                class="block text-sm text-left font-medium text-gray-500 pb-2"
-              >
+              <label for="carMilage" class="block text-sm text-left font-medium text-gray-500 pb-2">
                 Your car's milage (estimated)
               </label>
 
@@ -209,9 +183,7 @@
         >
           <div v-show="step === 3" class="mr-auto ml-auto text-left">
             <div class="mr-auto ml-auto">
-              <p class="block text-sm text-left font-bold text-gray-500 pb-2">
-                What services are you interested in?
-              </p>
+              <p class="block text-sm text-left font-bold text-gray-500 pb-2">What services are you interested in?</p>
               <input
                 type="checkbox"
                 v-model="appointmentDetails.servicesDesired"
@@ -219,10 +191,7 @@
                 id="ceramicCoating"
                 class="h-4 w-4 rounded-full mr-2"
               />
-              <label
-                for="ceramicCoating"
-                class="inline text-sm text-left text-xl text-gray-500 pb-2"
-              >
+              <label for="ceramicCoating" class="inline text-sm text-left text-xl text-gray-500 pb-2">
                 Ceramic Coating
               </label>
             </div>
@@ -234,10 +203,7 @@
                 id="wheelCoating"
                 class="h-4 w-4 rounded-full mr-2"
               />
-              <label
-                for="wheelCoating"
-                class="inline text-sm text-left text-xl text-gray-500 pb-2"
-              >
+              <label for="wheelCoating" class="inline text-sm text-left text-xl text-gray-500 pb-2">
                 Wheel Coating
               </label>
             </div>
@@ -249,10 +215,7 @@
                 id="windowCoating"
                 class="h-4 w-4 rounded-full mr-2"
               />
-              <label
-                for="windowCoating"
-                class="inline text-sm text-left text-xl text-gray-500 pb-2"
-              >
+              <label for="windowCoating" class="inline text-sm text-left text-xl text-gray-500 pb-2">
                 Window Coating
               </label>
             </div>
@@ -264,10 +227,7 @@
                 id="leatherCoating"
                 class="h-4 w-4 rounded-full mr-2"
               />
-              <label
-                for="leatherCoating"
-                class="inline text-sm text-left text-xl text-gray-500 pb-2"
-              >
+              <label for="leatherCoating" class="inline text-sm text-left text-xl text-gray-500 pb-2">
                 Leather Coating
               </label>
             </div>
@@ -279,10 +239,7 @@
                 id="convertibleTopCoating"
                 class="h-4 w-4 rounded-full mr-2"
               />
-              <label
-                for="convertibleTopCoating"
-                class="inline text-sm text-left text-xl text-gray-500 pb-2"
-              >
+              <label for="convertibleTopCoating" class="inline text-sm text-left text-xl text-gray-500 pb-2">
                 Convertible Top Coating
               </label>
             </div>
@@ -294,12 +251,7 @@
                 id="detailing"
                 class="h-4 w-4 rounded-full mr-2"
               />
-              <label
-                for="detailing"
-                class="inline text-sm text-left text-xl text-gray-500 pb-2"
-              >
-                Detailing
-              </label>
+              <label for="detailing" class="inline text-sm text-left text-xl text-gray-500 pb-2"> Detailing </label>
             </div>
             <div class="mr-auto ml-auto">
               <input
@@ -309,18 +261,13 @@
                 id="ceramicWaxPolish"
                 class="h-4 w-4 rounded-full mr-2"
               />
-              <label
-                for="ceramicWaxPolish"
-                class="inline text-sm text-left text-xl text-gray-500 pb-2"
-              >
+              <label for="ceramicWaxPolish" class="inline text-sm text-left text-xl text-gray-500 pb-2">
                 Ceramic Wax & Polish
               </label>
             </div>
 
             <div class="mr-auto ml-auto">
-              <p class="block text-sm text-left font-bold text-gray-500 py-3">
-                When would be best to contact you?
-              </p>
+              <p class="block text-sm text-left font-bold text-gray-500 py-3">When would be best to contact you?</p>
               <input
                 type="checkbox"
                 v-model="appointmentDetails.bestTimesToConnect"
@@ -328,10 +275,7 @@
                 id="9to12"
                 class="h-4 w-4 rounded-full mr-2"
               />
-              <label
-                for="9to12"
-                class="inline text-sm text-left text-xl text-gray-500 pb-2"
-              >
+              <label for="9to12" class="inline text-sm text-left text-xl text-gray-500 pb-2">
                 Between 9am and 12pm
               </label>
             </div>
@@ -343,10 +287,7 @@
                 id="12to4"
                 class="h-4 w-4 rounded-full mr-2"
               />
-              <label
-                for="12to4"
-                class="inline text-sm text-left text-xl text-gray-500 pb-2"
-              >
+              <label for="12to4" class="inline text-sm text-left text-xl text-gray-500 pb-2">
                 Between 12pm and 4pm
               </label>
             </div>
@@ -358,18 +299,12 @@
                 id="4to7"
                 class="h-4 w-4 rounded-full mr-2"
               />
-              <label
-                for="4to7"
-                class="inline text-sm text-left text-xl text-gray-500 pb-2"
-              >
+              <label for="4to7" class="inline text-sm text-left text-xl text-gray-500 pb-2">
                 Between 4pm and 7pm
               </label>
             </div>
             <div class="mr-auto ml-auto pt-4">
-              <label
-                for="otherComments"
-                class="block text-sm text-left font-medium text-gray-500 pb-2"
-              >
+              <label for="otherComments" class="block text-sm text-left font-medium text-gray-500 pb-2">
                 Additional questions?
               </label>
 
@@ -397,14 +332,9 @@
               />
               <p
                 class="text-xs pt-2 pl-4"
-                :class="[
-                  appointmentDetails.otherComments.length === 300
-                    ? 'text-red-600'
-                    : 'text-gray-300',
-                ]"
+                :class="[appointmentDetails.otherComments.length === 300 ? 'text-red-600' : 'text-gray-300']"
               >
-                {{ appointmentDetails.otherComments.length }} out of 300
-                characters used
+                {{ appointmentDetails.otherComments.length }} out of 300 characters used
               </p>
             </div>
           </div>
@@ -413,32 +343,14 @@
           <button
             v-if="step === 1"
             type="button"
-            class="
-              disabled
-              cursor-not-allowed
-              inline
-              bg-gray-500
-              rounded-md
-              w-24
-              p-3
-              mr-3
-            "
+            class="disabled cursor-not-allowed inline bg-gray-500 rounded-md w-24 p-3 mr-3"
           >
             Previous
           </button>
           <button
             v-else
             type="button"
-            class="
-              inline
-              bg-blue-700
-              rounded-md
-              w-24
-              p-3
-              mr-3
-              text-white
-              font-bold
-            "
+            class="inline bg-blue-700 rounded-md w-24 p-3 mr-3 text-white font-bold"
             @click="step = step - 1"
           >
             Previous
@@ -458,14 +370,14 @@
             class="inline rounded-md w-24 p-3 font-bold"
             :class="[
               Object.keys(errors).length > 1 ||
-              !firstName ||
-              !lastName ||
-              !phone ||
-              !email ||
-              !carYear ||
-              !carMake ||
-              !carModel ||
-              !carMilage
+              !appointmentDetails.firstName ||
+              !appointmentDetails.lastName ||
+              !appointmentDetails.phone ||
+              !appointmentDetails.email ||
+              !appointmentDetails.carYear ||
+              !appointmentDetails.carMake ||
+              !appointmentDetails.carModel ||
+              !appointmentDetails.carMilage
                 ? 'disabled cursor-not-allowed pointer-events-none bg-gray-500 text-black'
                 : 'bg-blue-700 text-white',
             ]"
@@ -506,6 +418,7 @@ export default {
   },
   data() {
     return {
+      errorCount: 0,
       step: 1,
       appointmentDetails: {
         firstName: "",
@@ -526,33 +439,30 @@ export default {
   mounted() {
     const getSource = localStorage.getItem("campaignSource");
     if (getSource) {
-      this.campaignSource = getSource;
+      this.appointmentDetails.campaignSource = getSource;
     }
   },
   methods: {
     async handleAppointmentSubmit() {
       try {
-        let response = await fetch(
-          `https://us-central1-coastal-coating.cloudfunctions.net/api/book-appointment`,
-          {
-            method: "POST",
+        let response = await fetch(`https://us-central1-coastal-coating.cloudfunctions.net/api/book-appointment`, {
+          method: "POST",
 
-            body: JSON.stringify({
-              appointmentDetails: this.appointmentDetails,
-            }),
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
+          body: JSON.stringify({
+            appointmentDetails: this.appointmentDetails,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
         if (response.ok) {
           this.$router.push("/thank-you");
         }
       } catch (error) {
-        alert(
-          "Something went wrong! Please make sure all required fields are filled out"
-        );
+        console.log(error, "Something went wrong.");
+        alert("Something went wrong! Please make sure all required fields are filled out");
         this.step = 1;
+        this.errorCount++;
       }
     },
     validateEmail(value) {

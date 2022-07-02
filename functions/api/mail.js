@@ -2,6 +2,7 @@ const nodemailer = require("nodemailer");
 const { mailerConfig } = require("../config/index");
 const validator = require("email-validator");
 const { isCampaignSourceValid } = require("../util/validators");
+const smtpTransport = require("nodemailer-smtp-transport");
 
 exports.sendAppointmentDetails = async (request, response) => {
   const {
@@ -20,37 +21,35 @@ exports.sendAppointmentDetails = async (request, response) => {
   } = request.body.appointmentDetails;
 
   if (!validator.validate(email)) {
-    return response
-      .status(400)
-      .json({ message: "Must provide valid email address." });
+    return response.status(400).json({ message: "Must provide valid email address." });
   }
 
   if (!isCampaignSourceValid(campaignSource)) {
     return response.status(400).json({ message: "Invalid campain source." });
   }
 
-  if (
-    firstName &&
-    lastName &&
-    phone &&
-    carYear &&
-    carMake &&
-    carModel &&
-    carMilage
-  ) {
-    const transporter = nodemailer.createTransport({
-      name: mailerConfig.name,
-      port: mailerConfig.port,
-      host: mailerConfig.host,
-      auth: {
-        user: mailerConfig.auth.user,
-        pass: mailerConfig.auth.pass,
-      },
-      secure: mailerConfig.secure,
-    });
+  if (firstName && lastName && phone && carYear && carMake && carModel && carMilage) {
+    const currentDate = new Date().toLocaleString("en-US", { timeZone: "America/New_York" });
+    const transporter = nodemailer.createTransport(
+      smtpTransport({
+        name: mailerConfig.name,
+        port: mailerConfig.port,
+        host: mailerConfig.host,
+        secure: mailerConfig.secure,
+        // ignoreTLS: true,
+        // requireTLS: true,
+        tls: {
+          rejectUnauthorized: false,
+        },
+        auth: {
+          user: mailerConfig.auth.user,
+          pass: mailerConfig.auth.pass,
+        },
+      })
+    );
 
     const mailData = {
-      from: email,
+      from: `${firstName} ${lastName} <${email}>`,
       to: mailerConfig.to,
       subject: "Coastal Coating: Request for consultation",
       html: `
@@ -68,17 +67,21 @@ exports.sendAppointmentDetails = async (request, response) => {
             <strong>Best time(s) to contact:</strong> ${bestTimesToConnect}<br />
             <hr />
             <strong>Other comments:</strong> ${otherComments}<br />
-            <strong>Campaign source:</strong> ${campaignSource}<br />
+            <strong>Campaign source(s):</strong> ${campaignSource}<br />
+            <strong>Server timestamp:</strong> ${currentDate}<br />
         `,
     };
 
     transporter.sendMail(mailData, (error, info) => {
       if (error) {
-        response
-          .status(400)
-          .json({ error: "There was an error when sending the message." });
+        console.log(error, "Error");
+        return response.status(400).json({ error: "There was an error when sending the message." });
       }
-      response.status(200).json({ msg: "Message sent!", info });
+      console.log("Email sent success");
+      return response.status(200).json({ msg: "Message sent!", info });
     });
+  } else {
+    console.log("Something went wrong.");
+    return response.status(400).json({ error: "Missing required form data. Please try again." });
   }
 };

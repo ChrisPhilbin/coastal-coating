@@ -12,10 +12,7 @@
     "
   >
     <div>
-      <img
-        src="/img/landing/corvettes.jpg"
-        class="w-auto h-full mx-auto opacity-80"
-      />
+      <img src="/img/landing/corvettes.jpg" class="w-auto h-full mx-auto" />
     </div>
 
     <div class="p-4 text-center">
@@ -34,15 +31,18 @@
       <router-link to="/book-consultation"
         ><button
           class="
+            relative
             mt-12
             md:mt-20
             h-16
             w-52
+            md:h-20 md:w-72
             rounded-lg
             bg-blue-700
             text-white
             font-semibold
             text-lg
+            md:text-xl
           "
         >
           Book a consultation

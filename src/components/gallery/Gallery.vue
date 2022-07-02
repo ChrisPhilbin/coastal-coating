@@ -2,28 +2,14 @@
   <div v-if="errors">
     <p class="text-red-500">Not found!</p>
   </div>
-  <div
-    class="
-      grid grid-cols-1
-      md:grid-cols-2
-      gap-2
-      md:gap-8
-      ml-auto
-      mr-auto
-      justify-items-center
-      max-w-auto
-      md:w-3/4
-      mb-10
-    "
-  >
-    <div class="px-2">
-      <p class="text-white font-bold text-3xl">{{ gallery.name }}</p>
-      <p class="text-gray-300" v-html="gallery.intro"></p>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8 ml-auto mr-auto max-w-auto md:w-3/4 mb-10">
+    <div class="md:col-span-2 mb-4 md:pl-20 pl-5">
+      <p class="text-white font-bold text-4xl text-justify">{{ gallery.name }}</p>
     </div>
-    <div>
+    <div v-if="gallery.leaderImage" class="ml-auto mr-auto">
       <img :src="`${gallery.leaderImage}`" class="rounded" />
     </div>
-    <div v-for="img in gallery.images" :key="img.id">
+    <div v-for="img in gallery.images" :key="img.id" class="ml-auto mr-auto">
       <img :src="`${img.sm_url}`" class="rounded" />
     </div>
   </div>
@@ -38,8 +24,6 @@ export default {
       galleries: {
         chevrolet: {
           name: "Chevrolet",
-          intro:
-            '<p class="pb-3">Chevy makes some of the most iconic sports cars in American history but also produces some great sedans and SUVs that are seen all over the roads.</p><p>Whether you have the latest C8 Corvette, a Suburban to take long family roadtrips, or an iconic 1963 split-window Sting Ray, protecting your Chevy from the harsh elements should be of top concern.</p>',
           leaderImage: "/img/cars/gallery/chevrolet/corvette_sm.jpg",
           images: [
             {
@@ -61,7 +45,6 @@ export default {
         },
         ford: {
           name: "Ford",
-          intro: "The automaker that started it all: Ford.",
           leaderImage: "/img/cars/gallery/ford/mach1_mustang_sm.jpg",
           images: [
             {
@@ -77,6 +60,7 @@ export default {
           ],
         },
         nissan: {
+          name: "Nissan",
           intro: "",
           leaderImage: "",
           images: [
