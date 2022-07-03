@@ -2,7 +2,7 @@
   <div v-if="errors">
     <p class="text-red-500">Not found!</p>
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8 ml-auto mr-auto max-w-auto md:w-3/4 mb-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8 ml-auto mr-auto max-w-auto md:w-3/4 mb-10" id="gallery">
     <div class="md:col-span-2 mb-4 md:pl-20 pl-5">
       <p class="text-white font-bold text-4xl text-justify">{{ gallery.name }}</p>
     </div>
@@ -37,6 +37,7 @@ export default {
       selectedImage: {},
       isModalVisible: false,
       errors: false,
+      viewPortWidth: window.innerWidth,
       galleries: {
         chevrolet: {
           name: "Chevrolet",
@@ -162,14 +163,18 @@ export default {
       },
     };
   },
-  mounted() {},
+  mounted() {
+    window.addEventListener("resize", () => {
+      this.viewPortWidth = window.innerWidth;
+    });
+  },
   methods: {
     setErrors() {
       this.errors = true;
       this.$router.push("/404");
     },
     showModal(image) {
-      if (image.lg_url) {
+      if (image.lg_url && this.viewPortWidth >= 600) {
         this.selectedImage = image;
         this.isModalVisible = true;
       }

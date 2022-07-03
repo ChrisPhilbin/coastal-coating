@@ -50,6 +50,8 @@ export default {
   overflow-x: auto;
   display: flex;
   flex-direction: column;
+  margin-right: 8px;
+  margin-left: 8px;
 }
 
 .modal-header,
