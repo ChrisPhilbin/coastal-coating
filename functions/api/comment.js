@@ -4,8 +4,9 @@ const nodemailer = require("nodemailer");
 const { mailerConfig } = require("../config/index");
 const smtpTransport = require("nodemailer-smtp-transport");
 
-exports.submitComment = async (request, response) => {
-  const { firstName, lastName, phone, email, comments, campaignSource } = request.body;
+exports.submitComment = (request, response) => {
+  console.log(request.body, "request body coming in");
+  const { firstName, lastName, phone, email, comments, campaignSource } = request.body.commentDetails;
 
   if (!firstName || !lastName || !phone || !email || !comments) {
     return response.json(400).json({ message: "Missing required form fields." });
@@ -20,6 +21,7 @@ exports.submitComment = async (request, response) => {
   }
 
   if (firstName && lastName && phone && email && comments) {
+    console.log("All necessary properties present...");
     const currentDate = new Date().toLocaleString("en-US", { timeZone: "America/New_York" });
     const transporter = nodemailer.createTransport(
       smtpTransport({
@@ -42,7 +44,7 @@ exports.submitComment = async (request, response) => {
       to: mailerConfig.to,
       subject: "Coastal Coating: General questions/comments",
       html: `
-                <h2>Customer's shared information:</h2>
+                <h2>Customer's questions/comments:</h2>
                 <strong>First name:</strong> ${firstName}<br />
                 <strong>Last name:</strong> ${lastName}<br />
                 <strong>Email address:</strong> ${email}<br />

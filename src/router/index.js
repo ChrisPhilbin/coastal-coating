@@ -3,6 +3,7 @@ import AboutUs from "../components/static/AboutUs.vue";
 import Home from "../components/Home.vue";
 import BookConsultation from "../components/consultation/BookConsultation.vue";
 import ContactUs from "../components/static/ContactUs.vue";
+import ContactSuccessThankYou from "../components/static/contact/ContactSuccessThankYou.vue";
 import ThankYou from "../components/consultation/ThankYou.vue";
 import Gallery from "../components/gallery/Gallery.vue";
 import LandingPage from "../components/landing/LandingPage.vue";
@@ -30,6 +31,11 @@ const routes = [
     path: "/contact-us",
     name: "ContactUs",
     component: ContactUs,
+  },
+  {
+    path: "/contact-us/thank-you",
+    name: "ContactSuccessThankYou",
+    component: ContactSuccessThankYou,
   },
   {
     path: "/gallery/:make",
