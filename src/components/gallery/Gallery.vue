@@ -41,22 +41,47 @@ export default {
       galleries: {
         chevrolet: {
           name: "Chevrolet",
-          leaderImage: "/img/cars/gallery/chevrolet/corvette_sm.jpg",
+          leaderImage: "",
           images: [
             {
               id: 1,
-              lg_url: "/img/cars/gallery/chevrolet/blazer_lg.jpg",
-              sm_url: "/img/cars/gallery/chevrolet/blazer_sm.jpg",
+              lg_url: "/img/cars/gallery/chevrolet/lg/corvette_lg.jpg",
+              sm_url: "/img/cars/gallery/chevrolet/sm/corvette_sm.jpg",
             },
             {
               id: 2,
-              lg_url: "/img/cars/gallery/chevrolet/suburban_lg.jpg",
-              sm_url: "/img/cars/gallery/chevrolet/suburban_sm.jpg",
+              lg_url: "/img/cars/gallery/chevrolet/lg/camaro_lg.jpg",
+              sm_url: "/img/cars/gallery/chevrolet/sm/camaro_sm.jpg",
             },
             {
               id: 3,
-              lg_url: "/img/cars/gallery/chevrolet/camaro_lg.jpg",
-              sm_url: "/img/cars/gallery/chevrolet/camaro_sm.jpg",
+              lg_url: "/img/cars/gallery/chevrolet/lg/silverado_lg.jpg",
+              sm_url: "/img/cars/gallery/chevrolet/sm/silverado_sm.jpg",
+            },
+            {
+              id: 4,
+              lg_url: "/img/cars/gallery/chevrolet/lg/tahoe_lg.jpg",
+              sm_url: "/img/cars/gallery/chevrolet/sm/tahoe_sm.jpg",
+            },
+            {
+              id: 5,
+              lg_url: "/img/cars/gallery/chevrolet/lg/corvette_2_lg.jpg",
+              sm_url: "/img/cars/gallery/chevrolet/sm/corvette_2_sm.jpg",
+            },
+            {
+              id: 6,
+              lg_url: "/img/cars/gallery/chevrolet/lg/corvette_3_lg.jpg",
+              sm_url: "/img/cars/gallery/chevrolet/sm/corvette_3_sm.jpg",
+            },
+            {
+              id: 7,
+              lg_url: "/img/cars/gallery/chevrolet/lg/traverse_lg.jpg",
+              sm_url: "/img/cars/gallery/chevrolet/sm/traverse_sm.jpg",
+            },
+            {
+              id: 8,
+              lg_url: "/img/cars/gallery/chevrolet/lg/corvette_4_lg.jpg",
+              sm_url: "/img/cars/gallery/chevrolet/sm/corvette_4_sm.jpg",
             },
           ],
         },
@@ -145,18 +170,43 @@ export default {
           images: [
             {
               id: 1,
-              lg_url: "",
-              sm_url: "/img/cars/gallery/bmw/x6_sm.jpg",
+              lg_url: "/img/cars/gallery/bmw/lg/m6_lg.jpg",
+              sm_url: "/img/cars/gallery/bmw/sm/m6_sm.jpg",
             },
             {
               id: 2,
-              lg_url: "",
-              sm_url: "/img/cars/gallery/bmw/m240i_sm.jpg",
+              lg_url: "/img/cars/gallery/bmw/lg/m4_side_lg.jpg",
+              sm_url: "/img/cars/gallery/bmw/sm/m4_side_sm.jpg",
             },
             {
               id: 3,
-              lg_url: "",
-              sm_url: "/img/cars/gallery/bmw/3_series_sm.jpg",
+              lg_url: "/img/cars/gallery/bmw/lg/x6_side_lg.jpg",
+              sm_url: "/img/cars/gallery/bmw/sm/x6_side_sm.jpg",
+            },
+            {
+              id: 4,
+              lg_url: "/img/cars/gallery/bmw/lg/4_series_2_lg.jpg",
+              sm_url: "/img/cars/gallery/bmw/sm/4_series_2_sm.jpg",
+            },
+            {
+              id: 5,
+              lg_url: "/img/cars/gallery/bmw/lg/4_series_lg.jpg",
+              sm_url: "/img/cars/gallery/bmw/sm/4_series_sm.jpg",
+            },
+            {
+              id: 6,
+              lg_url: "/img/cars/gallery/bmw/lg/m4_lg.jpg",
+              sm_url: "/img/cars/gallery/bmw/sm/m4_sm.jpg",
+            },
+            {
+              id: 7,
+              lg_url: "/img/cars/gallery/bmw/lg/x3_lg.jpg",
+              sm_url: "/img/cars/gallery/bmw/sm/x3_sm.jpg",
+            },
+            {
+              id: 8,
+              lg_url: "/img/cars/gallery/bmw/lg/x6_lg.jpg",
+              sm_url: "/img/cars/gallery/bmw/sm/x6_sm.jpg",
             },
           ],
         },
