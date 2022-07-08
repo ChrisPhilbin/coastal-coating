@@ -1,5 +1,5 @@
 <template>
-  <div class="md:hidden absolute right-4 top-5 flex items-center">
+  <div class="md:hidden absolute right-4 top-5 flex items-center z-10">
     <button class="outline-none mobile-menu-button">
       <svg
         @click="toggleMenu"

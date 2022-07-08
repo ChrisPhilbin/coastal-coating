@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col h-screen">
-    <TopNav />
-    <div class="mb-auto pt-20 md:pt-2" id="main-content-div">
+  <TopNav />
+  <div class="flex flex-col h-screen z-20" id="main-content-div">
+    <div class="mb-auto pt-20 md:pt-2">
       <router-view />
     </div>
     <BottomNav />
