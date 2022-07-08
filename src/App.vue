@@ -1,11 +1,7 @@
 <template>
   <div class="flex flex-col h-screen">
     <TopNav />
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
-    <div class="mb-auto pt-20 md:pt-2">
+    <div class="mb-auto pt-20 md:pt-2" id="main-content-div">
       <router-view />
     </div>
     <BottomNav />

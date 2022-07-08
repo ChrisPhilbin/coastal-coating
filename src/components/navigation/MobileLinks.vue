@@ -24,20 +24,7 @@
     leave-from-class="transform scale-100 opacity-100"
     leave-to-class="transform scale-95 opacity-0"
   >
-    <div
-      v-show="showMenu"
-      class="
-        md:hidden
-        absolute
-        left-10
-        top-24
-        bg-white
-        z-50
-        w-10/12
-        rounded-md
-        opacity-95
-      "
-    >
+    <div v-show="showMenu" class="md:hidden absolute left-10 top-24 bg-white z-50 w-10/12 rounded-md opacity-95">
       <router-link to="/" custom v-slot="{ navigate }">
         <div
           role="link"
@@ -47,12 +34,7 @@
           "
           class="border-b-2 w-full p-3"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 inline"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" viewBox="0 0 20 20" fill="currentColor">
             <path
               fill-rule="evenodd"
               d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
@@ -71,12 +53,7 @@
           "
           class="border-b-2 w-full p-3"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5 inline"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" viewBox="0 0 20 20" fill="currentColor">
             <path
               fill-rule="evenodd"
               d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
@@ -86,18 +63,12 @@
           <p class="inline font-bold">Book a consultation</p>
         </div>
       </router-link>
-      <div
-        class="w-full p-3"
-        :class="[showServices ? '' : 'border-b-2']"
-        @click="toggleServices"
-      >
+      <div class="w-full p-3" :class="[showServices ? '' : 'border-b-2']" @click="toggleServices">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-5 w-5 inline"
           :class="[
-            showServices
-              ? 'transform rotate-90 transition duration-300 text-blue-800'
-              : 'transition duration-300',
+            showServices ? 'transform rotate-90 transition duration-300 text-blue-800' : 'transition duration-300',
           ]"
           viewBox="0 0 20 20"
           fill="currentColor"
@@ -118,10 +89,7 @@
         leave-to-class="transform scale-95 opacity-0"
       >
         <div v-show="showServices" class="w-full pl-10">
-          <router-link
-            to="/services/ceramic-coating"
-            custom
-            v-slot="{ navigate }"
+          <router-link to="/services/ceramic-coating" custom v-slot="{ navigate }"
             ><span
               class="block pb-1.5"
               @click="
@@ -133,10 +101,7 @@
           >
           <span class="block pb-1.5">Wheel Coating</span>
           <span class="block pb-1.5">Window Coating</span>
-          <router-link
-            to="/services/interior-leather-coating"
-            custom
-            v-slot="{ navigate }"
+          <router-link to="/services/interior-leather-coating" custom v-slot="{ navigate }"
             ><span
               class="block pb-1.5"
               @click="
@@ -152,19 +117,11 @@
           <span class="block pb-1.5">Recreational Vehicles</span>
         </div>
       </transition>
-      <div
-        class="w-full p-3"
-        :class="[showWork ? '' : 'border-b-2']"
-        @click="toggleWork"
-      >
+      <div class="w-full p-3" :class="[showWork ? '' : 'border-b-2']" @click="toggleWork">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-5 w-5 inline"
-          :class="[
-            showWork
-              ? 'transform rotate-90 transition duration-300 text-blue-800'
-              : 'transition duration-300',
-          ]"
+          :class="[showWork ? 'transform rotate-90 transition duration-300 text-blue-800' : 'transition duration-300']"
           viewBox="0 0 20 20"
           fill="currentColor"
         >
@@ -257,12 +214,7 @@
         </div>
       </transition>
       <div class="border-b-2 w-full p-3">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 inline"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" viewBox="0 0 20 20" fill="currentColor">
           <path
             fill-rule="evenodd"
             d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
@@ -280,12 +232,7 @@
         >
       </div>
       <div class="border-b-2 w-full p-3">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 inline"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" viewBox="0 0 20 20" fill="currentColor">
           <path
             fill-rule="evenodd"
             d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
@@ -319,7 +266,16 @@ export default {
       showMenu: false,
       showWork: false,
       showServices: false,
+      mainDiv: null,
     };
+  },
+  mounted() {
+    this.mainDiv = document.getElementById("main-content-div");
+    this.mainDiv.addEventListener("click", () => {
+      if (this.showMenu) {
+        this.showMenu = !this.showMenu;
+      }
+    });
   },
   methods: {
     toggleMenu() {
