@@ -7,6 +7,7 @@
         :validation-schema="schema"
         class="ml-auto mr-auto w-80"
       >
+        <consultation-progress-vue :currentStep="step"></consultation-progress-vue>
         <transition
           enter-active-class="transition duration-500 ease-out"
           enter-from-class="transform scale-95 opacity-0"
@@ -392,12 +393,14 @@
 
 <script>
 import { Form, Field } from "vee-validate";
+import ConsultationProgressVue from "./ConsultationProgress.vue";
 import * as Yup from "yup";
 export default {
   name: "BookConsultation",
   components: {
     Form,
     Field,
+    ConsultationProgressVue,
   },
   setup() {
     const phoneRegEx =
