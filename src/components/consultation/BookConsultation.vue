@@ -378,12 +378,13 @@
               !appointmentDetails.carYear ||
               !appointmentDetails.carMake ||
               !appointmentDetails.carModel ||
-              !appointmentDetails.carMilage
+              !appointmentDetails.carMilage ||
+              inSubmission
                 ? 'disabled cursor-not-allowed pointer-events-none bg-gray-500 text-black'
                 : 'bg-blue-700 text-white',
             ]"
           >
-            Submit
+            {{ inSubmission ? `Sending...` : `Submit` }}
           </button>
         </div>
       </Form>
@@ -421,6 +422,7 @@ export default {
   },
   data() {
     return {
+      inSubmission: false,
       errorCount: 0,
       step: 1,
       appointmentDetails: {
@@ -448,6 +450,7 @@ export default {
   methods: {
     async handleAppointmentSubmit() {
       try {
+        this.inSubmission = true;
         let response = await fetch(`https://us-central1-coastal-coating.cloudfunctions.net/api/book-appointment`, {
           method: "POST",
 
@@ -466,6 +469,7 @@ export default {
         alert("Something went wrong! Please make sure all required fields are filled out");
         this.step = 1;
         this.errorCount++;
+        this.inSubmission = false;
       }
     },
     validateEmail(value) {
