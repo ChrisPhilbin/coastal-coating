@@ -393,6 +393,7 @@
 </template>
 
 <script>
+import formMixin from "../../mixins/form/formMixin";
 import { Form, Field } from "vee-validate";
 import ConsultationProgressVue from "./ConsultationProgress.vue";
 import * as Yup from "yup";
@@ -403,6 +404,7 @@ export default {
     Field,
     ConsultationProgressVue,
   },
+  mixins: [formMixin],
   setup() {
     const phoneRegEx =
       /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
@@ -442,10 +444,7 @@ export default {
     };
   },
   mounted() {
-    const getSource = localStorage.getItem("campaignSource");
-    if (getSource) {
-      this.appointmentDetails.campaignSource = getSource;
-    }
+    this.appointmentDetails.campaignSource = this.getCampaignSource();
   },
   methods: {
     async handleAppointmentSubmit() {

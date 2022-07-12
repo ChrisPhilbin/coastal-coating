@@ -134,9 +134,14 @@
 </template>
 
 <script>
+import siteAdminMixin from "../mixins/site/siteAdminMixin";
 import SocialIcons from "./navigation/SocialIcons.vue";
 export default {
   name: "Home",
   components: { SocialIcons },
+  mixins: [siteAdminMixin],
+  mounted() {
+    this.setPageTitle(this.global.defaultPageTitle);
+  },
 };
 </script>

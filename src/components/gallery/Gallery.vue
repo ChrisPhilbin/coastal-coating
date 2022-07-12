@@ -25,13 +25,14 @@
 </template>
 
 <script>
+import siteAdminMixin from "../../mixins/site/siteAdminMixin";
 import GalleryModalVue from "./modal/GalleryModal.vue";
-
 export default {
   name: "Gallery",
   components: {
     GalleryModalVue,
   },
+  mixins: [siteAdminMixin],
   data() {
     return {
       selectedImage: {},
@@ -217,6 +218,7 @@ export default {
     window.addEventListener("resize", () => {
       this.viewPortWidth = window.innerWidth;
     });
+    this.setPageTitle(this.global.defaultPageTitle);
   },
   methods: {
     setErrors() {
