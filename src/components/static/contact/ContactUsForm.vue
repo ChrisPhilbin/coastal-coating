@@ -33,7 +33,7 @@
             placeholder="Smith"
           />
           <p class="pt-2 text-left text-sm text-red-500">
-            {{ errors.lastName ? "*First name is required" : "" }}
+            {{ errors.lastName ? "*Last name is required" : "" }}
           </p>
         </div>
         <div class="mr-auto ml-auto">
@@ -73,26 +73,16 @@
             Questions / comments
           </label>
 
-          <textarea
+          <Field
+            as="textarea"
             rows="5"
             cols="25"
             maxlength="300"
             v-model="commentDetails.comments"
             name="comments"
             id="comments"
-            class="
-              resize-none
-              focus:ring-2 focus:ring-blue-700 focus:outline-none
-              flex-1
-              p-4
-              block
-              w-full
-              rounded-lg
-              bg-black
-              text-lg text-white
-              border border-blue-700
-              placeholder-gray-600
-            "
+            class="input-default"
+            :class="[errors.comments ? 'input--error' : 'input--no-error']"
             placeholder="Questions / comments"
           />
           <p class="pt-2 text-left text-sm text-red-500">
