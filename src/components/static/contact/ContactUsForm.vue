@@ -99,12 +99,13 @@
               !commentDetails.lastName ||
               !commentDetails.phone ||
               !commentDetails.email ||
-              !commentDetails.comments
+              !commentDetails.comments ||
+              inSubmission
                 ? 'disabled cursor-not-allowed pointer-events-none bg-gray-500 text-black'
                 : 'bg-blue-700 text-white',
             ]"
           >
-            Submit
+            {{ inSubmission ? `Sending...` : `Submit` }}
           </button>
         </div>
       </Form>
@@ -135,6 +136,7 @@ export default {
   },
   data() {
     return {
+      inSubmission: false,
       commentDetails: {
         firstName: "",
         lastName: "",
@@ -154,6 +156,7 @@ export default {
   methods: {
     async handleCommentSubmit() {
       try {
+        this.inSubmission = true;
         let response = await fetch(`https://us-central1-coastal-coating.cloudfunctions.net/api/comment/new`, {
           method: "POST",
           body: JSON.stringify({
@@ -169,6 +172,7 @@ export default {
       } catch (error) {
         console.log(error, "Something went wrong.");
         alert("Something went wrong. Please try again in a moment.");
+        this.inSubmission = false;
       }
     },
   },
