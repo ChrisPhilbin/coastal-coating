@@ -3,7 +3,14 @@ export default {
     getCampaignSource() {
       const campaignSource = localStorage.getItem("campaignSource");
       if (campaignSource) {
-        return campaignSource;
+        if (
+          this.global.validCampaignSources.includes(
+            campaignSource.toLowerCase()
+          )
+        ) {
+          return campaignSource;
+        }
+        return "unknown";
       }
 
       return "organic";

@@ -439,7 +439,7 @@ export default {
         servicesDesired: [],
         bestTimesToConnect: [],
         otherComments: "",
-        campaignSource: "Organic",
+        campaignSource: "organic",
       },
     };
   },
