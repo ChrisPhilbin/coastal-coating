@@ -182,165 +182,170 @@
           enter-from-class="transform scale-95 opacity-0"
           enter-to-class="transform scale-100 opacity-100"
         >
-          <div v-show="step === 3" class="mr-auto ml-auto text-left">
-            <div class="mr-auto ml-auto">
-              <p class="block text-sm text-left font-bold text-gray-500 pb-2">What services are you interested in?</p>
-              <input
-                type="checkbox"
-                v-model="appointmentDetails.servicesDesired"
-                value="Ceramic Coating"
-                id="ceramicCoating"
-                class="h-4 w-4 rounded-full mr-2"
-              />
-              <label for="ceramicCoating" class="inline text-sm text-left text-xl text-gray-500 pb-2">
-                Ceramic Coating
-              </label>
-            </div>
-            <div class="mr-auto ml-auto">
-              <input
-                type="checkbox"
-                v-model="appointmentDetails.servicesDesired"
-                value="Wheel Coating"
-                id="wheelCoating"
-                class="h-4 w-4 rounded-full mr-2"
-              />
-              <label for="wheelCoating" class="inline text-sm text-left text-xl text-gray-500 pb-2">
-                Wheel Coating
-              </label>
-            </div>
-            <div class="mr-auto ml-auto">
-              <input
-                type="checkbox"
-                v-model="appointmentDetails.servicesDesired"
-                value="Window Coating"
-                id="windowCoating"
-                class="h-4 w-4 rounded-full mr-2"
-              />
-              <label for="windowCoating" class="inline text-sm text-left text-xl text-gray-500 pb-2">
-                Window Coating
-              </label>
-            </div>
-            <div class="mr-auto ml-auto">
-              <input
-                type="checkbox"
-                v-model="appointmentDetails.servicesDesired"
-                value="Leather Coating"
-                id="leatherCoating"
-                class="h-4 w-4 rounded-full mr-2"
-              />
-              <label for="leatherCoating" class="inline text-sm text-left text-xl text-gray-500 pb-2">
-                Leather Coating
-              </label>
-            </div>
-            <div class="mr-auto ml-auto">
-              <input
-                type="checkbox"
-                v-model="appointmentDetails.servicesDesired"
-                value="Convertible Top Coating"
-                id="convertibleTopCoating"
-                class="h-4 w-4 rounded-full mr-2"
-              />
-              <label for="convertibleTopCoating" class="inline text-sm text-left text-xl text-gray-500 pb-2">
-                Convertible Top Coating
-              </label>
-            </div>
-            <div class="mr-auto ml-auto">
-              <input
-                type="checkbox"
-                v-model="appointmentDetails.servicesDesired"
-                value="Detailing"
-                id="detailing"
-                class="h-4 w-4 rounded-full mr-2"
-              />
-              <label for="detailing" class="inline text-sm text-left text-xl text-gray-500 pb-2"> Detailing </label>
-            </div>
-            <div class="mr-auto ml-auto">
-              <input
-                type="checkbox"
-                v-model="appointmentDetails.servicesDesired"
-                value="Ceramic Wax & Polish"
-                id="ceramicWaxPolish"
-                class="h-4 w-4 rounded-full mr-2"
-              />
-              <label for="ceramicWaxPolish" class="inline text-sm text-left text-xl text-gray-500 pb-2">
-                Ceramic Wax & Polish
-              </label>
-            </div>
+          <div v-show="step === 3" class="mr-auto ml-auto">
+            <div class="text-left">
+              <div class="mr-auto ml-auto">
+                <p class="block text-sm text-left font-bold text-gray-500 pb-2">What services are you interested in?</p>
+                <input
+                  type="checkbox"
+                  v-model="appointmentDetails.servicesDesired"
+                  value="Ceramic Coating"
+                  id="ceramicCoating"
+                  class="h-4 w-4 rounded-full mr-2"
+                />
+                <label for="ceramicCoating" class="inline text-sm text-left text-xl text-gray-500 pb-2">
+                  Ceramic Coating
+                </label>
+              </div>
+              <div class="mr-auto ml-auto">
+                <input
+                  type="checkbox"
+                  v-model="appointmentDetails.servicesDesired"
+                  value="Wheel Coating"
+                  id="wheelCoating"
+                  class="h-4 w-4 rounded-full mr-2"
+                />
+                <label for="wheelCoating" class="inline text-sm text-left text-xl text-gray-500 pb-2">
+                  Wheel Coating
+                </label>
+              </div>
+              <div class="mr-auto ml-auto">
+                <input
+                  type="checkbox"
+                  v-model="appointmentDetails.servicesDesired"
+                  value="Window Coating"
+                  id="windowCoating"
+                  class="h-4 w-4 rounded-full mr-2"
+                />
+                <label for="windowCoating" class="inline text-sm text-left text-xl text-gray-500 pb-2">
+                  Window Coating
+                </label>
+              </div>
+              <div class="mr-auto ml-auto">
+                <input
+                  type="checkbox"
+                  v-model="appointmentDetails.servicesDesired"
+                  value="Leather Coating"
+                  id="leatherCoating"
+                  class="h-4 w-4 rounded-full mr-2"
+                />
+                <label for="leatherCoating" class="inline text-sm text-left text-xl text-gray-500 pb-2">
+                  Leather Coating
+                </label>
+              </div>
+              <div class="mr-auto ml-auto">
+                <input
+                  type="checkbox"
+                  v-model="appointmentDetails.servicesDesired"
+                  value="Convertible Top Coating"
+                  id="convertibleTopCoating"
+                  class="h-4 w-4 rounded-full mr-2"
+                />
+                <label for="convertibleTopCoating" class="inline text-sm text-left text-xl text-gray-500 pb-2">
+                  Convertible Top Coating
+                </label>
+              </div>
+              <div class="mr-auto ml-auto">
+                <input
+                  type="checkbox"
+                  v-model="appointmentDetails.servicesDesired"
+                  value="Detailing"
+                  id="detailing"
+                  class="h-4 w-4 rounded-full mr-2"
+                />
+                <label for="detailing" class="inline text-sm text-left text-xl text-gray-500 pb-2"> Detailing </label>
+              </div>
+              <div class="mr-auto ml-auto">
+                <input
+                  type="checkbox"
+                  v-model="appointmentDetails.servicesDesired"
+                  value="Ceramic Wax & Polish"
+                  id="ceramicWaxPolish"
+                  class="h-4 w-4 rounded-full mr-2"
+                />
+                <label for="ceramicWaxPolish" class="inline text-sm text-left text-xl text-gray-500 pb-2">
+                  Ceramic Wax & Polish
+                </label>
+              </div>
 
-            <div class="mr-auto ml-auto">
-              <p class="block text-sm text-left font-bold text-gray-500 py-3">When would be best to contact you?</p>
-              <input
-                type="checkbox"
-                v-model="appointmentDetails.bestTimesToConnect"
-                value="Between 9am and 12pm"
-                id="9to12"
-                class="h-4 w-4 rounded-full mr-2"
-              />
-              <label for="9to12" class="inline text-sm text-left text-xl text-gray-500 pb-2">
-                Between 9am and 12pm
-              </label>
-            </div>
-            <div class="mr-auto ml-auto">
-              <input
-                type="checkbox"
-                v-model="appointmentDetails.bestTimesToConnect"
-                value="Between 12pm and 4pm"
-                id="12to4"
-                class="h-4 w-4 rounded-full mr-2"
-              />
-              <label for="12to4" class="inline text-sm text-left text-xl text-gray-500 pb-2">
-                Between 12pm and 4pm
-              </label>
-            </div>
-            <div class="mr-auto ml-auto">
-              <input
-                type="checkbox"
-                v-model="appointmentDetails.bestTimesToConnect"
-                value="Between 4pm and 7pm"
-                id="4to7"
-                class="h-4 w-4 rounded-full mr-2"
-              />
-              <label for="4to7" class="inline text-sm text-left text-xl text-gray-500 pb-2">
-                Between 4pm and 7pm
-              </label>
-            </div>
-            <div class="mr-auto ml-auto pt-4">
-              <label for="otherComments" class="block text-sm text-left font-medium text-gray-500 pb-2">
-                Additional questions?
-              </label>
+              <div class="mr-auto ml-auto">
+                <p class="block text-sm text-left font-bold text-gray-500 py-3">When would be best to contact you?</p>
+                <input
+                  type="checkbox"
+                  v-model="appointmentDetails.bestTimesToConnect"
+                  value="Between 9am and 12pm"
+                  id="9to12"
+                  class="h-4 w-4 rounded-full mr-2"
+                />
+                <label for="9to12" class="inline text-sm text-left text-xl text-gray-500 pb-2">
+                  Between 9am and 12pm
+                </label>
+              </div>
+              <div class="mr-auto ml-auto">
+                <input
+                  type="checkbox"
+                  v-model="appointmentDetails.bestTimesToConnect"
+                  value="Between 12pm and 4pm"
+                  id="12to4"
+                  class="h-4 w-4 rounded-full mr-2"
+                />
+                <label for="12to4" class="inline text-sm text-left text-xl text-gray-500 pb-2">
+                  Between 12pm and 4pm
+                </label>
+              </div>
+              <div class="mr-auto ml-auto">
+                <input
+                  type="checkbox"
+                  v-model="appointmentDetails.bestTimesToConnect"
+                  value="Between 4pm and 7pm"
+                  id="4to7"
+                  class="h-4 w-4 rounded-full mr-2"
+                />
+                <label for="4to7" class="inline text-sm text-left text-xl text-gray-500 pb-2">
+                  Between 4pm and 7pm
+                </label>
+              </div>
+              <div class="mr-auto ml-auto pt-4">
+                <label for="otherComments" class="block text-sm text-left font-medium text-gray-500 pb-2">
+                  Additional questions?
+                </label>
 
-              <textarea
-                rows="5"
-                cols="25"
-                maxlength="300"
-                v-model="appointmentDetails.otherComments"
-                name="otherComments"
-                id="otherComments"
-                class="
-                  resize-none
-                  focus:ring-2 focus:ring-blue-700 focus:outline-none
-                  flex-1
-                  p-4
-                  block
-                  w-full
-                  rounded-lg
-                  bg-black
-                  text-lg text-white
-                  border border-blue-700
-                  placeholder-gray-600
-                "
-                placeholder="Anything else you'd like us to know?"
-              />
-              <p
-                class="text-xs pt-2 pl-4"
-                :class="[appointmentDetails.otherComments.length === 300 ? 'text-red-600' : 'text-gray-300']"
-              >
-                {{ appointmentDetails.otherComments.length }} out of 300 characters used
-              </p>
+                <textarea
+                  rows="5"
+                  cols="25"
+                  maxlength="300"
+                  v-model="appointmentDetails.otherComments"
+                  name="otherComments"
+                  id="otherComments"
+                  class="
+                    resize-none
+                    focus:ring-2 focus:ring-blue-700 focus:outline-none
+                    flex-1
+                    p-4
+                    block
+                    w-full
+                    rounded-lg
+                    bg-black
+                    text-lg text-white
+                    border border-blue-700
+                    placeholder-gray-600
+                  "
+                  placeholder="Anything else you'd like us to know?"
+                />
+                <p
+                  class="text-xs pt-2 pl-4"
+                  :class="[appointmentDetails.otherComments.length === 300 ? 'text-red-600' : 'text-gray-300']"
+                >
+                  {{ appointmentDetails.otherComments.length }} out of 300 characters used
+                </p>
+              </div>
+            </div>
+            <div class="mr-auto ml-auto pt-4 inline-block">
+              <vue-recaptcha :sitekey="global.googleReCaptchaKey" @verify="onVerifyCaptcha"></vue-recaptcha>
             </div>
           </div>
         </transition>
-        <div class="mr-auto ml-auto pt-4">
+        <div class="mr-auto ml-auto pt-4 inline-block">
           <button
             v-if="step === 1"
             type="button"
@@ -366,8 +371,8 @@
             Next
           </button>
           <button
-            @click.prevent="handleAppointmentSubmit"
             v-else
+            @click.prevent="handleAppointmentSubmit"
             class="inline rounded-md w-24 p-3 font-bold"
             :class="[
               Object.keys(errors).length > 1 ||
@@ -379,7 +384,8 @@
               !appointmentDetails.carMake ||
               !appointmentDetails.carModel ||
               !appointmentDetails.carMilage ||
-              inSubmission
+              inSubmission ||
+              hasBlankCaptcha
                 ? 'disabled cursor-not-allowed pointer-events-none bg-gray-500 text-black'
                 : 'bg-blue-700 text-white',
             ]"
@@ -393,6 +399,7 @@
 </template>
 
 <script>
+import { VueRecaptcha } from "vue-recaptcha";
 import formMixin from "../../mixins/form/formMixin";
 import { Form, Field } from "vee-validate";
 import ConsultationProgressVue from "./ConsultationProgress.vue";
@@ -403,6 +410,7 @@ export default {
     Form,
     Field,
     ConsultationProgressVue,
+    VueRecaptcha,
   },
   mixins: [formMixin],
   setup() {
@@ -424,6 +432,7 @@ export default {
   },
   data() {
     return {
+      hasBlankCaptcha: true,
       inSubmission: false,
       errorCount: 0,
       step: 1,
@@ -447,6 +456,9 @@ export default {
     this.appointmentDetails.campaignSource = this.getCampaignSource();
   },
   methods: {
+    onVerifyCaptcha() {
+      this.hasBlankCaptcha = false;
+    },
     async handleAppointmentSubmit() {
       try {
         this.inSubmission = true;

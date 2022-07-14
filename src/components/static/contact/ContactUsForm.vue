@@ -89,10 +89,11 @@
             {{ errors.comments ? "Please include your questions/comments" : "" }}
           </p>
         </div>
-        <div class="mr-auto ml-auto pt-4">
+        <div class="mr-auto ml-auto pt-4 inline-block">
+          <vue-recaptcha :sitekey="global.googleReCaptchaKey" @verify="onVerifyCaptcha"></vue-recaptcha>
           <button
             @click.prevent="handleCommentSubmit"
-            class="inline rounded-md w-24 p-3 font-bold"
+            class="inline rounded-md w-24 p-3 mt-2 font-bold"
             :class="[
               Object.keys(errors).length > 1 ||
               !commentDetails.firstName ||
@@ -100,7 +101,8 @@
               !commentDetails.phone ||
               !commentDetails.email ||
               !commentDetails.comments ||
-              inSubmission
+              inSubmission ||
+              hasBlankCaptcha
                 ? 'disabled cursor-not-allowed pointer-events-none bg-gray-500 text-black'
                 : 'bg-blue-700 text-white',
             ]"
@@ -114,6 +116,7 @@
 </template>
 
 <script>
+import { VueRecaptcha } from "vue-recaptcha";
 import formMixin from "../../../mixins/form/formMixin";
 import { Form, Field } from "vee-validate";
 import * as Yup from "yup";
@@ -122,6 +125,7 @@ export default {
   components: {
     Form,
     Field,
+    VueRecaptcha,
   },
   mixins: [formMixin],
   setup() {
@@ -138,6 +142,7 @@ export default {
   },
   data() {
     return {
+      hasBlankCaptcha: true,
       inSubmission: false,
       commentDetails: {
         firstName: "",
@@ -153,6 +158,9 @@ export default {
     this.commentDetails.campaignSource = this.getCampaignSource();
   },
   methods: {
+    onVerifyCaptcha() {
+      this.hasBlankCaptcha = false;
+    },
     async handleCommentSubmit() {
       try {
         this.inSubmission = true;
