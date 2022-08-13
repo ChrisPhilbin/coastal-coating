@@ -105,7 +105,7 @@
                   'group flex items-center w-full px-2 py-2 text-sm',
                 ]"
               >
-                Ford
+                Ford / Lincoln
               </button>
             </router-link>
           </MenuItem>

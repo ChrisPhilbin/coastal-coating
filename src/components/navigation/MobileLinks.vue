@@ -168,7 +168,7 @@
                 toggleMenu();
                 navigate();
               "
-              >Ford</span
+              >Ford/Lincoln</span
             ></router-link
           >
           <router-link to="/gallery/gmc" custom v-slot="{ navigate }"

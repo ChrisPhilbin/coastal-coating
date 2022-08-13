@@ -133,18 +133,58 @@ export default {
           ],
         },
         ford: {
-          name: "Ford",
-          leaderImage: "/img/cars/gallery/ford/mach1_mustang_sm.jpg",
+          name: "Ford / Lincoln",
+          leaderImage: "",
           images: [
             {
               id: 1,
-              lg_url: "",
-              sm_url: "/img/cars/gallery/ford/f150_sm.jpg",
+              lg_url: "/img/cars/gallery/ford_lincoln/lg/bronco_lg.jpg",
+              sm_url: "/img/cars/gallery/ford_lincoln/sm/bronco_sm.jpg",
             },
             {
               id: 2,
-              lg_url: "",
-              sm_url: "/img/cars/gallery/ford/f450_sm.jpg",
+              lg_url: "/img/cars/gallery/ford_lincoln/lg/f250_lg.jpg",
+              sm_url: "/img/cars/gallery/ford_lincoln/sm/f250_sm.jpg",
+            },
+            {
+              id: 3,
+              lg_url: "/img/cars/gallery/ford_lincoln/lg/expedition_lg.jpg",
+              sm_url: "/img/cars/gallery/ford_lincoln/sm/expedition_sm.jpg",
+            },
+            {
+              id: 4,
+              lg_url: "/img/cars/gallery/ford_lincoln/lg/ltd_lg.jpg",
+              sm_url: "/img/cars/gallery/ford_lincoln/sm/ltd_sm.jpg",
+            },
+            {
+              id: 5,
+              lg_url: "/img/cars/gallery/ford_lincoln/lg/f150_lg.jpg",
+              sm_url: "/img/cars/gallery/ford_lincoln/sm/f150_sm.jpg",
+            },
+            {
+              id: 6,
+              lg_url: "/img/cars/gallery/ford_lincoln/lg/ltd_2_lg.jpg",
+              sm_url: "/img/cars/gallery/ford_lincoln/sm/ltd_2_sm.jpg",
+            },
+            {
+              id: 7,
+              lg_url: "/img/cars/gallery/ford_lincoln/lg/navigator_lg.jpg",
+              sm_url: "/img/cars/gallery/ford_lincoln/sm/navigator_sm.jpg",
+            },
+            {
+              id: 8,
+              lg_url: "/img/cars/gallery/ford_lincoln/lg/town_car_lg.jpg",
+              sm_url: "/img/cars/gallery/ford_lincoln/sm/town_car_sm.jpg",
+            },
+            {
+              id: 9,
+              lg_url: "/img/cars/gallery/ford_lincoln/lg/raptor_lg.jpg",
+              sm_url: "/img/cars/gallery/ford_lincoln/sm/raptor_sm.jpg",
+            },
+            {
+              id: 10,
+              lg_url: "/img/cars/gallery/ford_lincoln/lg/st_lg.jpg",
+              sm_url: "/img/cars/gallery/ford_lincoln/sm/st_sm.jpg",
             },
           ],
         },
