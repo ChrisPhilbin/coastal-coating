@@ -41,9 +41,7 @@
           bg-opacity-20
           hover:bg-opacity-30
           focus:outline-none
-          focus-visible:ring-2
-          focus-visible:ring-white
-          focus-visible:ring-opacity-75
+          focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75
         "
       >
         See our work
@@ -121,7 +119,7 @@
                   'group flex items-center w-full px-2 py-2 text-sm',
                 ]"
               >
-                GMC
+                GMC / Buick
               </button>
             </router-link>
           </MenuItem>
@@ -188,9 +186,7 @@
           bg-opacity-20
           hover:bg-opacity-30
           focus:outline-none
-          focus-visible:ring-2
-          focus-visible:ring-white
-          focus-visible:ring-opacity-75
+          focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75
         "
       >
         Our services
@@ -336,9 +332,7 @@
             bg-opacity-20
             hover:bg-opacity-30
             focus:outline-none
-            focus-visible:ring-2
-            focus-visible:ring-white
-            focus-visible:ring-opacity-75
+            focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75
           "
         >
           About us
@@ -362,9 +356,7 @@
             bg-opacity-20
             hover:bg-opacity-30
             focus:outline-none
-            focus-visible:ring-2
-            focus-visible:ring-white
-            focus-visible:ring-opacity-75
+            focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75
           "
         >
           Contact us

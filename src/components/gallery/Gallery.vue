@@ -86,6 +86,52 @@ export default {
             },
           ],
         },
+        gmc: {
+          name: "GMC / Buick",
+          leaderImage: "",
+          images: [
+            {
+              id: 1,
+              lg_url: "/img/cars/gallery/gmc_buick/lg/yukon_lg.jpg",
+              sm_url: "/img/cars/gallery/gmc_buick/sm/yukon_sm.jpg",
+            },
+            {
+              id: 2,
+              lg_url: "/img/cars/gallery/gmc_buick/lg/sierra_3_lg.jpg",
+              sm_url: "/img/cars/gallery/gmc_buick/sm/sierra_3_sm.jpg",
+            },
+            {
+              id: 3,
+              lg_url: "/img/cars/gallery/gmc_buick/lg/terrain_lg.jpg",
+              sm_url: "/img/cars/gallery/gmc_buick/sm/terrain_sm.jpg",
+            },
+            {
+              id: 4,
+              lg_url: "/img/cars/gallery/gmc_buick/lg/yukon_2_lg.jpg",
+              sm_url: "/img/cars/gallery/gmc_buick/sm/yukon_2_sm.jpg",
+            },
+            {
+              id: 5,
+              lg_url: "/img/cars/gallery/gmc_buick/lg/sierra_lg.jpg",
+              sm_url: "/img/cars/gallery/gmc_buick/sm/sierra_sm.jpg",
+            },
+            {
+              id: 6,
+              lg_url: "/img/cars/gallery/gmc_buick/lg/sierra_2_lg.jpg",
+              sm_url: "/img/cars/gallery/gmc_buick/sm/sierra_2_sm.jpg",
+            },
+            {
+              id: 7,
+              lg_url: "/img/cars/gallery/gmc_buick/lg/encore_lg.jpg",
+              sm_url: "/img/cars/gallery/gmc_buick/sm/encore_sm.jpg",
+            },
+            {
+              id: 8,
+              lg_url: "/img/cars/gallery/gmc_buick/lg/sierra_4_lg.jpg",
+              sm_url: "/img/cars/gallery/gmc_buick/sm/sierra_4_sm.jpg",
+            },
+          ],
+        },
         ford: {
           name: "Ford",
           leaderImage: "/img/cars/gallery/ford/mach1_mustang_sm.jpg",
@@ -248,6 +294,8 @@ export default {
           return this.galleries.jeep;
         case "bmw":
           return this.galleries.bmw;
+        case "gmc":
+          return this.galleries.gmc;
         default:
           this.setErrors();
           return this.errors;

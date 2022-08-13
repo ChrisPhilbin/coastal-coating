@@ -178,7 +178,7 @@
                 toggleMenu();
                 navigate();
               "
-              >GMC</span
+              >GMC/Buick</span
             ></router-link
           >
           <router-link to="/gallery/jeep" custom v-slot="{ navigate }"
