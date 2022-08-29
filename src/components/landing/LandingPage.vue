@@ -1,7 +1,7 @@
 <template>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 relative mb-8 mt-2 md:mx-8">
     <div>
-      <img src="/img/landing/corvettes.jpg" class="w-auto h-full mx-auto" />
+      <img src="/img/landing/corvettes.jpg" class="mx-auto" />
     </div>
 
     <div class="p-4 text-center">
