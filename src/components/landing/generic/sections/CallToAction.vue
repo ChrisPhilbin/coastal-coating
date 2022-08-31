@@ -1,10 +1,10 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 relative mb-8 mt-2 md:mx-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 mt-2 md:mx-8 md:w-3/4 md:mx-auto items-stretch">
     <div>
-      <img src="/img/landing/corvettes.jpg" class="mx-auto" />
+      <img src="/img/landing/corvettes.jpg" class="mx-auto rounded" />
     </div>
 
-    <div class="p-4 text-center">
+    <div class="px-4 text-center mt-auto mb-auto">
       <p class="w-full text-center text-3xl md:text-6xl text-white font-coastal-body font-bold">
         We are the Grand Strand's Leader in Ceramic Coating.
       </p>
@@ -13,7 +13,7 @@
         ><button
           class="
             relative
-            mt-12
+            mt-8
             md:mt-20
             h-16
             w-52
@@ -30,24 +30,11 @@
         </button></router-link
       >
     </div>
-
-    <div class="text-center">
-      <LandingPageImageCarousel />
-    </div>
   </div>
 </template>
 
 <script>
-import LandingPageImageCarousel from "../carousel/LandingPageImageCarousel.vue";
-
 export default {
-  name: "LandingPage",
-  components: { LandingPageImageCarousel },
-  data() {
-    return {};
-  },
-  mounted() {
-    localStorage.setItem("campaignSource", this.$route.params.campaignSource);
-  },
+  name: "CallToAction",
 };
 </script>

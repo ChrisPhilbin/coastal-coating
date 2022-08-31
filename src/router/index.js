@@ -6,7 +6,7 @@ import ContactUs from "../components/static/ContactUs.vue";
 import ContactSuccessThankYou from "../components/static/contact/ContactSuccessThankYou.vue";
 import ThankYou from "../components/consultation/ThankYou.vue";
 import Gallery from "../components/gallery/Gallery.vue";
-import LandingPage from "../components/landing/LandingPage.vue";
+import LandingPage from "../components/landing/generic/LandingPage.vue";
 import CeramicCoating from "../components/services/CeramicCoating.vue";
 import LeatherCoating from "../components/services/LeatherCoating.vue";
 import NotFound from "../components/static/NotFound.vue";
