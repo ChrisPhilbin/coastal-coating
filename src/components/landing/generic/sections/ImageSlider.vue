@@ -6,14 +6,15 @@
       gap-4
       mb-8
       mt-2
+      pt-4
       md:mx-8 md:w-3/4 md:mx-auto
       items-stretch
       bg-gray-800
       md:rounded md:p-4
     "
   >
-    <div class="text-center my-auto mt-4">
-      <p class="w-full text-center text-2xl md:text-4xl text-white font-coastal-body font-bold">
+    <div class="text-center my-auto sm:p-3">
+      <p class="w-full text-center text-2xl md:text-4xl text-white font-coastal-body font-bold sm:p-4">
         A picture is worth a thousand words - Check out some of our happy customers' vehicles we've coated 👀
       </p>
     </div>
