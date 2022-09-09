@@ -181,6 +181,16 @@
               >GMC/Buick</span
             ></router-link
           >
+          <router-link to="/gallery/hyundai" custom v-slot="{ navigate }"
+            ><span
+              class="block pb-2"
+              @click="
+                toggleMenu();
+                navigate();
+              "
+              >Hyundai/Genesis</span
+            ></router-link
+          >
           <router-link to="/gallery/jeep" custom v-slot="{ navigate }"
             ><span
               class="block pb-2"

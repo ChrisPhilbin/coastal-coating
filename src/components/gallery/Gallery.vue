@@ -226,32 +226,48 @@ export default {
           images: [
             {
               id: 1,
-              lg_url: "",
-              sm_url: "/img/cars/gallery/jeep/wrangler_sm.jpg",
+              lg_url: "/img/cars/gallery/jeep/lg/wrangler_1_lg.jpg",
+              sm_url: "/img/cars/gallery/jeep/sm/wrangler_1_sm.jpg",
             },
             {
               id: 2,
-              lg_url: "",
-              sm_url: "/img/cars/gallery/jeep/trackhawk_sm.jpg",
+              lg_url: "/img/cars/gallery/jeep/lg/cherokee_1_lg.jpg",
+              sm_url: "/img/cars/gallery/jeep/sm/cherokee_1_sm.jpg",
             },
             {
               id: 3,
-              lg_url: "",
-              sm_url: "/img/cars/gallery/jeep/trailhawk_sm.jpg",
+              lg_url: "/img/cars/gallery/jeep/lg/gladiator_1_lg.jpg",
+              sm_url: "/img/cars/gallery/jeep/sm/gladiator_1_sm.jpg",
             },
             {
               id: 4,
-              lg_url: "",
-              sm_url: "/img/cars/gallery/jeep/gladiator_sm.jpg",
+              lg_url: "/img/cars/gallery/jeep/lg/wrangler_2_lg.jpg",
+              sm_url: "/img/cars/gallery/jeep/sm/wrangler_2_sm.jpg",
             },
             {
               id: 5,
-              lg_url: "",
-              sm_url: "/img/cars/gallery/jeep/wrangler_sport_sm.jpg",
+              lg_url: "/img/cars/gallery/jeep/lg/wrangler_3_lg.jpg",
+              sm_url: "/img/cars/gallery/jeep/sm/wrangler_3_sm.jpg",
+            },
+            {
+              id: 6,
+              lg_url: "/img/cars/gallery/jeep/lg/cherokee_2_lg.jpg",
+              sm_url: "/img/cars/gallery/jeep/sm/cherokee_2_sm.jpg",
+            },
+            {
+              id: 7,
+              lg_url: "/img/cars/gallery/jeep/lg/gladiator_2_lg.jpg",
+              sm_url: "/img/cars/gallery/jeep/sm/gladiator_2_sm.jpg",
+            },
+            {
+              id: 8,
+              lg_url: "/img/cars/gallery/jeep/lg/wrangler_4_lg.jpg",
+              sm_url: "/img/cars/gallery/jeep/sm/wrangler_4_sm.jpg",
             },
           ],
         },
         bmw: {
+          name: "BMW",
           intro: "",
           leaderImage: "",
           images: [
@@ -297,6 +313,43 @@ export default {
             },
           ],
         },
+        hyundai: {
+          name: "Hyundai & Genesis",
+          intro: "",
+          leaderImage: "",
+          images: [
+            {
+              id: 1,
+              lg_url: "/img/cars/gallery/hyundai/lg/genesis_lg.jpg",
+              sm_url: "/img/cars/gallery/hyundai/sm/genesis_sm.jpg",
+            },
+            {
+              id: 2,
+              lg_url: "/img/cars/gallery/hyundai/lg/hyundai_lg.jpg",
+              sm_url: "/img/cars/gallery/hyundai/sm/hyundai_sm.jpg",
+            },
+            {
+              id: 3,
+              lg_url: "/img/cars/gallery/hyundai/lg/hyundai_2_lg.jpg",
+              sm_url: "/img/cars/gallery/hyundai/sm/hyundai_2_sm.jpg",
+            },
+            {
+              id: 4,
+              lg_url: "/img/cars/gallery/hyundai/lg/genesis_4_lg.jpg",
+              sm_url: "/img/cars/gallery/hyundai/sm/genesis_4_sm.jpg",
+            },
+            {
+              id: 5,
+              lg_url: "/img/cars/gallery/hyundai/lg/genesis_3_lg.jpg",
+              sm_url: "/img/cars/gallery/hyundai/sm/genesis_3_sm.jpg",
+            },
+            {
+              id: 6,
+              lg_url: "/img/cars/gallery/hyundai/lg/genesis_2_lg.jpg",
+              sm_url: "/img/cars/gallery/hyundai/sm/genesis_2_sm.jpg",
+            },
+          ],
+        },
       },
     };
   },
@@ -336,6 +389,8 @@ export default {
           return this.galleries.bmw;
         case "gmc":
           return this.galleries.gmc;
+        case "hyundai":
+          return this.galleries.hyundai;
         default:
           this.setErrors();
           return this.errors;
