@@ -9,6 +9,7 @@ import Gallery from "../components/gallery/Gallery.vue";
 import LandingPage from "../components/landing/generic/LandingPage.vue";
 import CeramicCoating from "../components/services/CeramicCoating.vue";
 import LeatherCoating from "../components/services/LeatherCoating.vue";
+import JeepJam22 from "../components/landing/special/jeep-jam-22/JeepJam22.vue";
 import NotFound from "../components/static/NotFound.vue";
 
 const routes = [
@@ -61,6 +62,11 @@ const routes = [
     path: "/thank-you",
     name: "ThankYou",
     component: ThankYou,
+  },
+  {
+    path: "/special/jeep-jam-2022",
+    name: "JeepJam22",
+    component: JeepJam22,
   },
   {
     path: "/:catchAll(.*)",
