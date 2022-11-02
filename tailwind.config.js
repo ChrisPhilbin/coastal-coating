@@ -10,8 +10,13 @@ module.exports = {
       "2xl": "1536px",
     },
     extend: {
+      colors: {
+        "coastal-light-blue": "#59c2bb",
+        "coastal-dark-blue": "#0d7ec0",
+      },
       fontFamily: {
         "coastal-body": ["Nunito"],
+        "coastal-montserrat": ["Montserrat"],
       },
       backgroundImage: {
         "home-background-desktop": "url('/img/home/corvette.jpg')",

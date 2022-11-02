@@ -3,7 +3,7 @@
     <button class="outline-none mobile-menu-button">
       <svg
         @click="toggleMenu"
-        class="w-10 h-10 text-blue-700"
+        class="w-10 h-10 text-coastal-dark-blue"
         fill="none"
         stroke-linecap="round"
         stroke-linejoin="round"

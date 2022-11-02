@@ -5,11 +5,31 @@
     </div>
 
     <div class="px-4 text-center mt-auto mb-auto">
-      <p class="w-full inline-block text-center text-3xl md:text-6xl text-white font-coastal-body font-bold mb-6">
+      <p
+        class="
+          w-full
+          inline-block
+          text-center text-3xl
+          md:text-6xl
+          text-coastal-light-blue
+          font-coastal-montserrat font-semibold
+          mb-6
+        "
+      >
         Get your rig ready for Jeep Jam 2022!
       </p>
 
-      <p class="w-full inline-block text-center text-3xl md:text-3xl text-white font-coastal-body font-semibold mt-8">
+      <p
+        class="
+          w-full
+          inline-block
+          text-center text-3xl
+          md:text-3xl
+          text-coastal-light-blue
+          font-coastal-montserrat font-semibold
+          mt-8
+        "
+      >
         Jeep Jam kicks off in
       </p>
       <EventCountDown countDownToDate="Oct 28, 2022 00:00:00" />
@@ -24,14 +44,14 @@
             w-52
             md:h-20 md:w-72
             rounded-lg
-            bg-blue-700
+            bg-coastal-dark-blue
             text-white
             font-semibold
             text-lg
             md:text-xl
           "
         >
-          Book your Jeep Jam Prep
+          Let's get ready!
         </button></router-link
       >
     </div>

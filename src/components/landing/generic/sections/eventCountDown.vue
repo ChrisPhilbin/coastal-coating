@@ -1,5 +1,5 @@
 <template>
-  <p class="w-full text-center text-3xl md:text-4xl text-white font-coastal-body font-bold">
+  <p class="w-full text-center text-3xl md:text-4xl text-coastal-dark-blue font-coastal-body font-bold">
     {{ countDown.days + "d " + countDown.hours + "h " + countDown.minutes + "m " + countDown.seconds + "s" }}
   </p>
 </template>

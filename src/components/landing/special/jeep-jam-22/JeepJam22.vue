@@ -23,5 +23,8 @@ export default {
   data() {
     return {};
   },
+  mounted() {
+    localStorage.setItem("campaignSource", "jeepjam22");
+  },
 };
 </script>
