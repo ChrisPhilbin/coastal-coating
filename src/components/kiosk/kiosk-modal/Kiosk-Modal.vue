@@ -1,6 +1,7 @@
 <script>
 export default {
   name: "KioskModal",
+  props: ["isGameFinished", "numberOfMatches", "numberOfTurns"],
   methods: {
     close() {
       this.$emit("close");
@@ -20,11 +21,23 @@ export default {
 
         <section class="modal-body" id="modalDescription">
           <slot name="body"> Default modal body </slot>
+          <div v-if="isGameFinished">GAME OVER!</div>
         </section>
 
         <footer class="modal-footer">
           <slot name="footer"></slot>
-          <button type="button" class="btn-green" @click="close" aria-label="Close modal">Close window</button>
+          <button v-if="!this.isGameFinished" type="button" class="btn-green" @click="close" aria-label="Close modal">
+            Close
+          </button>
+          <button
+            v-if="this.isGameFinished"
+            type="button"
+            class="btn-green"
+            @click="close"
+            aria-label="Claim your discount"
+          >
+            Claim your discount
+          </button>
         </footer>
       </div>
     </div>
@@ -52,6 +65,9 @@ export default {
   flex-direction: column;
   margin-right: 8px;
   margin-left: 8px;
+  min-width: 50%;
+  min-height: 50%;
+  position: relative;
 }
 
 .modal-header,

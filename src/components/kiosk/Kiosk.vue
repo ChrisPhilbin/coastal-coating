@@ -3,28 +3,28 @@
 </style>
 
 <template>
-  <div class="grid grid-cols-6 gap-8 m-4">
-    <div
-      v-for="(card, index) in memoryCards"
-      class="text-white flip-container"
-      :class="{ flipped: card.isFlipped, matched: card.isMatched }"
-      :key="index"
-      @click="flipCard(card)"
-    >
+  <div class="grid grid-cols-6 gap-8 m-4" :class="{ 'pointer-events-none': isModalVisible }" id="cardGame">
+    <div v-for="(card, index) in memoryCards" class="text-white flip-container" :key="index" @click="flipCard(card)">
       <div class="memorycard">
-        <div class="front border rounded shadow p-4">
+        <div class="border rounded shadow p-4" v-if="!card.isFlipped">
           <img src="/img/kiosk/cc_logo_small_transparent.png" class="origin-center rotate-45" />
         </div>
-        <div class="back rounded border"><img :src="card.image" /></div>
+        <div class="rounded border" v-else><img :src="card.image" /></div>
       </div>
     </div>
   </div>
-  <KioskModal v-show="isModalVisible" @close="closeModal">
-    <template v-slot:header> Header Text </template>
+  <KioskModal
+    v-show="isModalVisible"
+    @close="closeModal"
+    :isGameFinished="isGameFinished"
+    :numberOfMatches="numberOfMatches"
+    :numberOfTurns="numberOfTurns"
+  >
+    <template v-slot:header> {{ modalText.header }} </template>
 
-    <template v-slot:body> Body Modal Text </template>
+    <template v-slot:body> {{ modalText.body }} </template>
 
-    <template v-slot:footer> Footer Modal text </template>
+    <template v-slot:footer> {{ modalText.footer }} </template>
   </KioskModal>
 </template>
 
@@ -44,7 +44,8 @@ export default {
       flippedCards: [],
       isGameFinished: false,
       numberOfMatches: 0,
-      numberOfTurns: 0,
+      numberOfTurns: 1,
+      modalText: {},
       cardDeck: [
         {
           cardName: "camaro1",
@@ -80,22 +81,39 @@ export default {
   methods: {
     closeModal() {
       this.isModalVisible = false;
+      if (this.numberOfTurns === 3) {
+        this.resetGame();
+      }
     },
     showModal(modalStatus) {
       if (modalStatus === "start") {
         this.isModalVisible = true;
       } else if (modalStatus === "success") {
-        return;
+        this.isModalVisible = true;
+        this.modalText.header = "Nice job! You found a match!";
+        this.modalText.body = `You've found ${this.numberOfMatches} match${
+          this.numberOfMatches > 1 || this.numberOfMatches === 0 ? "es" : ""
+        } so far!`;
+        this.modalText.footer = `You have ${3 - this.numberOfTurns} turns remaining!`;
       } else if (modalStatus === "failure") {
-        return;
+        this.isModalVisible = true;
+        this.modalText.header = "So Close! You didn't find a match this time!";
+        this.modalText.body = `You've found ${this.numberOfMatches} match${
+          this.numberOfMatches > 1 || this.numberOfMatches === 0 ? "es" : ""
+        } so far!`;
+        this.modalText.footer = `You have ${3 - this.numberOfTurns} turns remaining!`;
       } else if (modalStatus === "finished") {
-        return;
+        this.isModalVisible = true;
+        this.modalText.header = "Game Over!";
+        this.modalText.body = `Thanks for playing! You found ${this.numberOfMatches} match${
+          this.numberOfMatches > 1 || this.numberOfMatches === 0 ? "es" : ""
+        }!`;
+        this.modalText.footer = "";
       } else {
         this.isModalVisible = false;
       }
     },
     flipCard(card) {
-      console.log(card, "Flipping card.");
       if (card.isMatched || card.isFlipped || this.flippedCards.length === 2) {
         return;
       }
@@ -107,20 +125,23 @@ export default {
       if (this.flippedCards.length === 2) {
         this.match(card);
       }
-      console.log(card, "Card after being flipped.");
     },
     match() {
       console.log("Checking for card match");
       if (this.flippedCards[0].cardName === this.flippedCards[1].cardName) {
-        setTimeout(() => {
-          this.flippedCards.forEach((card) => {
-            card.isMatched = true;
-          });
-        }, 500);
+        // setTimeout(() => {
+        //   this.flippedCards.forEach((card) => {
+        //     card.isMatched = true;
+        //   });
+        // }, 500);
+        this.flippedCards.forEach((card) => {
+          card.isMatched = true;
+        });
         this.numberOfMatches++;
         this.numberOfTurns++;
         this.flippedCards = [];
-        console.log("Success! Cards match", this, this.numberOfMatches);
+        this.showModal("success");
+        console.log("Success! Cards match", this.numberOfMatches);
         //briefly show success modal with number of turns remaining
       } else {
         setTimeout(() => {
@@ -128,14 +149,22 @@ export default {
             card.isFlipped = false;
           });
         }, 800);
+        // this.flippedCards.forEach((card) => {
+        //   card.isFlipped = false;
+        // });
         this.numberOfTurns++;
         this.flippedCards = [];
+        if (this.numberOfTurns < 3) {
+          this.showModal("failure");
+        }
         console.log("Cards are not a match!", this.numberOfTurns);
         //briefly show failure modal with number of turns remaining
       }
 
       if (this.numberOfTurns === 3) {
         this.isGameFinished = true;
+        this.showModal("finished");
+        // this.resetGame();
         //show thanks for playing modal and redirect to form to caputure user info and pass along proper discount code
       }
     },
