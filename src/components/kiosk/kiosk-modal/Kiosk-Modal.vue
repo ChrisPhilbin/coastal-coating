@@ -12,7 +12,7 @@ export default {
 
 <template>
   <transition name="modal-fade">
-    <div class="modal-backdrop" @click="close">
+    <div class="modal-backdrop">
       <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
         <header class="modal-header" id="modalTitle">
           <slot name="header"></slot>
