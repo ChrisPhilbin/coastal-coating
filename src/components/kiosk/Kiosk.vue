@@ -4,7 +4,12 @@
 
 <template>
   <div class="grid grid-cols-6 gap-8 m-4" :class="{ 'pointer-events-none': isModalVisible }" id="cardGame">
-    <div v-for="(card, index) in memoryCards" class="text-white flip-container" :key="index" @click="flipCard(card)">
+    <div
+      v-for="(card, index) in memoryCards"
+      class="text-white flip-container my-auto"
+      :key="index"
+      @click="flipCard(card)"
+    >
       <div class="memorycard">
         <div class="border rounded shadow p-4" v-if="!card.isFlipped">
           <img src="/img/kiosk/cc_logo_small_transparent.png" class="origin-center rotate-45" />
