@@ -3,7 +3,11 @@
 </style>
 
 <template>
-  <div class="grid grid-cols-6 gap-8 m-4" :class="{ 'pointer-events-none': isModalVisible }" id="cardGame">
+  <div
+    class="grid grid-cols-6 gap-8 m-4"
+    :class="{ 'pointer-events-none': isModalVisible }"
+    id="cardGame"
+  >
     <div
       v-for="(card, index) in memoryCards"
       class="text-white flip-container my-auto"
@@ -12,7 +16,10 @@
     >
       <div class="memorycard">
         <div class="border rounded shadow p-4" v-if="!card.isFlipped">
-          <img src="/img/kiosk/cc_logo_small_transparent.png" class="origin-center rotate-45" />
+          <img
+            src="/img/kiosk/cc_logo_small_transparent.png"
+            class="origin-center rotate-45"
+          />
         </div>
         <div class="rounded border" v-else><img :src="card.image" /></div>
       </div>
@@ -24,6 +31,7 @@
     :isGameFinished="isGameFinished"
     :numberOfMatches="numberOfMatches"
     :numberOfTurns="numberOfTurns"
+    :discountEarned="discountEarned"
   >
     <template v-slot:header> {{ modalText.header }} </template>
 
@@ -44,6 +52,7 @@ export default {
   mixins: [],
   data() {
     return {
+      discountEarned: 0,
       isModalVisible: false,
       memoryCards: [],
       flippedCards: [],
@@ -93,24 +102,34 @@ export default {
     showModal(modalStatus) {
       if (modalStatus === "start") {
         this.isModalVisible = true;
+        this.modalText.header = "Welcome! Let's get started!";
+        this.modalText.body =
+          "You have 3 tries to find up to 3 matches. Each match found will earn you a larger discount.";
+        this.modalText.footer = "Tap the button below to get started.";
       } else if (modalStatus === "success") {
         this.isModalVisible = true;
         this.modalText.header = "Nice job! You found a match!";
         this.modalText.body = `You've found ${this.numberOfMatches} match${
           this.numberOfMatches > 1 || this.numberOfMatches === 0 ? "es" : ""
-        } so far!`;
-        this.modalText.footer = `You have ${3 - this.numberOfTurns} turns remaining!`;
+        } so far`;
+        this.modalText.footer = `You have ${
+          3 - this.numberOfTurns
+        } turns remaining`;
       } else if (modalStatus === "failure") {
         this.isModalVisible = true;
-        this.modalText.header = "So Close! You didn't find a match this time!";
+        this.modalText.header = "So Close! You didn't find a match this time.";
         this.modalText.body = `You've found ${this.numberOfMatches} match${
           this.numberOfMatches > 1 || this.numberOfMatches === 0 ? "es" : ""
-        } so far!`;
-        this.modalText.footer = `You have ${3 - this.numberOfTurns} turns remaining!`;
+        } so far`;
+        this.modalText.footer = `You have ${
+          3 - this.numberOfTurns
+        } turns remaining`;
       } else if (modalStatus === "finished") {
         this.isModalVisible = true;
-        this.modalText.header = "Game Over!";
-        this.modalText.body = `Thanks for playing! You found ${this.numberOfMatches} match${
+        this.modalText.header = `You've earned a ${this.discountEarned}% discount!`;
+        this.modalText.body = `Thanks for playing! You found ${
+          this.numberOfMatches
+        } match${
           this.numberOfMatches > 1 || this.numberOfMatches === 0 ? "es" : ""
         }!`;
         this.modalText.footer = "";
@@ -168,6 +187,7 @@ export default {
 
       if (this.numberOfTurns === 3) {
         this.isGameFinished = true;
+        this.calculateDiscount(this.numberOfMatches);
         this.showModal("finished");
         // this.resetGame();
         //show thanks for playing modal and redirect to form to caputure user info and pass along proper discount code
@@ -185,12 +205,34 @@ export default {
         const cards2 = _cloneDeep(this.cardDeck);
         const cards3 = _cloneDeep(this.cardDeck);
 
-        this.memoryCards = _shuffle(this.memoryCards.concat(cards1, cards2, cards3));
+        this.memoryCards = _shuffle(
+          this.memoryCards.concat(cards1, cards2, cards3)
+        );
         this.isGameFinished = false;
         this.numberOfMatches = 0;
         this.numberOfTurns = 0;
+        this.discountEarned = 0;
         this.flippedCards = [];
       }, 800);
+    },
+    calculateDiscount(numberOfMatches) {
+      switch (numberOfMatches) {
+        case 0:
+          this.discountEarned = 5;
+          break;
+        case 1:
+          this.discountEarned = 10;
+          break;
+        case 2:
+          this.discountEarned = 15;
+          break;
+        case 3:
+          this.discountEarned = 20;
+          break;
+        default:
+          this.discountEarned = 5;
+          break;
+      }
     },
   },
 };

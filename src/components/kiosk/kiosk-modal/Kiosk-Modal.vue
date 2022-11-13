@@ -1,10 +1,33 @@
 <script>
+import KioskForm from "../kiosk-form/Kiosk-Form.vue";
 export default {
   name: "KioskModal",
-  props: ["isGameFinished", "numberOfMatches", "numberOfTurns"],
+  components: { KioskForm },
+  props: [
+    "isGameFinished",
+    "numberOfMatches",
+    "numberOfTurns",
+    "discountEarned",
+  ],
+  data() {
+    return {
+      isKioskFormVisible: false,
+    };
+  },
   methods: {
     close() {
-      this.$emit("close");
+      this.isKioskFormVisible = false;
+      if (this.numberOfTurns === 3) {
+        if (
+          confirm(
+            "Are you sure you want to exit and rest the game? Any discount earned will be lost."
+          )
+        ) {
+          this.$emit("close");
+        }
+      } else {
+        this.$emit("close");
+      }
     },
   },
 };
@@ -13,32 +36,90 @@ export default {
 <template>
   <transition name="modal-fade">
     <div class="modal-backdrop">
-      <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
+      <div
+        class="modal"
+        role="dialog"
+        aria-labelledby="modalTitle"
+        aria-describedby="modalDescription"
+      >
         <header class="modal-header" id="modalTitle">
-          <slot name="header"></slot>
-          <button type="button" class="btn-close" @click="close" aria-label="Close modal">x</button>
-        </header>
-
-        <section class="modal-body" id="modalDescription">
-          <slot name="body"> Default modal body </slot>
-          <div v-if="isGameFinished">GAME OVER!</div>
-        </section>
-
-        <footer class="modal-footer">
-          <slot name="footer"></slot>
-          <button v-if="!this.isGameFinished" type="button" class="btn-green" @click="close" aria-label="Close modal">
-            Close
-          </button>
+          <span class="text-4xl font-bold text-coastal-dark-blue"
+            ><slot name="header"></slot
+          ></span>
           <button
-            v-if="this.isGameFinished"
             type="button"
-            class="btn-green"
+            class="btn-close"
             @click="close"
-            aria-label="Claim your discount"
+            aria-label="Close modal"
           >
-            Claim your discount
+            x
           </button>
-        </footer>
+        </header>
+        <div v-if="!isKioskFormVisible">
+          <section class="modal-body" id="modalDescription">
+            <div class="block flex justify-center">
+              <div class="text-3xl font-bold text-center w-3/4">
+                <slot name="body"></slot>
+              </div>
+            </div>
+            <div v-if="isGameFinished">
+              <span
+                class="
+                  text-green-600 text-5xl
+                  font-bold
+                  text-center
+                  block
+                  mt-10
+                "
+              >
+                You've earned a {{ discountEarned }}% discount!
+              </span>
+            </div>
+          </section>
+
+          <footer class="modal-footer">
+            <span class="text-2xl text-center block">
+              <slot name="footer"></slot>
+            </span>
+            <button
+              v-if="!this.isGameFinished"
+              type="button"
+              class="
+                btn-green
+                absolute
+                bottom-8
+                left-1/2
+                transform
+                -translate-x-1/2
+                translate-y-8
+              "
+              @click="close"
+              aria-label="Close modal"
+            >
+              Continue
+            </button>
+            <button
+              v-if="this.isGameFinished"
+              type="button"
+              class="
+                btn-green
+                absolute
+                bottom-8
+                left-1/2
+                transform
+                -translate-x-1/2
+                translate-y-8
+              "
+              @click="isKioskFormVisible = true"
+              aria-label="Claim your discount"
+            >
+              Claim your discount
+            </button>
+          </footer>
+        </div>
+        <div v-if="isKioskFormVisible">
+          <KioskForm :discountEarned="discountEarned" />
+        </div>
       </div>
     </div>
   </transition>
@@ -107,8 +188,12 @@ export default {
 }
 
 .btn-green {
+  margin-bottom: 16px;
+  margin-top: 16px;
+  width: 50%;
   color: white;
   font-weight: bold;
+  font-size: larger;
   background: rgb(30, 64, 475);
   border: 1px solid #4aae9b;
   border-radius: 5px;
