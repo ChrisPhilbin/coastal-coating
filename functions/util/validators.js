@@ -4,7 +4,8 @@ exports.isCampaignSourceValid = (source) => {
     campaignSource === "facebook" ||
     campaignSource === "organic" ||
     campaignSource === "instagram" ||
-    campaignSource === "jeepjam22"
+    campaignSource === "jeepjam22" ||
+    campaignSource === "kiosk"
   ) {
     return true;
   }
