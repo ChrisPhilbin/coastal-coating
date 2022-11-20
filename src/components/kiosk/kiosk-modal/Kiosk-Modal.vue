@@ -3,12 +3,7 @@ import KioskForm from "../kiosk-form/Kiosk-Form.vue";
 export default {
   name: "KioskModal",
   components: { KioskForm },
-  props: [
-    "isGameFinished",
-    "numberOfMatches",
-    "numberOfTurns",
-    "discountEarned",
-  ],
+  props: ["isGameFinished", "numberOfMatches", "numberOfTurns", "discountEarned"],
   data() {
     return {
       isKioskFormVisible: false,
@@ -18,11 +13,7 @@ export default {
     close() {
       this.isKioskFormVisible = false;
       if (this.numberOfTurns === 3) {
-        if (
-          confirm(
-            "Are you sure you want to exit and rest the game? Any discount earned will be lost."
-          )
-        ) {
+        if (confirm("Are you sure you want to exit and rest the game? Any discount earned will be lost.")) {
           this.$emit("close");
         }
       } else {
@@ -36,24 +27,10 @@ export default {
 <template>
   <transition name="modal-fade">
     <div class="modal-backdrop">
-      <div
-        class="modal"
-        role="dialog"
-        aria-labelledby="modalTitle"
-        aria-describedby="modalDescription"
-      >
+      <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
         <header class="modal-header" id="modalTitle">
-          <span class="text-4xl font-bold text-coastal-dark-blue"
-            ><slot name="header"></slot
-          ></span>
-          <button
-            type="button"
-            class="btn-close"
-            @click="close"
-            aria-label="Close modal"
-          >
-            x
-          </button>
+          <span class="text-4xl font-bold text-coastal-dark-blue"><slot name="header"></slot></span>
+          <button type="button" class="btn-close" @click="close" aria-label="Close modal">x</button>
         </header>
         <div v-if="!isKioskFormVisible">
           <section class="modal-body" id="modalDescription">
@@ -63,15 +40,7 @@ export default {
               </div>
             </div>
             <div v-if="isGameFinished">
-              <span
-                class="
-                  text-green-600 text-5xl
-                  font-bold
-                  text-center
-                  block
-                  mt-10
-                "
-              >
+              <span class="text-green-600 text-5xl font-bold text-center block mt-10">
                 You've earned a {{ discountEarned }}% discount!
               </span>
             </div>
@@ -84,15 +53,7 @@ export default {
             <button
               v-if="!this.isGameFinished"
               type="button"
-              class="
-                btn-green
-                absolute
-                bottom-8
-                left-1/2
-                transform
-                -translate-x-1/2
-                translate-y-8
-              "
+              class="btn-green absolute bottom-8 left-1/2 transform -translate-x-1/2 translate-y-8"
               @click="close"
               aria-label="Close modal"
             >
@@ -101,15 +62,7 @@ export default {
             <button
               v-if="this.isGameFinished"
               type="button"
-              class="
-                btn-green
-                absolute
-                bottom-8
-                left-1/2
-                transform
-                -translate-x-1/2
-                translate-y-8
-              "
+              class="btn-green absolute bottom-8 left-1/2 transform -translate-x-1/2 translate-y-8"
               @click="isKioskFormVisible = true"
               aria-label="Claim your discount"
             >
@@ -149,6 +102,7 @@ export default {
   min-width: 50%;
   min-height: 50%;
   position: relative;
+  border-radius: 0.25rem;
 }
 
 .modal-header,

@@ -3,7 +3,11 @@
 </style>
 
 <template>
-  <div class="grid grid-cols-6 gap-8 m-4" :class="{ 'pointer-events-none': isModalVisible }" id="cardGame">
+  <div
+    class="grid grid-cols-6 gap-6 px-4 pt-auto pb-auto max-h-full"
+    :class="{ 'pointer-events-none': isModalVisible }"
+    id="cardGame"
+  >
     <div
       v-for="(card, index) in memoryCards"
       class="text-white flip-container my-auto"
@@ -59,6 +63,13 @@ export default {
   created() {
     this.resetGame();
     this.showModal("start");
+  },
+  mounted() {
+    window.addEventListener("keydown", (e) => {
+      if (e.key === ".") {
+        this.showAllCards();
+      }
+    });
   },
   methods: {
     closeModal() {
@@ -134,12 +145,11 @@ export default {
         if (this.numberOfTurns < 3) {
           this.showModal("failure");
         }
-
-        if (this.numberOfTurns === 3) {
-          this.isGameFinished = true;
-          this.calculateDiscount(this.numberOfMatches);
-          this.showModal("finished");
-        }
+      }
+      if (this.numberOfTurns === 3) {
+        this.isGameFinished = true;
+        this.calculateDiscount(this.numberOfMatches);
+        this.showModal("finished");
       }
     },
     resetGame() {
@@ -179,6 +189,11 @@ export default {
           this.discountEarned = 5;
           break;
       }
+    },
+    showAllCards() {
+      this.memoryCards.forEach((card) => {
+        card.isFlipped = !card.isFlipped;
+      });
     },
   },
 };
