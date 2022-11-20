@@ -12,62 +12,108 @@ import LeatherCoating from "../components/services/LeatherCoating.vue";
 import JeepJam22 from "../components/landing/special/jeep-jam-22/JeepJam22.vue";
 import Kiosk from "../components/kiosk/Kiosk.vue";
 import NotFound from "../components/static/NotFound.vue";
+import TopNav from "../components/navigation/TopNav";
+import BottomNav from "../components/navigation/BottomNav";
 
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home,
+    components: {
+      default: Home,
+      TopNav,
+      BottomNav,
+    },
   },
   {
     path: "/about-us",
     name: "AboutUs",
-    component: AboutUs,
+    components: {
+      default: AboutUs,
+      TopNav,
+      BottomNav,
+    },
   },
   {
     path: "/book-consultation",
     name: "Quote",
-    component: BookConsultation,
+    components: {
+      default: BookConsultation,
+      TopNav,
+      BottomNav,
+    },
   },
   {
     path: "/contact-us",
     name: "ContactUs",
-    component: ContactUs,
+    components: {
+      default: ContactUs,
+      TopNav,
+      BottomNav,
+    },
   },
   {
     path: "/contact-us/thank-you",
     name: "ContactSuccessThankYou",
-    component: ContactSuccessThankYou,
+    components: {
+      default: ContactSuccessThankYou,
+      TopNav,
+      BottomNav,
+    },
   },
   {
     path: "/gallery/:make",
     name: "Gallery",
-    component: Gallery,
+    components: {
+      default: Gallery,
+      TopNav,
+      BottomNav,
+    },
   },
   {
     path: "/get-services/:campaignSource",
     name: "Landing Page",
-    component: LandingPage,
+    components: {
+      default: LandingPage,
+      TopNav,
+      BottomNav,
+    },
   },
   {
     path: "/services/ceramic-coating",
     name: "Ceramic Coating",
-    component: CeramicCoating,
+    components: {
+      default: CeramicCoating,
+      TopNav,
+      BottomNav,
+    },
   },
   {
     path: "/services/interior-leather-coating",
     name: "Leather Coating",
-    component: LeatherCoating,
+    components: {
+      default: LeatherCoating,
+      TopNav,
+      BottomNav,
+    },
   },
   {
     path: "/thank-you",
     name: "ThankYou",
-    component: ThankYou,
+    components: {
+      default: ThankYou,
+      TopNav,
+      BottomNav,
+    },
   },
   {
     path: "/special/jeep-jam-2022",
     name: "JeepJam22",
-    component: JeepJam22,
+    components: {
+      default: JeepJam22,
+      TopNav,
+      BottomNav,
+    },
   },
   {
     path: "/kiosk/match-game",
@@ -77,7 +123,11 @@ const routes = [
   {
     path: "/:catchAll(.*)",
     name: "Not Found",
-    component: NotFound,
+    components: {
+      default: NotFound,
+      TopNav,
+      BottomNav,
+    },
   },
 ];
 
