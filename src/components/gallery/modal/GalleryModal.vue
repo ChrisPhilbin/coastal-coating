@@ -58,6 +58,8 @@ export default {
 .modal-footer {
   padding: 15px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-header {
@@ -94,7 +96,6 @@ export default {
   color: white;
   font-weight: bold;
   background: rgb(30, 64, 475);
-  border: 1px solid #4aae9b;
   border-radius: 5px;
   padding: 8px;
 }
