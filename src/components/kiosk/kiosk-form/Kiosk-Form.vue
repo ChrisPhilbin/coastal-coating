@@ -1,20 +1,12 @@
 <template>
   <div v-if="!formSuccessWithoutErrors">
-    <p class="block text-center text-xl font-bold">
+    <p class="block text-center text-xl font-bold font-coastal-body">
       Claim your {{ discountEarned }}% discount by filling out the form below
     </p>
-    <Form
-      @submit="handleKioskSubmit"
-      v-slot="{ errors }"
-      :validation-schema="schema"
-      class="ml-auto mr-auto w-3/4"
-    >
+    <Form @submit="handleKioskSubmit" v-slot="{ errors }" :validation-schema="schema" class="ml-auto mr-auto w-3/4">
       <div class="m-10 grid grid-cols-2 gap-4">
         <div>
-          <label
-            for="firstName"
-            class="block text-sm text-left font-medium text-gray-500 pb-2"
-          >
+          <label for="firstName" class="block text-sm text-left font-medium text-gray-500 pb-2">
             Your first name
           </label>
 
@@ -33,12 +25,7 @@
         </div>
 
         <div>
-          <label
-            for="lastName"
-            class="block text-sm text-left font-medium text-gray-500 pb-2"
-          >
-            Your last name
-          </label>
+          <label for="lastName" class="block text-sm text-left font-medium text-gray-500 pb-2"> Your last name </label>
 
           <Field
             type="text"
@@ -55,12 +42,7 @@
         </div>
 
         <div>
-          <label
-            for="email"
-            class="block text-sm text-left font-medium text-gray-500 pb-2"
-          >
-            Your email address
-          </label>
+          <label for="email" class="block text-sm text-left font-medium text-gray-500 pb-2"> Your email address </label>
 
           <Field
             type="email"
@@ -77,10 +59,7 @@
         </div>
 
         <div>
-          <label
-            for="phoneNumber"
-            class="block text-sm text-left font-medium text-gray-500 pb-2"
-          >
+          <label for="phoneNumber" class="block text-sm text-left font-medium text-gray-500 pb-2">
             Your phone number
           </label>
 
@@ -102,7 +81,7 @@
         <div class="w-full block text-center">
           <button
             @click.prevent="handleKioskSubmit"
-            class="block w-2/4 rounded-md p-3 font-bold mx-auto"
+            class="block w-2/4 rounded-md p-3 font-bold font-coastal-body mx-auto"
             :class="[
               Object.keys(errors).length > 1 ||
               !appointmentDetails.firstName ||
@@ -163,27 +142,22 @@ export default {
     async handleKioskSubmit() {
       try {
         this.inSubmission = true;
-        let response = await fetch(
-          `https://us-central1-coastal-coating.cloudfunctions.net/api/kiosk`,
-          {
-            method: "POST",
+        let response = await fetch(`https://us-central1-coastal-coating.cloudfunctions.net/api/kiosk`, {
+          method: "POST",
 
-            body: JSON.stringify({
-              appointmentDetails: this.appointmentDetails,
-            }),
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
+          body: JSON.stringify({
+            appointmentDetails: this.appointmentDetails,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
         if (response.ok) {
           this.submitSuccess();
         }
       } catch (error) {
         console.log(error, "Something went wrong.");
-        alert(
-          "Something went wrong! Please make sure all required fields are filled out and try again."
-        );
+        alert("Something went wrong! Please make sure all required fields are filled out and try again.");
         this.inSubmission = false;
       }
     },

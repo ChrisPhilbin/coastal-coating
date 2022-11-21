@@ -29,13 +29,13 @@ export default {
     <div class="modal-backdrop">
       <div class="modal" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalDescription">
         <header class="modal-header" id="modalTitle">
-          <span class="text-4xl font-bold text-coastal-dark-blue"><slot name="header"></slot></span>
+          <span class="text-4xl font-bold text-coastal-dark-blue font-coastal-body"><slot name="header"></slot></span>
           <button type="button" class="btn-close" @click="close" aria-label="Close modal">x</button>
         </header>
         <div v-if="!isKioskFormVisible">
           <section class="modal-body" id="modalDescription">
             <div class="block flex justify-center">
-              <div class="text-3xl font-bold text-center w-3/4">
+              <div class="text-3xl font-bold font-coastal-body text-center w-3/4">
                 <slot name="body"></slot>
               </div>
             </div>
@@ -47,13 +47,13 @@ export default {
           </section>
 
           <footer class="modal-footer">
-            <span class="text-2xl text-center block">
+            <span class="text-2xl text-center block font-coastal-body">
               <slot name="footer"></slot>
             </span>
             <button
               v-if="!this.isGameFinished"
               type="button"
-              class="btn-green absolute bottom-8 left-1/2 transform -translate-x-1/2 translate-y-8"
+              class="btn-green absolute bottom-8 left-1/2 transform -translate-x-1/2 translate-y-8 font-coastal-body"
               @click="close"
               aria-label="Close modal"
             >
@@ -62,7 +62,7 @@ export default {
             <button
               v-if="this.isGameFinished"
               type="button"
-              class="btn-green absolute bottom-8 left-1/2 transform -translate-x-1/2 translate-y-8"
+              class="btn-green absolute bottom-8 left-1/2 transform -translate-x-1/2 translate-y-8 font-coastal-body"
               @click="isKioskFormVisible = true"
               aria-label="Claim your discount"
             >

@@ -99,7 +99,9 @@ export default {
           this.modalText.body = `You've found ${this.numberOfMatches} match${
             this.numberOfMatches > 1 || this.numberOfMatches === 0 ? "es" : ""
           } so far`;
-          this.modalText.footer = `You have ${3 - this.numberOfTurns} turns remaining`;
+          this.modalText.footer = `You have ${3 - this.numberOfTurns} turn${
+            3 - this.numberOfTurns === 1 ? "" : "s"
+          } remaining`;
         } else if (modalStatus === "finished") {
           this.isModalVisible = true;
           this.modalText.header = `You've earned a ${this.discountEarned}% discount!`;
@@ -127,24 +129,26 @@ export default {
     },
     match() {
       if (this.flippedCards[0].cardName === this.flippedCards[1].cardName) {
-        this.flippedCards.forEach((card) => {
-          card.isMatched = true;
-        });
-        this.numberOfMatches++;
         this.numberOfTurns++;
-        this.flippedCards = [];
         this.showModal("success");
+        setTimeout(() => {
+          this.flippedCards.forEach((card) => {
+            card.isMatched = true;
+          });
+          this.numberOfMatches++;
+          this.flippedCards = [];
+        }, 800);
       } else {
+        this.numberOfTurns++;
+        if (this.numberOfTurns < 3) {
+          this.showModal("failure");
+        }
         setTimeout(() => {
           this.flippedCards.forEach((card) => {
             card.isFlipped = false;
           });
+          this.flippedCards = [];
         }, 800);
-        this.numberOfTurns++;
-        this.flippedCards = [];
-        if (this.numberOfTurns < 3) {
-          this.showModal("failure");
-        }
       }
       if (this.numberOfTurns === 3) {
         this.isGameFinished = true;
