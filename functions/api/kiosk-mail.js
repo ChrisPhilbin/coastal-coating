@@ -5,13 +5,10 @@ const { isCampaignSourceValid } = require("../util/validators");
 const smtpTransport = require("nodemailer-smtp-transport");
 
 exports.sendKioskResponse = async (request, response) => {
-  const { firstName, lastName, phone, email, discountEarned, campaignSource } =
-    request.body.appointmentDetails;
+  const { firstName, lastName, phone, email, discountEarned, campaignSource } = request.body.appointmentDetails;
 
   if (!validator.validate(email)) {
-    return response
-      .status(400)
-      .json({ message: "Must provide valid email address." });
+    return response.status(400).json({ message: "Must provide valid email address." });
   }
 
   if (!isCampaignSourceValid(campaignSource)) {
@@ -41,7 +38,7 @@ exports.sendKioskResponse = async (request, response) => {
     );
 
     const mailData = {
-      from: `${firstName} ${lastName} <${email}>`,
+      from: `*** Tradeshow booth visitor *** <${mailerConfig.auth.user}>`,
       to: mailerConfig.to,
       subject: "Coastal Coating: Client contact information from booth visit",
       html: `
@@ -60,17 +57,13 @@ exports.sendKioskResponse = async (request, response) => {
     transporter.sendMail(mailData, (error, info) => {
       if (error) {
         console.log(error, "Error");
-        return response
-          .status(400)
-          .json({ error: "There was an error when sending the message." });
+        return response.status(400).json({ error: "There was an error when sending the message." });
       }
       console.log("Email sent success");
       return response.status(200).json({ msg: "Message sent!", info });
     });
   } else {
     console.log("Something went wrong.");
-    return response
-      .status(400)
-      .json({ error: "Missing required form data. Please try again." });
+    return response.status(400).json({ error: "Missing required form data. Please try again." });
   }
 };

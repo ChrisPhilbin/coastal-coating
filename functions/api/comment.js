@@ -40,7 +40,7 @@ exports.submitComment = (request, response) => {
     );
 
     const mailData = {
-      from: `${firstName} ${lastName} <${email}>`,
+      from: `*** General Question/Comment *** <${mailerConfig.auth.user}>`,
       to: mailerConfig.to,
       subject: "Coastal Coating: General questions/comments",
       html: `
