@@ -49,14 +49,15 @@ exports.sendAppointmentDetails = async (request, response) => {
     );
 
     const mailData = {
-      from: `${firstName} ${lastName} <${email}>`,
+      // from: `${firstName} ${lastName} <${email}>`,
+      from: `*** Consultation Request *** <${mailerConfig.auth.user}>`,
       to: mailerConfig.to,
       subject: "Coastal Coating: Request for consultation",
       html: `
             <h2>Customer's shared information:</h2>
             <strong>First name:</strong> ${firstName}<br />
             <strong>Last name:</strong> ${lastName}<br />
-            <strong>Email address:</strong> ${email}<br />
+            <strong>Email address:</strong> <a href="mailto:${email}">${email}</a><br />
             <strong>Phone number:</strong> ${phone}<br />
             <hr />
             <strong>Car year:</strong> ${carYear}<br />
