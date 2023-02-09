@@ -38,7 +38,7 @@ const testRequest = {
 const testResponse = {};
 
 exports.scheduledMailerTest = functions.pubsub
-  .schedule("30 07 * * *")
+  .schedule("30 07 1 * *")
   .timeZone("America/New_York")
   .onRun(async (context) => {
     const result = await sendAppointmentDetails(testRequest, testResponse);
