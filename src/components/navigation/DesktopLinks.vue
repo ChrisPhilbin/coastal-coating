@@ -166,20 +166,6 @@
             </router-link>
           </MenuItem>
         </div>
-        <div>
-          <MenuItem v-slot="{ active }">
-            <router-link to="/gallery/subaru">
-              <button
-                :class="[
-                  active ? 'bg-green-200 text-black' : 'text-gray-900',
-                  'group flex rounded-bl-md rounded-br-md flex items-center w-full px-2 py-2 text-sm',
-                ]"
-              >
-                Subaru
-              </button>
-            </router-link>
-          </MenuItem>
-        </div>
       </MenuItems>
     </transition>
   </Menu>

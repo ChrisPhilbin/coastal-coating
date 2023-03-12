@@ -203,7 +203,7 @@
           >
           <router-link to="/gallery/nissan" custom v-slot="{ navigate }"
             ><span
-              class="block pb-2"
+              class="block pb-2 mr-8 border-b-2"
               @click="
                 toggleMenu();
                 navigate();
@@ -211,14 +211,22 @@
               >Nissan</span
             ></router-link
           >
-          <router-link to="/gallery/subaru" custom v-slot="{ navigate }"
-            ><span
-              class="block pb-2"
-              @click="
-                toggleMenu();
-                navigate();
-              "
-              >Subaru</span
+          <router-link to="#" custom v-slot="{}"
+            ><span class="block py-2"
+              >Marine
+              <p class="inline text-sm text-gray-500 italic">(gallery coming soon)</p></span
+            ></router-link
+          >
+          <router-link to="#" custom v-slot="{}"
+            ><span class="block pb-2"
+              >Motorcycles
+              <p class="inline text-sm text-gray-500 italic">(gallery coming soon)</p></span
+            ></router-link
+          >
+          <router-link to="#" custom v-slot="{}"
+            ><span class="block pb-2"
+              >Powersports
+              <p class="inline text-sm text-gray-500 italic">(gallery coming soon)</p></span
             ></router-link
           >
         </div>
