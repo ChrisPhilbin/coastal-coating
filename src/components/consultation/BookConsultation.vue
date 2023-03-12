@@ -1,6 +1,6 @@
 <template>
-  <div class="text-center">
-    <div class="grid grid-cols-1 mb-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 md:w-3/4 mb-10 ml-auto mr-auto">
+    <div class="text-center">
       <Form
         @submit="handleAppointmentSubmit"
         v-slot="{ errors }"
@@ -395,6 +395,9 @@
         </div>
       </Form>
     </div>
+    <div class="text-center mt-6">
+      <customer-reviews></customer-reviews>
+    </div>
   </div>
 </template>
 
@@ -403,6 +406,7 @@ import { VueRecaptcha } from "vue-recaptcha";
 import formMixin from "../../mixins/form/formMixin";
 import { Form, Field } from "vee-validate";
 import ConsultationProgressVue from "./ConsultationProgress.vue";
+import CustomerReviews from "./CustomerReviews.vue";
 import * as Yup from "yup";
 export default {
   name: "BookConsultation",
@@ -410,6 +414,7 @@ export default {
     Form,
     Field,
     ConsultationProgressVue,
+    CustomerReviews,
     VueRecaptcha,
   },
   mixins: [formMixin],
