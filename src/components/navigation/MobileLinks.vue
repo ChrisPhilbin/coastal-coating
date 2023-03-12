@@ -141,78 +141,24 @@
         leave-to-class="transform scale-95 opacity-0"
       >
         <div v-show="showWork" class="w-full pl-10">
-          <router-link to="/gallery/bmw" custom v-slot="{ navigate }"
+          <router-link
+            v-for="(link, index) in autoGalleryLinkInfo"
+            :to="`/gallery/${link.pathName}`"
+            :key="index"
+            custom
+            v-slot="{ navigate }"
             ><span
               class="block pb-2"
+              :class="index === autoGalleryLinkInfo.length - 1 ? 'mr-8 border-b-2' : null"
               @click="
                 toggleMenu();
                 navigate();
               "
-              >BMW</span
-            ></router-link
-          >
-          <router-link to="/gallery/chevrolet" custom v-slot="{ navigate }"
-            ><span
-              class="block pb-2"
-              @click="
-                toggleMenu();
-                navigate();
-              "
-              >Chevrolet</span
-            ></router-link
-          >
-          <router-link to="/gallery/ford" custom v-slot="{ navigate }"
-            ><span
-              class="block pb-2"
-              @click="
-                toggleMenu();
-                navigate();
-              "
-              >Ford/Lincoln</span
-            ></router-link
-          >
-          <router-link to="/gallery/gmc" custom v-slot="{ navigate }"
-            ><span
-              class="block pb-2"
-              @click="
-                toggleMenu();
-                navigate();
-              "
-              >GMC/Buick</span
-            ></router-link
-          >
-          <router-link to="/gallery/hyundai" custom v-slot="{ navigate }"
-            ><span
-              class="block pb-2"
-              @click="
-                toggleMenu();
-                navigate();
-              "
-              >Hyundai/Genesis</span
-            ></router-link
-          >
-          <router-link to="/gallery/jeep" custom v-slot="{ navigate }"
-            ><span
-              class="block pb-2"
-              @click="
-                toggleMenu();
-                navigate();
-              "
-              >Jeep</span
-            ></router-link
-          >
-          <router-link to="/gallery/nissan" custom v-slot="{ navigate }"
-            ><span
-              class="block pb-2 mr-8 border-b-2"
-              @click="
-                toggleMenu();
-                navigate();
-              "
-              >Nissan</span
+              >{{ link.displayName }}</span
             ></router-link
           >
           <router-link to="#" custom v-slot="{}"
-            ><span class="block py-2"
+            ><span class="block mt-2 py-2"
               >Marine
               <p class="inline text-sm text-gray-500 italic">(gallery coming soon)</p></span
             ></router-link
@@ -275,10 +221,12 @@
 </template>
 
 <script>
+import galleryLinksMixin from "../../mixins/site/galleryLinksMixin";
 import SocialIcons from "./SocialIcons.vue";
 export default {
   name: "MobileLinks",
   components: { SocialIcons },
+  mixins: [galleryLinksMixin],
   data() {
     return {
       showMenu: false,

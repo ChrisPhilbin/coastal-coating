@@ -59,7 +59,7 @@
         class="
           absolute
           right-0
-          w-40
+          w-52
           mt-2
           origin-top-right
           bg-white
@@ -70,21 +70,21 @@
           z-50
         "
       >
-        <div>
+        <div v-for="(link, index) in autoGalleryLinkInfo" :key="index">
           <MenuItem v-slot="{ active }">
-            <router-link to="/gallery/bmw">
+            <router-link :to="`/gallery/${link.pathName}`">
               <button
                 :class="[
                   active ? 'bg-green-200 text-black' : 'text-gray-900',
                   'group flex rounded-tl-md rounded-tr-md items-center w-full px-2 py-2 text-sm',
                 ]"
               >
-                BMW
+                {{ link.displayName }}
               </button>
             </router-link>
           </MenuItem>
         </div>
-        <div>
+        <!-- <div>
           <MenuItem v-slot="{ active }">
             <router-link to="/gallery/chevrolet">
               <button
@@ -162,6 +162,51 @@
                 ]"
               >
                 Nissan
+              </button>
+            </router-link>
+          </MenuItem>
+        </div> -->
+        <div class="border-t-2">
+          <MenuItem v-slot="{}">
+            <router-link to="#">
+              <button
+                :class="[
+                  active ? 'bg-green-200 text-black' : 'text-gray-900',
+                  'group flex items-center w-full px-2 py-2 text-sm',
+                ]"
+              >
+                Marine
+                <p class="inline text-sm text-gray-400 italic">(coming soon)</p>
+              </button>
+            </router-link>
+          </MenuItem>
+        </div>
+        <div>
+          <MenuItem v-slot="{}">
+            <router-link to="#">
+              <button
+                :class="[
+                  active ? 'bg-green-200 text-black' : 'text-gray-900',
+                  'group flex items-center w-full px-2 py-2 text-sm',
+                ]"
+              >
+                Motorcycles
+                <p class="inline text-sm text-gray-400 italic">(coming soon)</p>
+              </button>
+            </router-link>
+          </MenuItem>
+        </div>
+        <div>
+          <MenuItem v-slot="{}">
+            <router-link to="#">
+              <button
+                :class="[
+                  active ? 'bg-green-200 text-black' : 'text-gray-900',
+                  'group flex items-center w-full px-2 py-2 text-sm',
+                ]"
+              >
+                Powersports
+                <p class="inline text-sm text-gray-400 italic">(coming soon)</p>
               </button>
             </router-link>
           </MenuItem>
@@ -367,6 +412,7 @@
 </template>
 
 <script>
+import galleryLinksMixin from "../../mixins/site/galleryLinksMixin";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
 export default {
   name: "DesktopLinks",
@@ -376,5 +422,6 @@ export default {
     MenuItem,
     MenuItems,
   },
+  mixins: [galleryLinksMixin],
 };
 </script>
