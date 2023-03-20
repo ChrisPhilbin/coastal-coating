@@ -80,6 +80,8 @@ export default {
           return this.galleries.gmc;
         case "hyundai":
           return this.galleries.hyundai;
+        case "marine":
+          return this.galleries.marine;
         default:
           this.setErrors();
           return this.errors;

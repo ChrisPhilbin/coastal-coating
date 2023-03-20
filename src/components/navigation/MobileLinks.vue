@@ -157,11 +157,15 @@
               >{{ link.displayName }}</span
             ></router-link
           >
-          <router-link to="#" custom v-slot="{}"
-            ><span class="block mt-2 py-2"
+          <router-link to="/gallery/marine" custom v-slot="{ navigate }"
+            ><span
+              class="block mt-2 py-2"
+              @click="
+                toggleMenu();
+                navigate();
+              "
               >Marine
-              <p class="inline text-sm text-gray-500 italic">(gallery coming soon)</p></span
-            ></router-link
+            </span></router-link
           >
           <router-link to="#" custom v-slot="{}"
             ><span class="block pb-2"

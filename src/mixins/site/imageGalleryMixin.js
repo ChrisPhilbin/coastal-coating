@@ -2,6 +2,52 @@ export default {
   data() {
     return {
       galleries: {
+        marine: {
+          name: "Boats / Marine",
+          leaderImage: "",
+          images: [
+            {
+              id: 1,
+              lg_url: "/img/marine/gallery/lg/boat_1_lg.jpg",
+              sm_url: "/img/marine/gallery/sm/boat_1_sm.jpg",
+            },
+            {
+              id: 2,
+              lg_url: "/img/marine/gallery/lg/boat_2_lg.jpg",
+              sm_url: "/img/marine/gallery/sm/boat_2_sm.jpg",
+            },
+            {
+              id: 3,
+              lg_url: "/img/marine/gallery/lg/boat_3_lg.jpg",
+              sm_url: "/img/marine/gallery/sm/boat_3_sm.jpg",
+            },
+            {
+              id: 4,
+              lg_url: "/img/marine/gallery/lg/boat_4_lg.jpg",
+              sm_url: "/img/marine/gallery/sm/boat_4_sm.jpg",
+            },
+            {
+              id: 5,
+              lg_url: "/img/marine/gallery/lg/boat_5_lg.jpg",
+              sm_url: "/img/marine/gallery/sm/boat_5_sm.jpg",
+            },
+            {
+              id: 6,
+              lg_url: "/img/marine/gallery/lg/boat_6_lg.jpg",
+              sm_url: "/img/marine/gallery/sm/boat_6_sm.jpg",
+            },
+            {
+              id: 7,
+              lg_url: "/img/marine/gallery/lg/boat_7_lg.jpg",
+              sm_url: "/img/marine/gallery/sm/boat_7_sm.jpg",
+            },
+            {
+              id: 8,
+              lg_url: "/img/marine/gallery/lg/boat_8_lg.jpg",
+              sm_url: "/img/marine/gallery/sm/boat_8_sm.jpg",
+            },
+          ],
+        },
         chevrolet: {
           name: "Chevrolet",
           leaderImage: "",
