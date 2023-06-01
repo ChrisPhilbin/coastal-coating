@@ -51,7 +51,7 @@ exports.sendAppointmentDetails = async (request, response) => {
     const mailData = {
       // from: `${firstName} ${lastName} <${email}>`,
       from: `*** Consultation Request *** <${mailerConfig.auth.user}>`,
-      to: mailerConfig.to,
+      to: email === "test@test.com" ? "chris@chrisphilbin.net" : mailerConfig.to,
       subject: "Coastal Coating: Request for consultation",
       html: `
             <h2>Customer's shared information:</h2>

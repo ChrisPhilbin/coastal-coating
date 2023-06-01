@@ -458,7 +458,15 @@ export default {
     };
   },
   mounted() {
-    this.appointmentDetails.campaignSource = this.getCampaignSource();
+    const campaignSource = this.$route.query.campaignSource;
+    const existingCampaignSource = localStorage.getItem("campaignSource");
+    if (campaignSource) {
+      const newCampaignSource = this.getCampaignSource(campaignSource);
+      localStorage.setItem("campaignSource", newCampaignSource);
+      this.appointmentDetails.campaignSource = newCampaignSource;
+    } else if (existingCampaignSource) {
+      this.appointmentDetails.campaignSource = this.getCampaignSource(existingCampaignSource);
+    }
   },
   methods: {
     onVerifyCaptcha() {
@@ -467,7 +475,7 @@ export default {
     async handleAppointmentSubmit() {
       try {
         this.inSubmission = true;
-        let response = await fetch(`https://us-central1-coastal-coating.cloudfunctions.net/api/book-appointment`, {
+        let response = await fetch(`${this.global.backendApiEndpoint}/book-appointment`, {
           method: "POST",
 
           body: JSON.stringify({

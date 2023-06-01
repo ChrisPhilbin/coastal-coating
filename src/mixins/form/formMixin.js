@@ -6,14 +6,9 @@ export default {
     };
   },
   methods: {
-    getCampaignSource() {
-      const campaignSource = localStorage.getItem("campaignSource");
+    getCampaignSource(campaignSource) {
       if (campaignSource) {
-        if (
-          this.global.validCampaignSources.includes(
-            campaignSource.toLowerCase()
-          )
-        ) {
+        if (this.global.validCampaignSources.includes(campaignSource.toLowerCase())) {
           return campaignSource;
         }
         return "unknown";

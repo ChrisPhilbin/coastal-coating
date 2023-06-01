@@ -12,7 +12,7 @@ app.config.globalProperties.global = {
   googleReCaptchaKey: "6LfzfOkgAAAAAKrB13GU3QJT9wKYa5Z75TwVQ75b",
   orgName: "Coastal Coating",
   defaultPageTitle: "Coastal Coating - The Grand Strand's Leader in Ceramic Coating",
-  validCampaignSources: ["facebook", "instagram", "organic", "jeepjam22", "kiosk"],
+  validCampaignSources: ["facebook", "instagram", "organic", "jeepjam22", "kiosk", "bizcard"],
   contactInfo: {
     address: {
       street: "115-C Prather Park Dr.",
