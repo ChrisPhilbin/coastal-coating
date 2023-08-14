@@ -56,6 +56,8 @@
       >
     </div>
 
+    <ServiceTiles />
+
     <div class="grid grid-cols-1 md:grid-cols-2 bg-black py-10">
       <div class="mt-auto mb-auto">
         <p class="font-coastal-body text-gray-100 text-3xl font-bold mb-3">Why Coastal Coating?</p>
@@ -136,9 +138,10 @@
 <script>
 import siteAdminMixin from "../mixins/site/siteAdminMixin";
 import SocialIcons from "./navigation/SocialIcons.vue";
+import ServiceTiles from "./home/ServiceTiles.vue";
 export default {
   name: "Home",
-  components: { SocialIcons },
+  components: { SocialIcons, ServiceTiles },
   mixins: [siteAdminMixin],
   mounted() {
     this.setPageTitle(this.global.defaultPageTitle);
