@@ -1,16 +1,20 @@
 <style scoped>
+.flip {
+  perspective: 800px;
+}
 .flip-content {
   transition: transform 0.4s;
   transform-style: preserve-3d;
 }
 
-.flip-content:hover .flip-content {
+.flip:hover .flip-content {
   transform: rotateY(180deg);
   transition: transform 0.3s;
 }
 
 .flip-front,
 .flip-back {
+  position: absolute;
   backface-visibility: hidden;
 }
 
@@ -25,16 +29,17 @@
       class="h-96 p-8 bg-center bg-no-repeat bg-cover"
       style="background-image: url('/img/services/tiles/ceramic_coating.jpeg')"
     >
-      <div class="flip-content h-full">
-        <div class="flip-front flex items-center bg-service-tile-front justify-center h-full cursor-pointer">
-          <div class="basis-full">
-            <p class="block text-2xl text-white font-bold opacity-100">CERAMIC COATING</p>
+      <div class="flip h-full w-full">
+        <div class="flip-content h-full w-full">
+          <div class="flip-front h-full bg-service-tile-front w-full flex items-center justify-center">
+            <p class="block text-2xl text-white font-bold">CERAMIC COATING</p>
           </div>
-        </div>
-        <div class="flip-back flex items-center bg-service-tile-back justify-center h-full cursor-pointer">
-          <div class="basis-full">
-            <p class="block text-2xl text-white font-bold opacity-100">CERAMIC COATING</p>
-            <button class="bg-gray-800 text-white p-3 mt-3">LEARN MORE</button>
+
+          <div class="flip-back h-full bg-service-tile-back w-full flex items-center justify-center cursor-pointer">
+            <div>
+              <p class="block text-2xl text-white font-bold">CERAMIC COATING</p>
+              <button class="bg-gray-800 text-white p-3 mt-3">LEARN MORE</button>
+            </div>
           </div>
         </div>
       </div>
@@ -44,23 +49,35 @@
       class="h-96 p-8 bg-center bg-no-repeat bg-cover"
       style="background-image: url('/img/services/tiles/marine.jpg')"
     >
-      <div
-        class="flex items-center bg-service-tile-front hover:bg-service-tile-back justify-center h-full cursor-pointer"
-      >
-        <div class="basis-full">
-          <p class="block text-2xl text-white font-bold opacity-100">MARINE</p>
-          <button class="bg-gray-800 text-white p-3 mt-3">LEARN MORE</button>
+      <div class="flip h-full w-full">
+        <div class="flip-content h-full w-full">
+          <div class="flip-front h-full bg-service-tile-front w-full flex items-center justify-center">
+            <p class="block text-2xl text-white font-bold">MARINE</p>
+          </div>
+
+          <div class="flip-back h-full bg-service-tile-back w-full flex items-center justify-center cursor-pointer">
+            <div>
+              <p class="block text-2xl text-white font-bold">MARINE</p>
+              <button class="bg-gray-800 text-white p-3 mt-3">LEARN MORE</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="h-96 p-8 bg-center bg-no-repeat bg-cover" style="background-image: url('/img/services/tiles/rv.jpg')">
-      <div
-        class="flex items-center bg-service-tile-front hover:bg-service-tile-back justify-center h-full cursor-pointer"
-      >
-        <div class="basis-full">
-          <p class="block text-2xl text-white font-bold opacity-100">RV</p>
-          <button class="bg-gray-800 text-white p-3 mt-3">LEARN MORE</button>
+      <div class="flip h-full w-full">
+        <div class="flip-content h-full w-full">
+          <div class="flip-front h-full bg-service-tile-front w-full flex items-center justify-center">
+            <p class="block text-2xl text-white font-bold">RV</p>
+          </div>
+
+          <div class="flip-back h-full bg-service-tile-back w-full flex items-center justify-center cursor-pointer">
+            <div>
+              <p class="block text-2xl text-white font-bold">RV</p>
+              <button class="bg-gray-800 text-white p-3 mt-3">LEARN MORE</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
