@@ -3,13 +3,13 @@
   perspective: 800px;
 }
 .flip-content {
-  transition: transform 0.4s;
+  transition: transform 0.5s;
   transform-style: preserve-3d;
 }
 
 .flip:hover .flip-content {
   transform: rotateY(180deg);
-  transition: transform 0.3s;
+  transition: transform 0.5s;
 }
 
 .flip-front,
@@ -32,13 +32,13 @@
       <div class="flip h-full w-full">
         <div class="flip-content h-full w-full">
           <div class="flip-front h-full bg-service-tile-front w-full flex items-center justify-center">
-            <p class="block text-2xl text-white font-bold">CERAMIC COATING</p>
+            <p class="block text-2xl text-white font-bold font-coastal-body">CERAMIC COATING</p>
           </div>
 
           <div class="flip-back h-full bg-service-tile-back w-full flex items-center justify-center cursor-pointer">
             <div>
-              <p class="block text-2xl text-white font-bold">CERAMIC COATING</p>
-              <button class="bg-gray-800 text-white p-3 mt-3">LEARN MORE</button>
+              <p class="block text-2xl text-white font-bold font-coastal-body">CERAMIC COATING</p>
+              <button class="bg-gray-800 text-white p-3 mt-3 font-coastal-body">LEARN MORE</button>
             </div>
           </div>
         </div>
@@ -52,13 +52,13 @@
       <div class="flip h-full w-full">
         <div class="flip-content h-full w-full">
           <div class="flip-front h-full bg-service-tile-front w-full flex items-center justify-center">
-            <p class="block text-2xl text-white font-bold">MARINE</p>
+            <p class="block text-2xl text-white font-bold font-coastal-body">MARINE</p>
           </div>
 
           <div class="flip-back h-full bg-service-tile-back w-full flex items-center justify-center cursor-pointer">
             <div>
-              <p class="block text-2xl text-white font-bold">MARINE</p>
-              <button class="bg-gray-800 text-white p-3 mt-3">LEARN MORE</button>
+              <p class="block text-2xl text-white font-bold font-coastal-body">MARINE</p>
+              <button class="bg-gray-800 text-white p-3 mt-3 font-coastal-body">LEARN MORE</button>
             </div>
           </div>
         </div>
@@ -69,29 +69,77 @@
       <div class="flip h-full w-full">
         <div class="flip-content h-full w-full">
           <div class="flip-front h-full bg-service-tile-front w-full flex items-center justify-center">
-            <p class="block text-2xl text-white font-bold">RV</p>
+            <p class="block text-2xl text-white font-bold font-coastal-body">RV</p>
           </div>
 
           <div class="flip-back h-full bg-service-tile-back w-full flex items-center justify-center cursor-pointer">
             <div>
-              <p class="block text-2xl text-white font-bold">RV</p>
-              <button class="bg-gray-800 text-white p-3 mt-3">LEARN MORE</button>
+              <p class="block text-2xl text-white font-bold font-coastal-body">RV</p>
+              <button class="bg-gray-800 text-white p-3 mt-3 font-coastal-body">LEARN MORE</button>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="bg-green-200 h-min p-8">
-      <div class="bg-red-700 h-16"></div>
+    <div
+      class="h-96 p-8 bg-center bg-no-repeat bg-cover"
+      style="background-image: url('/img/services/tiles/detailing.jpg')"
+    >
+      <div class="flip h-full w-full">
+        <div class="flip-content h-full w-full">
+          <div class="flip-front h-full bg-service-tile-front w-full flex items-center justify-center">
+            <p class="block text-2xl text-white font-bold font-coastal-body">DETAILING</p>
+          </div>
+
+          <div class="flip-back h-full bg-service-tile-back w-full flex items-center justify-center cursor-pointer">
+            <div>
+              <p class="block text-2xl text-white font-bold font-coastal-body">DETAILING</p>
+              <button class="bg-gray-800 text-white p-3 mt-3 font-coastal-body">LEARN MORE</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="bg-blue-200 h-min p-8">
-      <div class="bg-red-700 h-16"></div>
+    <div
+      class="h-96 p-8 bg-center bg-no-repeat bg-cover"
+      style="background-image: url('/img/services/tiles/paint_correction.jpg')"
+    >
+      <div class="flip h-full w-full">
+        <div class="flip-content h-full w-full">
+          <div class="flip-front h-full bg-service-tile-front w-full flex items-center justify-center">
+            <p class="block text-2xl text-white font-bold font-coastal-body">PAINT CORRECTION</p>
+          </div>
+
+          <div class="flip-back h-full bg-service-tile-back w-full flex items-center justify-center cursor-pointer">
+            <div>
+              <p class="block text-2xl text-white font-bold font-coastal-body">PAINT CORRECTION</p>
+              <button class="bg-gray-800 text-white p-3 mt-3 font-coastal-body">LEARN MORE</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="bg-red-200 h-min p-8">
-      <div class="bg-red-700 h-16"></div>
+    <div
+      class="h-96 p-8 bg-center bg-no-repeat bg-cover"
+      style="background-image: url('/img/services/tiles/window_tinting.jpg')"
+    >
+      <div class="flip h-full w-full">
+        <div class="flip-content h-full w-full">
+          <div class="flip-front h-full bg-service-tile-front w-full flex items-center justify-center">
+            <p class="block text-2xl text-white font-bold font-coastal-body">WINDOW TINTING</p>
+          </div>
+
+          <div class="flip-back h-full bg-service-tile-back w-full flex items-center justify-center cursor-pointer">
+            <div>
+              <p class="block text-2xl text-white font-bold font-coastal-body">WINDOW TINTING</p>
+              <button class="bg-gray-800 text-white p-3 mt-3 font-coastal-body">LEARN MORE</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
