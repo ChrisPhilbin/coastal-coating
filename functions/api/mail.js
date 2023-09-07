@@ -16,7 +16,6 @@ exports.sendAppointmentDetails = async (request, response) => {
     carMilage,
     servicesDesired,
     otherComments,
-    bestTimesToConnect,
     campaignSource,
   } = request.body.appointmentDetails;
 
@@ -65,7 +64,6 @@ exports.sendAppointmentDetails = async (request, response) => {
             <strong>Car model:</strong> ${carModel}<br />
             <strong>Car milage:</strong> ${carMilage}<br />
             <strong>Services desired:</strong> ${servicesDesired}<br />
-            <strong>Best time(s) to contact:</strong> ${bestTimesToConnect}<br />
             <hr />
             <strong>Other comments:</strong> ${otherComments}<br />
             <strong>Campaign source(s):</strong> ${campaignSource}<br />
