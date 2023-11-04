@@ -89,7 +89,23 @@
         leave-to-class="transform scale-95 opacity-0"
       >
         <div v-show="showServices" class="w-full pl-10">
-          <router-link to="/services/ceramic-coating" custom v-slot="{ navigate }"
+          <router-link
+            v-for="(link, index) in serviceLinksInfo"
+            :to="`/services/${link.pathName}`"
+            :key="index"
+            custom
+            v-slot="{ navigate }"
+            ><span
+              class="block pb-2"
+              :class="index === autoGalleryLinkInfo.length - 1 ? 'mr-8 border-b-2' : null"
+              @click="
+                toggleMenu();
+                navigate();
+              "
+              >{{ link.displayName }}</span
+            ></router-link
+          >
+          <!-- <router-link to="/services/ceramic-coating" custom v-slot="{ navigate }"
             ><span
               class="block pb-1.5"
               @click="
@@ -114,7 +130,7 @@
           <span class="block pb-1.5">Convertible Top Coating</span>
           <span class="block pb-1.5">Detailing</span>
           <span class="block pb-1.5">Ceramic Wax & Polish</span>
-          <span class="block pb-1.5">Recreational Vehicles</span>
+          <span class="block pb-1.5">Recreational Vehicles</span> -->
         </div>
       </transition>
       <div class="w-full p-3" :class="[showWork ? '' : 'border-b-2']" @click="toggleWork">
@@ -226,11 +242,12 @@
 
 <script>
 import galleryLinksMixin from "../../mixins/site/galleryLinksMixin";
+import serviceLinksMixin from "../../mixins/site/serviceLinksMixin";
 import SocialIcons from "./SocialIcons.vue";
 export default {
   name: "MobileLinks",
   components: { SocialIcons },
-  mixins: [galleryLinksMixin],
+  mixins: [galleryLinksMixin, serviceLinksMixin],
   data() {
     return {
       showMenu: false,

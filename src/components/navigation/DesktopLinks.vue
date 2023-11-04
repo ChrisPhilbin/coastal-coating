@@ -178,98 +178,16 @@
           z-50
         "
       >
-        <div>
+        <div v-for="(link, index) in serviceLinksInfo" :key="index">
           <MenuItem v-slot="{ active }">
-            <router-link to="/services/ceramic-coating">
+            <router-link :to="`/services/${link.pathName}`">
               <button
                 :class="[
                   active ? 'bg-green-200 text-black' : 'text-gray-900',
                   'group flex rounded-tl-md rounded-tr-md items-center w-full px-2 py-2 text-sm',
                 ]"
               >
-                Ceramic Coating
-              </button>
-            </router-link>
-          </MenuItem>
-          <MenuItem v-slot="{ active }">
-            <router-link to="/services/wheel-coating">
-              <button
-                :class="[
-                  active ? 'bg-green-200 text-black' : 'text-gray-900',
-                  'group flex items-center w-full px-2 py-2 text-sm',
-                ]"
-              >
-                Wheel Coating
-              </button>
-            </router-link>
-          </MenuItem>
-          <MenuItem v-slot="{ active }">
-            <router-link to="/services/window-coating">
-              <button
-                :class="[
-                  active ? 'bg-green-200 text-black' : 'text-gray-900',
-                  'group flex items-center w-full px-2 py-2 text-sm',
-                ]"
-              >
-                Window Coating
-              </button>
-            </router-link>
-          </MenuItem>
-          <MenuItem v-slot="{ active }">
-            <router-link to="/services/interor-leather-coating">
-              <button
-                :class="[
-                  active ? 'bg-green-200 text-black' : 'text-gray-900',
-                  'group flex items-center w-full px-2 py-2 text-sm',
-                ]"
-              >
-                Leather Coating
-              </button>
-            </router-link>
-          </MenuItem>
-          <MenuItem v-slot="{ active }">
-            <router-link to="/services/convertible-top-coating">
-              <button
-                :class="[
-                  active ? 'bg-green-200 text-black' : 'text-gray-900',
-                  'group flex items-center w-full px-2 py-2 text-sm',
-                ]"
-              >
-                Convertible Top Coating
-              </button>
-            </router-link>
-          </MenuItem>
-          <MenuItem v-slot="{ active }">
-            <button
-              :class="[
-                active ? 'bg-green-200 text-black' : 'text-gray-900',
-                'group flex items-center w-full px-2 py-2 text-sm',
-              ]"
-            >
-              Detailing
-            </button>
-          </MenuItem>
-        </div>
-        <div>
-          <MenuItem v-slot="{ active }">
-            <button
-              :class="[
-                active ? 'bg-green-200 text-black' : 'text-gray-900',
-                'group flex items-center w-full px-2 py-2 text-sm',
-              ]"
-            >
-              Ceramic Wax & Polish
-            </button>
-          </MenuItem>
-          <MenuItem v-slot="{ active }">
-            <router-link to="/services/recreational-vehicles">
-              <button
-                :class="[
-                  active ? 'bg-green-200 text-black' : 'text-gray-900',
-                  'group flex rounded-bl-md rounded-br-md  items-center w-full px-2 py-2 text-sm',
-                ]"
-              >
-                Recreational Vehicles
+                {{ link.displayName }}
               </button>
             </router-link>
           </MenuItem>
@@ -331,6 +249,7 @@
 
 <script>
 import galleryLinksMixin from "../../mixins/site/galleryLinksMixin";
+import serviceLinksMixin from "../../mixins/site/serviceLinksMixin";
 import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/vue";
 export default {
   name: "DesktopLinks",
@@ -340,6 +259,6 @@ export default {
     MenuItem,
     MenuItems,
   },
-  mixins: [galleryLinksMixin],
+  mixins: [galleryLinksMixin, serviceLinksMixin],
 };
 </script>
